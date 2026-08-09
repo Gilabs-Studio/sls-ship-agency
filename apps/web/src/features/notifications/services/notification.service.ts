@@ -1,0 +1,75 @@
+import type { NotificationItem, ReminderThresholdRule } from "../types/notification.types";
+
+export const initialNotifications: NotificationItem[] = [
+  {
+    id: "notif-1",
+    title: "Sertifikat SOLAS Expired Mendesak (H-1)",
+    message: "Sertifikat SOLAS Safety Construction KM Solid Horizon (IMO 9821245) sudah melewati tanggal expired.",
+    category: "Certificate Expiry",
+    channels: ["Email", "WhatsApp", "In-App"],
+    priority: "High",
+    isRead: false,
+    isEscalated: true, // Escalated to Super Admin
+    targetUrl: "/vessels",
+    timestamp: "10 menit yang lalu",
+  },
+  {
+    id: "notif-2",
+    title: "Permohonan Approval Dokumen Baru",
+    message: "Budi Santoso mengunggah Sertifikat IOPP KM Samarinda Titan untuk diverifikasi Supervisor.",
+    category: "Approval Request",
+    channels: ["In-App"],
+    priority: "Medium",
+    isRead: false,
+    isEscalated: false,
+    targetUrl: "/documents",
+    timestamp: "1 jam yang lalu",
+  },
+  {
+    id: "notif-3",
+    title: "Reminder Follow-up Lead CRM Stagnant",
+    message: "Prospek CV Lautan Makmur Transport belum ada aktivitas selama 14 hari.",
+    category: "CRM Follow-up",
+    channels: ["Email", "In-App"],
+    priority: "Medium",
+    isRead: true,
+    isEscalated: false,
+    targetUrl: "/crm",
+    timestamp: "3 jam yang lalu",
+  },
+  {
+    id: "notif-4",
+    title: "Peringatan Expiry H-15 Sertifikat Tanker",
+    message: "KM Samarinda Titan: Sertifikat IOPP jatuh tempo dalam 16 hari.",
+    category: "Certificate Expiry",
+    channels: ["Email", "WhatsApp", "In-App"],
+    priority: "High",
+    isRead: true,
+    isEscalated: false,
+    targetUrl: "/vessels",
+    timestamp: "Kemarin",
+  },
+];
+
+export const initialRules: ReminderThresholdRule[] = [
+  {
+    id: "rule-1",
+    categoryName: "Sertifikat Keselamatan Kapal (SOLAS / ISM)",
+    threshold30Days: true,
+    threshold15Days: true,
+    threshold7Days: true,
+    threshold1Day: true,
+    sendEmail: true,
+    sendWhatsApp: true,
+  },
+  {
+    id: "rule-2",
+    categoryName: "Dokumen Klien & Perizinan Port",
+    threshold30Days: true,
+    threshold15Days: true,
+    threshold7Days: false,
+    threshold1Day: false,
+    sendEmail: true,
+    sendWhatsApp: false,
+  },
+];
