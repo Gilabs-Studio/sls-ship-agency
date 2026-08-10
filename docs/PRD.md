@@ -47,31 +47,28 @@ Sistem ini dirancang untuk menjadi platform digital yang mengubah proses adminis
 
 ---
 
-## 3. Page: Dashboard (Outsourcing Teknisi & Overview Kepatuhan Maritim)
+## 3. Page: Dashboard (Penugasan Agen/Teknisi & Vendor Management System)
 
 ### 3.1 Tujuan Halaman
 
-Menjadi pusat kendali operasional utama yang menyajikan grafik agregat overview seluruh modul (kepatuhan sertifikat kapal/kru & pipeline prospek CRM), alokasi penugasan teknisi maritim, dan status kelaikan secara sederhana, bersih, tanpa container berlebihan, serta memiliki kontras warna tinggi di tema terang maupun gelap.
+Menjadi pusat kendali operasional utama yang menyajikan ringkasan penugasan agen/teknisi di perusahaan pelayaran klien (kontrak 6 bulan & masa kerja berjalan), sistem Vendor Management System (VMS) mitra supplier, serta grafik Donut sirkular CRM secara bersih, tanpa hardcoded warna, dan berkontras tinggi pada tema terang maupun gelap.
 
 ### 3.2 Fitur Utama & Layout Komponen
 
-- **Grafik Overview Lintas Modul PRD:**
-  - Grafik tren kepatuhan sertifikat maritim bulanan (target 95%, realisasi 94.2%).
-  - Indikator ringkas pipeline prospek CRM (Lead Baru ➔ Dihubungi ➔ Presentasi ➔ Negosiasi ➔ Closing).
-- **Kartu Ringkasan Metrik Sederhana:**
+- **Grafik Donut Sirkular CRM & Timespan Ringkasan:**
+  - Grafik lingkaran SVG Donut yang merangkum distribusi deal CRM (*Closing 45%*, *Negosiasi 30%*, *Prospek Baru 25%*).
+  - Ringkasan statistik alokasi agen/teknisi di klien.
+- **Kartu Ringkasan Metrik Bersih:**
   - `Total Teknisi & Kru Terdaftar`: 128 Personel
-  - `Sedang Penugasan (Outsourced)`: 103 Personel
-  - `Standby (Siap Ditugaskan)`: 17 Personel
+  - `Penugasan Aktif (Klien)`: 103 Personel
+  - `Standby (Siap Tugas)`: 17 Personel
   - `Perlu Perpanjangan`: 8 Dokumen
-- **Tabel Penugasan Teknisi Klien (Borderless & Tanpa Uppercase):**
-  - Daftar penugasan personel aktif ke kapal perusahaan pelayaran mitra dengan huruf kapital alami (*sentence/title case*).
-  - Skema warna hijau kontras tinggi (`Emerald Green` pada Light Theme, `Neon Mint` pada Dark Theme) agar 100% mudah dibaca.
-- **Panel Kepatuhan Sertifikat Kru & Kompas Navigasi:**
-  - Persentase kepatuhan sertifikat kru (`94.2% Safe`).
-  - Ringkasan permintaan outsourcing teknisi dari klien pelayaran.
-  - Widget kompas navigasi radar bergaya sonar bersih.
-- **Shortcut Header Sederhana (Tanpa Background Container Card):**
-  - Tombol aksi bersih tanpa pembungkus card tebal: Tugaskan Teknisi, Upload Sertifikat, Tambah Lead CRM.
+- **Tabel Penugasan Agen/Teknisi & Vendor Management System (VMS Tabs):**
+  - **Tab 1 (Penugasan Agen/Teknisi)**: Nama Teknisi/Agen, Perusahaan Klien, Vendor Supplier, Posisi & Kapal, Durasi Kontrak (6 Bulan), Masa Kerja Berjalan (*Timespan* Bulan ke-X dari 6 Bulan dengan progress bar), dan Fee Rate.
+  - **Tab 2 (Vendor Management System - VMS)**: Daftar Vendor Partner Outsourcing (*PT Sea Engine Vendor*, *CV Subsea Engineering*), Kategori Layanan, Jumlah Teknisi Ditugaskan, dan Rating Performa SLA (98.5%).
+  - **Tab 3 (Permintaan Alokasi Klien)**: Permintaan penugasan personel baru dari klien pelayaran dan status pemenuhan (*matching*).
+- **Skema Warna Terpusat (Zero Hardcoded Color):**
+  - Seluruh status tag/badge menggunakan variabel CSS terpusat (`--mint-*`, `--ice-*`, `--warning-*`, `--success-*`) yang otomatis menyesuaikan tingkat kontras tinggi pada Light Theme dan Dark Theme.
 
 ### 3.3 Use Case dan Logic Sistem
 

@@ -2,13 +2,11 @@
 
 import React from "react";
 import { toast } from "sonner";
-import { Plus, FileText, UserPlus } from "lucide-react";
 
 import { useDashboard } from "@/features/dashboard/hooks/useDashboard";
 import { OutsourcingKpiCards } from "@/features/dashboard/components/outsourcing-kpi-cards";
-import { PrdOverviewChart } from "@/features/dashboard/components/prd-overview-chart";
+import { CrmDonutSummary } from "@/features/dashboard/components/crm-donut-summary";
 import { TechnicianAssignmentTable } from "@/features/dashboard/components/technician-assignment-table";
-import { CrewCompliancePanel } from "@/features/dashboard/components/crew-compliance-panel";
 import { QuickActionModals } from "@/features/dashboard/components/quick-action-modals";
 import { Button } from "@/components/ui/button";
 
@@ -21,70 +19,57 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-6 pb-8">
-      {/* Super Clean Borderless Header (No Container Box) */}
+      {/* Page Header & Action Controls */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div className="space-y-1">
           <h1 className="text-2xl font-extrabold tracking-tight text-foreground font-heading">
-            Dashboard Pengelolaan Teknisi & Kru Maritim
+            Dashboard Penugasan Agen & Vendor Management System
           </h1>
           <p className="text-xs text-muted-foreground">
-            Ringkasan alokasi penugasan teknisi, kelaikan sertifikat kru, dan permintaan outsourcing klien.
+            Monitoring penugasan agen/teknisi di klien, performa mitra VMS supplier, & distribusi deal CRM.
           </p>
         </div>
 
-        {/* Simplified Action Buttons (No Card Wrapper Box) */}
+        {/* Action Buttons */}
         <div className="flex items-center gap-2">
           <Button
             size="sm"
             onClick={() => modalState.setAddVesselOpen(true)}
-            className="h-8 text-xs gap-1.5 cursor-pointer shadow-xs"
+            className="h-8 text-xs cursor-pointer shadow-xs"
           >
-            <UserPlus className="h-3.5 w-3.5" />
-            <span>Tugaskan Teknisi</span>
+            Tugaskan Personel
           </Button>
 
           <Button
             size="sm"
             variant="outline"
             onClick={() => modalState.setUploadDocOpen(true)}
-            className="h-8 text-xs gap-1.5 cursor-pointer bg-background/50"
+            className="h-8 text-xs cursor-pointer bg-background/50"
           >
-            <FileText className="h-3.5 w-3.5" />
-            <span>Upload Sertifikat</span>
+            Upload Sertifikat
           </Button>
 
           <Button
             size="sm"
             variant="ghost"
             onClick={() => modalState.setAddLeadOpen(true)}
-            className="h-8 text-xs gap-1.5 cursor-pointer text-foreground hover:bg-accent"
+            className="h-8 text-xs cursor-pointer hover:bg-accent"
           >
-            <Plus className="h-3.5 w-3.5 text-primary" />
-            <span>Tambah Lead CRM</span>
+            Tambah Lead CRM
           </Button>
         </div>
       </div>
 
-      {/* 4 Clean Outsourcing Summary Cards */}
+      {/* 4 Clean Summary Metric Cards (No Badges) */}
       <OutsourcingKpiCards />
 
-      {/* PRD Multi-Module Overview Chart */}
-      <PrdOverviewChart />
+      {/* CRM Deal Status Donut Circle Chart */}
+      <CrmDonutSummary />
 
-      {/* Main Content Split Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-        {/* Left Column: Technician Assignments Table */}
-        <div className="lg:col-span-2 space-y-4">
-          <TechnicianAssignmentTable
-            onOpenAddAssignment={() => modalState.setAddVesselOpen(true)}
-          />
-        </div>
-
-        {/* Right Column: Crew Certificate Compliance & Placement Requests */}
-        <div className="lg:col-span-1">
-          <CrewCompliancePanel />
-        </div>
-      </div>
+      {/* Main Canvas: VMS & Assignment Table */}
+      <TechnicianAssignmentTable
+        onOpenAddAssignment={() => modalState.setAddVesselOpen(true)}
+      />
 
       {/* Quick Action Interactive Dialog Modals */}
       <QuickActionModals

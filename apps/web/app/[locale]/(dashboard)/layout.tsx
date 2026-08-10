@@ -153,29 +153,29 @@ export default function DashboardLayout({
 
       {/* Main Content Area (pl-20 for floating narrow sidebar) */}
       <div className="flex-1 pl-20 flex flex-col min-h-screen z-10 relative">
-        {/* Top Floating Glass Header */}
-        <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border backdrop-blur-xl bg-background/50 px-6">
-          {/* Global Search Bar */}
+        {/* Top Header */}
+        <header className="sticky top-0 z-30 flex h-16 items-center justify-between px-6">
+          {/* Global Search Bar (Clear Container & Distinct Border) */}
           <div className="relative w-80">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               type="text"
               placeholder="Cari kapal, teknisi, sertifikat, IMO... (⌘K)"
-              className="pl-9 pr-4 h-9 text-xs glass-input rounded-full"
+              className="pl-9 pr-4 h-9 text-xs bg-card/90 border border-border shadow-xs rounded-xl focus:border-primary font-medium"
             />
           </div>
 
-          {/* Header Action Tools */}
-          <div className="flex items-center gap-3">
+          {/* Header Action Tools (Clean Borderless Buttons - No Card/Pill Boxes) */}
+          <div className="flex items-center gap-1.5">
             {/* Quick Language Toggle */}
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleLocale}
-              className="h-9 px-3 text-xs font-semibold gap-1.5 cursor-pointer glass-pill rounded-full hover:bg-white/15"
+              className="h-8 px-2 text-xs font-semibold gap-1 cursor-pointer text-foreground hover:bg-accent/60 rounded-lg border-0 shadow-none bg-transparent"
             >
-              <Globe className="h-3.5 w-3.5 text-[#ACFCCC]" />
-              <span className="uppercase text-xs tracking-wider">{locale}</span>
+              <Globe className="h-3.5 w-3.5 text-primary" />
+              <span className="uppercase text-xs font-bold">{locale}</span>
             </Button>
 
             {/* Theme Toggle */}
@@ -187,21 +187,21 @@ export default function DashboardLayout({
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="relative h-9 w-9 rounded-full cursor-pointer glass-pill hover:bg-white/15"
+                  className="relative h-8 w-8 rounded-lg cursor-pointer text-foreground hover:bg-accent/60 border-0 shadow-none bg-transparent"
                 >
-                  <Bell className="h-4 w-4 text-foreground" />
-                  <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-[#ACFCCC] animate-pulse" />
+                  <Bell className="h-4 w-4" />
+                  <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-emerald-600 dark:bg-[#ACFCCC]" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="end" className="w-80 p-0 backdrop-blur-2xl bg-card/90 border border-white/10 shadow-2xl">
-                <div className="p-3 border-b border-white/10 flex items-center justify-between">
+              <PopoverContent align="end" className="w-80 p-0 glass-panel border border-border shadow-xl">
+                <div className="p-3 border-b border-border flex items-center justify-between">
                   <h4 className="font-bold text-xs">Notifikasi Operasional</h4>
                   <Badge variant="mint" className="text-[10px] px-1.5 py-0">
                     3 Baru
                   </Badge>
                 </div>
-                <div className="divide-y divide-white/10 max-h-72 overflow-y-auto">
-                  <div className="p-3 hover:bg-white/5 transition-colors text-xs space-y-1">
+                <div className="divide-y divide-border max-h-72 overflow-y-auto">
+                  <div className="p-3 hover:bg-accent/40 transition-colors text-xs space-y-1">
                     <div className="flex items-center gap-1.5 text-destructive font-semibold">
                       <AlertTriangle className="h-3.5 w-3.5" />
                       <span>Sertifikat SOLAS Expired</span>
@@ -211,8 +211,8 @@ export default function DashboardLayout({
                     </p>
                     <span className="text-[10px] text-muted-foreground">10 menit yang lalu</span>
                   </div>
-                  <div className="p-3 hover:bg-white/5 transition-colors text-xs space-y-1">
-                    <div className="flex items-center gap-1.5 text-[#8FC5FF] font-semibold">
+                  <div className="p-3 hover:bg-accent/40 transition-colors text-xs space-y-1">
+                    <div className="flex items-center gap-1.5 text-sky-600 dark:text-[#8FC5FF] font-semibold">
                       <FileText className="h-3.5 w-3.5" />
                       <span>Permintaan 1 Teknisi Mesin Baru</span>
                     </div>
@@ -221,8 +221,8 @@ export default function DashboardLayout({
                     </p>
                     <span className="text-[10px] text-muted-foreground">1 jam yang lalu</span>
                   </div>
-                  <div className="p-3 hover:bg-white/5 transition-colors text-xs space-y-1">
-                    <div className="flex items-center gap-1.5 text-[#ACFCCC] font-semibold">
+                  <div className="p-3 hover:bg-accent/40 transition-colors text-xs space-y-1">
+                    <div className="flex items-center gap-1.5 text-emerald-600 dark:text-[#ACFCCC] font-semibold">
                       <CheckCircle2 className="h-3.5 w-3.5" />
                       <span>Sertifikat Crew Disetujui</span>
                     </div>
@@ -232,10 +232,10 @@ export default function DashboardLayout({
                     <span className="text-[10px] text-muted-foreground">3 jam yang lalu</span>
                   </div>
                 </div>
-                <div className="p-2 border-t border-white/10 text-center">
+                <div className="p-2 border-t border-border text-center">
                   <Link
                     href="/notifications"
-                    className="text-[11px] font-semibold text-[#ACFCCC] hover:underline cursor-pointer"
+                    className="text-[11px] font-semibold text-primary hover:underline cursor-pointer"
                   >
                     Lihat Semua Notifikasi
                   </Link>
@@ -243,27 +243,27 @@ export default function DashboardLayout({
               </PopoverContent>
             </Popover>
 
-            <div className="h-4 w-px bg-white/10 my-auto" />
+            <div className="h-4 w-px bg-border my-auto mx-1" />
 
-            {/* User Profile Menu */}
+            {/* User Profile Menu (Clean Borderless Button) */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-2.5 p-1 h-auto cursor-pointer glass-pill rounded-full hover:bg-white/15 px-2">
-                  <Avatar className="h-7 w-7 border border-[#ACFCCC]/40">
+                <Button variant="ghost" className="flex items-center gap-2 p-1 h-auto cursor-pointer hover:bg-accent/60 rounded-xl border-0 shadow-none bg-transparent">
+                  <Avatar className="h-7 w-7 border border-primary/30">
                     <AvatarImage src="/avatar-placeholder.png" alt="User" />
-                    <AvatarFallback className="bg-[#ACFCCC]/20 text-[#ACFCCC] text-xs font-bold">
+                    <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">
                       KN
                     </AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col text-left hidden sm:flex pr-1">
                     <span className="text-xs font-bold leading-none text-foreground">Arafat Nayeem</span>
-                    <span className="text-[10px] text-[#8FC5FF] leading-none mt-1">
+                    <span className="text-[10px] text-muted-foreground leading-none mt-1">
                       {currentRole}
                     </span>
                   </div>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56 backdrop-blur-2xl bg-card/90 border border-white/10">
+              <DropdownMenuContent align="end" className="w-56 glass-panel border border-border">
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col space-y-1">
                     <p className="text-sm font-bold leading-none">Arafat Nayeem</p>
@@ -272,12 +272,12 @@ export default function DashboardLayout({
                     </p>
                   </div>
                 </DropdownMenuLabel>
-                <DropdownMenuSeparator className="bg-white/10" />
+                <DropdownMenuSeparator className="bg-border" />
                 <DropdownMenuItem className="cursor-pointer" onClick={() => router.push("/settings")}>
-                  <User className="mr-2 h-4 w-4 text-[#8FC5FF]" />
+                  <User className="mr-2 h-4 w-4 text-primary" />
                   <span>Pengaturan Profil</span>
                 </DropdownMenuItem>
-                <DropdownMenuSeparator className="bg-white/10" />
+                <DropdownMenuSeparator className="bg-border" />
                 <DropdownMenuItem className="text-destructive cursor-pointer" onClick={() => router.push("/login")}>
                   <LogOut className="mr-2 h-4 w-4" />
                   <span>Keluar Sistem</span>

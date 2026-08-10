@@ -22,17 +22,17 @@ const badgeVariants = cva(
         glass:
           "border-border/60 bg-card/60 text-foreground backdrop-blur-md hover:bg-accent/40",
         mint:
-          "border-emerald-600/30 bg-emerald-50 text-emerald-800 font-bold dark:border-[#ACFCCC]/40 dark:bg-[#ACFCCC]/15 dark:text-[#ACFCCC] shadow-xs",
+          "border-[hsl(var(--mint-border))] bg-[hsl(var(--mint-bg))] text-[hsl(var(--mint-text))] font-bold shadow-xs",
         ice:
-          "border-sky-600/30 bg-sky-50 text-sky-800 font-bold dark:border-[#8FC5FF]/40 dark:bg-[#8FC5FF]/15 dark:text-[#8FC5FF] shadow-xs",
+          "border-[hsl(var(--ice-border))] bg-[hsl(var(--ice-bg))] text-[hsl(var(--ice-text))] font-bold shadow-xs",
         success:
-          "border-emerald-600/30 bg-emerald-50 text-emerald-800 font-bold dark:border-[#ACFCCC]/40 dark:bg-[#ACFCCC]/15 dark:text-[#ACFCCC] shadow-xs",
+          "border-[hsl(var(--success-border))] bg-[hsl(var(--success-bg))] text-[hsl(var(--success-text))] font-bold shadow-xs",
         warning:
-          "border-amber-500/40 bg-amber-50 text-amber-800 dark:bg-amber-400/15 dark:text-amber-300 font-bold shadow-xs",
+          "border-[hsl(var(--warning-border))] bg-[hsl(var(--warning-bg))] text-[hsl(var(--warning-text))] font-bold shadow-xs",
         info:
-          "border-sky-600/30 bg-sky-50 text-sky-800 font-bold dark:border-[#8FC5FF]/40 dark:bg-[#8FC5FF]/15 dark:text-[#8FC5FF] shadow-xs",
+          "border-[hsl(var(--ice-border))] bg-[hsl(var(--ice-bg))] text-[hsl(var(--ice-text))] font-bold shadow-xs",
         active:
-          "border-emerald-600/30 bg-emerald-50 text-emerald-800 font-bold dark:border-[#ACFCCC]/50 dark:bg-[#ACFCCC]/20 dark:text-[#ACFCCC]",
+          "border-[hsl(var(--mint-border))] bg-[hsl(var(--mint-bg))] text-[hsl(var(--mint-text))] font-bold shadow-xs",
         inactive: "border-border bg-muted/50 text-muted-foreground",
         soft: "border-transparent bg-secondary/50 text-foreground hover:bg-secondary/80",
         dot: "border-transparent bg-transparent text-foreground px-1 gap-1.5 shadow-none",
