@@ -26,6 +26,8 @@
   --color-warning-foreground: hsl(0 0% 100%);
   --color-success: hsl(var(--chart-2));
   --color-success-foreground: hsl(0 0% 100%);
+  --color-neon-mint: #ACFCCC;
+  --color-ice-blue: #8FC5FF;
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -77,130 +79,128 @@
 
 @layer base {
   :root {
-    /* Calm Light Theme - Much Softer on the Eyes */
-    --background: 220 14% 96%;     /* Soft cool gray background */
-    --foreground: 220 10% 20%;     /* Softer charcoal text (reduced glare) */
+    /* Glassmorphism Light Theme - Translucent Frost & Minimal Border */
+    --background: 215 30% 95%;     /* Cool atmospheric light background */
+    --foreground: 220 20% 12%;     /* Deep charcoal text */
     
-    --card: 0 0% 100%;             /* Pure white for cards */
-    --card-foreground: 220 10% 20%;
+    --card: 0 0% 100%;             /* Translucent card background */
+    --card-foreground: 220 20% 12%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 20%;
+    --popover-foreground: 220 20% 12%;
     
-    --primary: 221 83% 53%;        /* Electric Blue var(--color-primary) */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 154 90% 32%;        /* Deep Mint Green for light theme (#10b981) */
+    --primary-foreground: 0 0% 100%; 
     
-    --secondary: 220 14% 92%;      /* Calmer gray for secondary elements */
-    --secondary-foreground: 220 10% 20%;
+    --secondary: 211 90% 48%;      /* Sky Ice Blue accent */
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: 220 14% 92%;
-    --muted-foreground: 220 10% 45%; /* Softer muted text */
+    --muted: 215 20% 90%;
+    --muted-foreground: 220 10% 40%; 
     
-    --accent: 220 14% 92%;        /* Purple accent (light theme) */
-    --accent-foreground: 220 10% 20%;
+    --accent: 215 20% 92%;        
+    --accent-foreground: 220 20% 12%;
 
-    --purple: 262 83% 58%;         /* Semantic purple (high-contrast) */
+    --purple: 262 83% 58%;         
     --purple-foreground: 0 0% 100%;
 
-    --cyan: 187 100% 44%;          /* Semantic cyan */
+    --cyan: 187 100% 44%;          
     --cyan-foreground: 0 0% 100%;
 
-    --rose: 340 82% 57%;           /* Semantic rose */
+    --rose: 340 82% 57%;           
     --rose-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 14% 86%;         /* Slightly darker border for visibility */
-    --input: 220 14% 86%;          
-    --ring: 221 83% 53%;           /* Electric Blue var(--color-primary) */
+    --border: 220 20% 90% / 0.4;   /* Minimal hairline border */
+    --input: 220 20% 90% / 0.4;          
+    --ring: 154 90% 40%;           
     
-    --brand: 221 83% 53%;          /* Electric Blue var(--color-primary) */
+    --brand: 154 90% 36%;          
     --brand-foreground: 0 0% 100%;
     
     /* Chart colors */
-    --chart-1: 221 83% 53%;        /* Electric Blue var(--color-primary) */
-    --chart-2: 142 76% 36%;        /* Green var(--color-success) */
-    --chart-3: 38 92% 50%;         /* Amber */
-    --chart-4: 0 84% 60%;          /* Red */
-    --chart-5: 262 83% 58%;        /* Purple */
+    --chart-1: 154 90% 40%;        
+    --chart-2: 211 100% 50%;       
+    --chart-3: 38 92% 50%;         
+    --chart-4: 0 84% 60%;          
+    --chart-5: 262 83% 58%;        
     
     --radius: 0.5rem;
 
-    /* Sidebar (Detail sidebar + gap) - Dark */
-    --sidebar: 0 0% 15%;           /* Dark gray for detail sidebar and gap */
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 221 83% 53%;
+    /* Sidebar - Light Glass */
+    --sidebar: 0 0% 100% / 0.7;    
+    --sidebar-foreground: 220 20% 12%;
+    --sidebar-primary: 154 90% 36%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 20%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 22%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-accent: 215 20% 92%;
+    --sidebar-accent-foreground: 220 20% 12%;
+    --sidebar-border: 220 20% 90% / 0.3;
+    --sidebar-ring: 154 90% 36%;
     
-    /* Sidebar Dark (Icon sidebar) */
-    --sidebar-dark: 0 0% 10%;
-    --sidebar-dark-foreground: 0 0% 100%;
+    --sidebar-dark: 220 30% 94%;
+    --sidebar-dark-foreground: 220 20% 12%;
   }
 
   .dark {
-    /* Dark mode - keeping it monochrome but inverted */
-    --background: 0 0% 10%;
+    /* Glassmorphism Dark Theme - AtlanticX Atmospheric Glass & #ACFCCC / #8FC5FF */
+    --background: 224 40% 7%;      /* Deep obsidian slate #090d16 */
     --foreground: 0 0% 100%;
     
-    --card: 0 0% 12%;
+    --card: 224 35% 11%;           /* Dark frosted glass card */
     --card-foreground: 0 0% 100%;
     
-    --popover: 0 0% 12%;
+    --popover: 224 35% 12%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 221 83% 53%;        /* Electric Blue var(--color-primary) */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 144 95% 83%;        /* Neon Mint #ACFCCC */
+    --primary-foreground: 224 40% 7%; 
     
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 211 100% 78%;     /* Ice Sky Blue #8FC5FF */
+    --secondary-foreground: 224 40% 7%;
     
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 224 30% 16%;
+    --muted-foreground: 220 15% 65%;
     
-    --accent: 0 0% 15%;          /* Purple accent (dark theme) */
+    --accent: 224 30% 18%;          
     --accent-foreground: 0 0% 100%;
 
-    --purple: 262 83% 70%;         /* Semantic purple (high contrast in dark theme) */
+    --purple: 262 83% 70%;         
     --purple-foreground: 0 0% 100%;
 
-    --cyan: 187 100% 44%;          /* Semantic cyan */
+    --cyan: 187 100% 44%;          
     --cyan-foreground: 0 0% 100%;
 
-    --rose: 340 82% 57%;           /* Semantic rose */
+    --rose: 340 82% 57%;           
     --rose-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 221 83% 53%;           /* Electric Blue var(--color-primary) */
-    --brand: 221 83% 53%;
-    --brand-foreground: 0 0% 100%;
+    --border: 255 255 255 / 0.08;  /* Minimal hairline border */
+    --input: 255 255 255 / 0.08;
+    --ring: 144 95% 83%;           
+    --brand: 144 95% 83%;
+    --brand-foreground: 224 40% 7%;
 
     /* Chart colors */
-    --chart-1: 221 83% 53%;        /* Electric Blue var(--color-primary) */
-    --chart-2: 142 76% 36%;        /* Green var(--color-success) */
-    --chart-3: 38 92% 50%;         /* Amber */
-    --chart-4: 0 84% 60%;          /* Red */
-    --chart-5: 262 83% 58%;        /* Purple */
+    --chart-1: 144 95% 83%;        /* Neon Mint */
+    --chart-2: 211 100% 78%;       /* Ice Sky Blue */
+    --chart-3: 38 92% 60%;         
+    --chart-4: 0 84% 65%;          
+    --chart-5: 262 83% 70%;        
 
-    /* Sidebar (Detail sidebar + gap) - Darker */
-    --sidebar: 0 0% 8%;            /* Very dark for detail sidebar and gap */
+    /* Sidebar - Translucent Dark Glass */
+    --sidebar: 224 40% 5% / 0.75;  
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 221 83% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
+    --sidebar-primary: 144 95% 83%;
+    --sidebar-primary-foreground: 224 40% 7%;
+    --sidebar-accent: 224 30% 14%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-border: 255 255 255 / 0.06;
+    --sidebar-ring: 144 95% 83%;
     
-    /* Sidebar Light (Icon sidebar) - Slightly lighter */
-    --sidebar-dark: 0 0% 14%;      /* Lighter than sidebar for icon sidebar */
+    --sidebar-dark: 224 40% 4%;
     --sidebar-dark-foreground: 0 0% 100%;
   }
 }
@@ -297,6 +297,76 @@
 @layer utilities {
   .z-15 {
     z-index: 15;
+  }
+
+  /* Glassmorphism System Utilities (AtlanticX Style) */
+  .glass-card {
+    background-color: hsl(var(--card) / 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-panel {
+    background-color: hsl(var(--card) / 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-pill {
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glass-input:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(172, 252, 204, 0.5);
+    box-shadow: 0 0 15px rgba(172, 252, 204, 0.2);
+  }
+
+  .text-neon-mint {
+    color: #ACFCCC;
+  }
+
+  .bg-neon-mint {
+    background-color: #ACFCCC;
+  }
+
+  .border-neon-mint {
+    border-color: #ACFCCC;
+  }
+
+  .text-ice-blue {
+    color: #8FC5FF;
+  }
+
+  .bg-ice-blue {
+    background-color: #8FC5FF;
+  }
+
+  .border-ice-blue {
+    border-color: #8FC5FF;
+  }
+
+  .mint-glow {
+    box-shadow: 0 0 20px rgba(172, 252, 204, 0.35);
+  }
+
+  .ice-glow {
+    box-shadow: 0 0 20px rgba(143, 197, 255, 0.35);
   }
 
   .z-16 {

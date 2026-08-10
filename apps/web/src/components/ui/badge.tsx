@@ -7,29 +7,35 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-lg border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-all duration-300 overflow-hidden relative",
+  "inline-flex items-center justify-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1.5 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all duration-300 overflow-hidden relative backdrop-blur-md",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90 badge-gradient [a&]:hover:scale-105 [a&]:hover:shadow-md [a&]:hover:shadow-primary/30",
+          "border-transparent bg-[#ACFCCC] text-black font-bold shadow-md shadow-[#ACFCCC]/25 hover:bg-[#ACFCCC]/90 hover:scale-105",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90 [a&]:hover:scale-105 [a&]:hover:shadow-sm",
+          "border-transparent bg-[#8FC5FF] text-black font-bold shadow-md shadow-[#8FC5FF]/25 hover:bg-[#8FC5FF]/90 hover:scale-105",
         destructive:
-          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 [a&]:hover:scale-105 [a&]:hover:shadow-md [a&]:hover:shadow-destructive/30",
+          "border-transparent bg-destructive/90 text-white font-semibold hover:bg-destructive shadow-md hover:scale-105",
         outline:
-          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground [a&]:hover:scale-105 [a&]:hover:shadow-sm",
+          "border-white/20 bg-white/5 text-foreground hover:bg-white/10 hover:scale-105",
+        glass:
+          "border-white/15 bg-white/10 text-foreground backdrop-blur-md hover:bg-white/20 hover:scale-105",
+        mint:
+          "border-[#ACFCCC]/40 bg-[#ACFCCC]/15 text-[#ACFCCC] font-bold shadow-sm shadow-[#ACFCCC]/10 hover:scale-105",
+        ice:
+          "border-[#8FC5FF]/40 bg-[#8FC5FF]/15 text-[#8FC5FF] font-bold shadow-sm shadow-[#8FC5FF]/10 hover:scale-105",
         success:
-          "border-transparent bg-success text-white [a&]:hover:bg-success/90 [a&]:hover:scale-105 [a&]:hover:shadow-sm",
+          "border-[#ACFCCC]/40 bg-[#ACFCCC]/15 text-[#ACFCCC] font-bold shadow-sm shadow-[#ACFCCC]/10 hover:scale-105",
         warning:
-          "border-transparent bg-warning/90 text-white [a&]:hover:bg-warning/90 [a&]:hover:scale-105 [a&]:hover:shadow-sm",
+          "border-amber-400/40 bg-amber-400/15 text-amber-300 font-bold shadow-sm hover:scale-105",
         info:
-          "border-transparent bg-primary text-white [a&]:hover:bg-primary/90 [a&]:hover:scale-105 [a&]:hover:shadow-sm",
+          "border-[#8FC5FF]/40 bg-[#8FC5FF]/15 text-[#8FC5FF] font-bold shadow-sm hover:scale-105",
         active:
-          "border-transparent bg-primary/10 text-primary border-primary/20 [a&]:hover:scale-105 [a&]:hover:shadow-sm [a&]:hover:bg-primary/20",
-        inactive: "border-transparent bg-muted text-muted-foreground",
-        soft: "border-transparent bg-secondary/50 text-secondary-foreground [a&]:hover:bg-secondary/80",
-        dot: "border-transparent bg-transparent text-foreground px-1 gap-1.5 shadow-none [a&]:hover:bg-transparent",
+          "border-[#ACFCCC]/50 bg-[#ACFCCC]/20 text-[#ACFCCC] font-bold hover:scale-105",
+        inactive: "border-white/10 bg-white/5 text-muted-foreground",
+        soft: "border-transparent bg-white/10 text-foreground hover:bg-white/15",
+        dot: "border-transparent bg-transparent text-foreground px-1 gap-1.5 shadow-none",
       },
     },
     defaultVariants: {
