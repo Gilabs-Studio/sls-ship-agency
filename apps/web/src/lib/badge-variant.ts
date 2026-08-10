@@ -18,7 +18,9 @@ export type BadgeColor =
   | "success"
   | "warning"
   | "info"
-  | "active";
+  | "active"
+  | "mint"
+  | "rose";
 
 /**
  * Converts badge_color from API to Badge variant type
@@ -51,6 +53,8 @@ export function isValidBadgeVariant(value: unknown): value is BadgeVariant {
     "info",
     "active",
     "inactive",
+    "mint",
+    "rose",
   ];
   return (
     typeof value === "string" && validVariants.includes(value as BadgeVariant)

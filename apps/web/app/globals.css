@@ -141,7 +141,7 @@
     --sidebar-dark: 220 30% 94%;
     --sidebar-dark-foreground: 220 20% 12%;
 
-    /* Semantic Tag Colors - Light Theme (High Contrast Deep Text) */
+    /* Semantic Tag Colors - Light Theme (High Contrast Solid Colors) */
     --mint-bg: 154 75% 92%;
     --mint-border: 154 60% 70%;
     --mint-text: 154 90% 18%;
@@ -157,6 +157,10 @@
     --success-bg: 154 75% 92%;
     --success-border: 154 60% 70%;
     --success-text: 154 90% 18%;
+
+    --rose-bg: 340 85% 92%;
+    --rose-border: 340 70% 75%;
+    --rose-text: 340 90% 22%;
   }
 
   .dark {
@@ -220,22 +224,26 @@
     --sidebar-dark: 224 40% 7%;
     --sidebar-dark-foreground: 0 0% 100%;
 
-    /* Semantic Tag Colors - Dark Theme (Glowing Neon Mint & Ice Blue) */
-    --mint-bg: 144 95% 83% / 0.15;
-    --mint-border: 144 95% 83% / 0.4;
+    /* Semantic Tag Colors - Dark Theme (Solid Vivid Dark Backgrounds) */
+    --mint-bg: 154 50% 16%;
+    --mint-border: 154 50% 30%;
     --mint-text: 144 95% 83%;
 
-    --ice-bg: 211 100% 78% / 0.15;
-    --ice-border: 211 100% 78% / 0.4;
+    --ice-bg: 211 50% 16%;
+    --ice-border: 211 50% 30%;
     --ice-text: 211 100% 78%;
 
-    --warning-bg: 38 92% 50% / 0.15;
-    --warning-border: 38 92% 50% / 0.4;
+    --warning-bg: 38 50% 16%;
+    --warning-border: 38 50% 30%;
     --warning-text: 38 92% 70%;
 
-    --success-bg: 144 95% 83% / 0.15;
-    --success-border: 144 95% 83% / 0.4;
+    --success-bg: 154 50% 16%;
+    --success-border: 154 50% 30%;
     --success-text: 144 95% 83%;
+
+    --rose-bg: 340 50% 16%;
+    --rose-border: 340 50% 30%;
+    --rose-text: 340 90% 75%;
   }
 }
 

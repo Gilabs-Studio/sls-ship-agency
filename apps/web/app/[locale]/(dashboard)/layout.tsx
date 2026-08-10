@@ -142,11 +142,9 @@ export default function DashboardLayout({
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Avatar className="h-8 w-8 border border-primary/30 cursor-pointer hover:scale-105 transition-transform">
-            <AvatarImage src="/avatar-placeholder.png" alt="User" />
-            <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">
-              KN
-            </AvatarFallback>
+          <Avatar className="h-8 w-8 cursor-pointer hover:scale-105 transition-transform">
+            <AvatarImage src="" alt="User" />
+            <AvatarFallback>Arafat Nayeem</AvatarFallback>
           </Avatar>
         </div>
       </aside>
@@ -249,11 +247,9 @@ export default function DashboardLayout({
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center gap-2 p-1 h-auto cursor-pointer hover:bg-accent/60 rounded-xl border-0 shadow-none bg-transparent">
-                  <Avatar className="h-7 w-7 border border-primary/30">
-                    <AvatarImage src="/avatar-placeholder.png" alt="User" />
-                    <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">
-                      KN
-                    </AvatarFallback>
+                  <Avatar className="h-7 w-7">
+                    <AvatarImage src="" alt="User" />
+                    <AvatarFallback>Arafat Nayeem</AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col text-left hidden sm:flex pr-1">
                     <span className="text-xs font-bold leading-none text-foreground">Arafat Nayeem</span>

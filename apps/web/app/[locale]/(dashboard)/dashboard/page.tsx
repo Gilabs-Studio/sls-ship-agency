@@ -4,71 +4,63 @@ import React from "react";
 import { toast } from "sonner";
 
 import { useDashboard } from "@/features/dashboard/hooks/useDashboard";
+import { VmsHeader } from "@/features/dashboard/components/vms-header";
 import { OutsourcingKpiCards } from "@/features/dashboard/components/outsourcing-kpi-cards";
-import { CrmDonutSummary } from "@/features/dashboard/components/crm-donut-summary";
-import { TechnicianAssignmentTable } from "@/features/dashboard/components/technician-assignment-table";
+import { VmsProjectPipelineDonut } from "@/features/dashboard/components/vms-project-pipeline-donut";
+import { VmsTopAgenciesTable } from "@/features/dashboard/components/vms-top-agencies-table";
+import { VmsAgencyListTable } from "@/features/dashboard/components/vms-agency-list-table";
 import { QuickActionModals } from "@/features/dashboard/components/quick-action-modals";
-import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
-  const { modalState } = useDashboard();
+  const {
+    vmsPipeline,
+    vmsTopAgencies,
+    filteredAgencies,
+    activeTab,
+    setActiveTab,
+    searchQuery,
+    setSearchQuery,
+    counts,
+    modalState,
+  } = useDashboard();
 
   const handleSuccessToast = (msg: string) => {
     toast.success(msg);
   };
 
   return (
-    <div className="space-y-6 pb-8">
-      {/* Page Header & Action Controls */}
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div className="space-y-1">
-          <h1 className="text-2xl font-extrabold tracking-tight text-foreground font-heading">
-            Dashboard Penugasan Agen & Vendor Management System
-          </h1>
-          <p className="text-xs text-muted-foreground">
-            Monitoring penugasan agen/teknisi di klien, performa mitra VMS supplier, & distribusi deal CRM.
-          </p>
+    <div className="space-y-5 pb-8">
+      {/* 1. Header & Actions */}
+      <VmsHeader
+        onAddAgency={() => modalState.setAddVesselOpen(true)}
+        onUploadDoc={() => modalState.setUploadDocOpen(true)}
+        onExportReport={() => handleSuccessToast("Laporan VMS berhasil diexport")}
+      />
+
+      {/* 2. Reverted KPI Metric Cards (Clean glass-cards format) */}
+      <OutsourcingKpiCards />
+
+      {/* 3. Middle Section: Pipeline Donut Chart + Top Performing Agency */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <div className="lg:col-span-5">
+          <VmsProjectPipelineDonut pipeline={vmsPipeline} />
         </div>
-
-        {/* Action Buttons */}
-        <div className="flex items-center gap-2">
-          <Button
-            size="sm"
-            onClick={() => modalState.setAddVesselOpen(true)}
-            className="h-8 text-xs cursor-pointer shadow-xs"
-          >
-            Tugaskan Personel
-          </Button>
-
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => modalState.setUploadDocOpen(true)}
-            className="h-8 text-xs cursor-pointer bg-background/50"
-          >
-            Upload Sertifikat
-          </Button>
-
-          <Button
-            size="sm"
-            variant="ghost"
-            onClick={() => modalState.setAddLeadOpen(true)}
-            className="h-8 text-xs cursor-pointer hover:bg-accent"
-          >
-            Tambah Lead CRM
-          </Button>
+        <div className="lg:col-span-7">
+          <VmsTopAgenciesTable
+            topAgencies={vmsTopAgencies}
+            onViewAll={() => setActiveTab("semua")}
+          />
         </div>
       </div>
 
-      {/* 4 Clean Summary Metric Cards (No Badges) */}
-      <OutsourcingKpiCards />
-
-      {/* CRM Deal Status Donut Circle Chart */}
-      <CrmDonutSummary />
-
-      {/* Main Canvas: VMS & Assignment Table */}
-      <TechnicianAssignmentTable
-        onOpenAddAssignment={() => modalState.setAddVesselOpen(true)}
+      {/* 4. Bottom Section: Clean Filing Style Folder Container for Agency List */}
+      <VmsAgencyListTable
+        agencies={filteredAgencies}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        counts={counts}
       />
 
       {/* Quick Action Interactive Dialog Modals */}
@@ -84,3 +76,5 @@ export default function DashboardPage() {
     </div>
   );
 }
+
+
