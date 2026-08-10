@@ -62,90 +62,71 @@ export default function DashboardLayout({
 
   return (
     <div className="relative min-h-screen bg-background text-foreground flex overflow-x-hidden">
-      {/* Background Ambient Atmospheric Light Spots (AtlanticX Glass Environment) */}
+      {/* Background Ambient Atmospheric Light Glows */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#ACFCCC]/15 blur-[120px] dark:bg-[#ACFCCC]/10" />
-        <div className="absolute top-1/3 -right-40 h-[600px] w-[600px] rounded-full bg-[#8FC5FF]/15 blur-[140px] dark:bg-[#8FC5FF]/10" />
-        <div className="absolute -bottom-40 left-1/3 h-[500px] w-[500px] rounded-full bg-[#ACFCCC]/10 blur-[130px]" />
+        <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[140px]" />
+        <div className="absolute top-1/3 -right-40 h-[600px] w-[600px] rounded-full bg-secondary/10 blur-[150px]" />
       </div>
 
-      {/* Glassmorphic Sidebar */}
-      <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col backdrop-blur-2xl bg-card/40 text-sidebar-foreground border-r border-white/10 dark:border-white/5 shadow-2xl">
-        {/* Brand Logo & Header */}
-        <div className="flex h-16 items-center px-4 gap-3 border-b border-white/10 dark:border-white/5">
-          <div className="h-9 w-9 rounded-lg bg-[#ACFCCC] text-black font-bold flex items-center justify-center shadow-lg shadow-[#ACFCCC]/20">
+      {/* Floating Super Minimal Glass Sidebar (AtlanticX Reference Style - w-16) */}
+      <aside className="fixed left-3 top-3 bottom-3 z-40 flex h-[calc(100vh-1.5rem)] w-14 flex-col items-center py-4 glass-panel rounded-2xl border border-border shadow-xl justify-between">
+        {/* Top Brand Logo Icon */}
+        <div className="flex flex-col items-center gap-4">
+          <Link
+            href="/dashboard"
+            className="h-9 w-9 rounded-xl bg-primary text-primary-foreground font-bold flex items-center justify-center shadow-sm hover:scale-105 transition-transform"
+            title="Solid Maritime Agency"
+          >
             <Ship className="h-5 w-5" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold text-sm tracking-tight text-foreground flex items-center gap-1.5">
-              SOLID MARITIME
-              <Sparkles className="h-3 w-3 text-[#ACFCCC] animate-pulse" />
-            </span>
-            <span className="text-[10px] text-muted-foreground tracking-wider uppercase font-medium">
-              Ship Agency System
-            </span>
-          </div>
+          </Link>
+
+          <div className="h-px w-6 bg-border" />
+
+          {/* Navigation Icon Stack */}
+          <nav className="flex flex-col items-center gap-2">
+            {navigationConfig.map((item) => {
+              const isActive =
+                pathname === item.url || pathname.startsWith(`${item.url}/`);
+              return (
+                <Link
+                  key={item.id || item.url}
+                  href={item.url}
+                  title={item.name}
+                  className={cn(
+                    "h-9 w-9 rounded-xl flex items-center justify-center transition-all duration-200 cursor-pointer relative group",
+                    isActive
+                      ? "bg-primary text-primary-foreground font-bold shadow-sm"
+                      : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                  )}
+                >
+                  <span className="flex items-center justify-center">
+                    {getMenuIcon(item.icon)}
+                  </span>
+
+                  {/* Clean Tooltip Hover Label */}
+                  <span className="absolute left-12 px-2.5 py-1 rounded-lg bg-popover text-popover-foreground text-[11px] font-semibold whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity shadow-lg border border-border z-50">
+                    {item.name}
+                  </span>
+                </Link>
+              );
+            })}
+          </nav>
         </div>
 
-        {/* Navigation Items */}
-        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1.5">
-          <div className="px-3 py-1 text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-            Menu Utama
-          </div>
-          {navigationConfig.map((item) => {
-            const isActive =
-              pathname === item.url || pathname.startsWith(`${item.url}/`);
-            return (
-              <Link
-                key={item.id || item.url}
-                href={item.url}
-                className={cn(
-                  "flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-all duration-300 cursor-pointer relative overflow-hidden",
-                  isActive
-                    ? "bg-[#ACFCCC] text-black shadow-lg shadow-[#ACFCCC]/25 font-bold"
-                    : "text-foreground/75 hover:bg-white/10 dark:hover:bg-white/5 hover:text-foreground"
-                )}
-              >
-                <span className={cn("flex items-center justify-center transition-transform duration-300", isActive ? "text-black scale-110" : "text-[#8FC5FF]")}>
-                  {getMenuIcon(item.icon)}
-                </span>
-                <span className="flex-1 truncate tracking-wide">{item.name}</span>
-                {item.badge && (
-                  <Badge
-                    variant="outline"
-                    className={cn(
-                      "text-[9px] px-1.5 py-0.5 border-transparent font-bold",
-                      isActive
-                        ? "bg-black/20 text-black"
-                        : "bg-[#8FC5FF]/20 text-[#8FC5FF]"
-                    )}
-                  >
-                    {item.badge}
-                  </Badge>
-                )}
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* Current Active Role Badge */}
-        <div className="p-3 border-t border-white/10 dark:border-white/5 bg-black/5 dark:bg-white/5">
+        {/* Bottom Active Role & User Avatar Menu */}
+        <div className="flex flex-col items-center gap-3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                className="w-full justify-between text-xs bg-white/5 border-white/10 text-foreground hover:bg-white/10 cursor-pointer rounded-lg"
+              <button
+                className="h-9 w-9 rounded-xl glass-pill flex items-center justify-center text-foreground hover:bg-accent transition-all cursor-pointer"
+                title={`Role: ${currentRole}`}
               >
-                <div className="flex items-center gap-2 truncate">
-                  <Shield className="h-3.5 w-3.5 text-[#ACFCCC]" />
-                  <span className="truncate font-medium">{currentRole}</span>
-                </div>
-                <ChevronDown className="h-3.5 w-3.5 opacity-60" />
-              </Button>
+                <Shield className="h-4 w-4 text-primary" />
+              </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-52 backdrop-blur-xl bg-card/80 border border-white/10">
-              <DropdownMenuLabel className="text-xs">Switch Preview Role</DropdownMenuLabel>
-              <DropdownMenuSeparator className="bg-white/10" />
+            <DropdownMenuContent align="start" className="w-52 glass-panel border border-border ml-2">
+              <DropdownMenuLabel className="text-xs font-semibold">Switch Preview Role</DropdownMenuLabel>
+              <DropdownMenuSeparator className="bg-border" />
               <DropdownMenuItem className="cursor-pointer" onClick={() => handleRoleChange("Super Admin")}>
                 Super Admin
               </DropdownMenuItem>
@@ -160,19 +141,26 @@ export default function DashboardLayout({
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <Avatar className="h-8 w-8 border border-primary/30 cursor-pointer hover:scale-105 transition-transform">
+            <AvatarImage src="/avatar-placeholder.png" alt="User" />
+            <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">
+              KN
+            </AvatarFallback>
+          </Avatar>
         </div>
       </aside>
 
-      {/* Main Content Area */}
-      <div className="flex-1 pl-64 flex flex-col min-h-screen z-10 relative">
+      {/* Main Content Area (pl-20 for floating narrow sidebar) */}
+      <div className="flex-1 pl-20 flex flex-col min-h-screen z-10 relative">
         {/* Top Floating Glass Header */}
-        <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-white/10 dark:border-white/5 backdrop-blur-xl bg-background/30 px-6">
+        <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border backdrop-blur-xl bg-background/50 px-6">
           {/* Global Search Bar */}
           <div className="relative w-80">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               type="text"
-              placeholder="Cari kapal, dokumen, IMO, lead... (⌘K)"
+              placeholder="Cari kapal, teknisi, sertifikat, IMO... (⌘K)"
               className="pl-9 pr-4 h-9 text-xs glass-input rounded-full"
             />
           </div>
@@ -208,7 +196,7 @@ export default function DashboardLayout({
               <PopoverContent align="end" className="w-80 p-0 backdrop-blur-2xl bg-card/90 border border-white/10 shadow-2xl">
                 <div className="p-3 border-b border-white/10 flex items-center justify-between">
                   <h4 className="font-bold text-xs">Notifikasi Operasional</h4>
-                  <Badge variant="outline" className="text-[10px] text-[#ACFCCC] border-[#ACFCCC]/30 bg-[#ACFCCC]/10">
+                  <Badge variant="mint" className="text-[10px] px-1.5 py-0">
                     3 Baru
                   </Badge>
                 </div>
@@ -226,20 +214,20 @@ export default function DashboardLayout({
                   <div className="p-3 hover:bg-white/5 transition-colors text-xs space-y-1">
                     <div className="flex items-center gap-1.5 text-[#8FC5FF] font-semibold">
                       <FileText className="h-3.5 w-3.5" />
-                      <span>Dokumen Menunggu Approval</span>
+                      <span>Permintaan 1 Teknisi Mesin Baru</span>
                     </div>
                     <p className="text-muted-foreground text-[11px]">
-                      Sertifikat Pengawakan KM Ocean Star diunggah oleh Staff.
+                      PT Samarinda Trans Energi mengajukan penugasan teknisi.
                     </p>
                     <span className="text-[10px] text-muted-foreground">1 jam yang lalu</span>
                   </div>
                   <div className="p-3 hover:bg-white/5 transition-colors text-xs space-y-1">
                     <div className="flex items-center gap-1.5 text-[#ACFCCC] font-semibold">
                       <CheckCircle2 className="h-3.5 w-3.5" />
-                      <span>Lead Menang (Closing)</span>
+                      <span>Sertifikat Crew Disetujui</span>
                     </div>
                     <p className="text-muted-foreground text-[11px]">
-                      PT Samarinda Trans Energi menyetujui kontrak keagenan.
+                      Sertifikat Pengawakan KM Ocean Star disetujui Supervisor.
                     </p>
                     <span className="text-[10px] text-muted-foreground">3 jam yang lalu</span>
                   </div>
@@ -268,7 +256,7 @@ export default function DashboardLayout({
                     </AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col text-left hidden sm:flex pr-1">
-                    <span className="text-xs font-bold leading-none">Arafat Nayeem</span>
+                    <span className="text-xs font-bold leading-none text-foreground">Arafat Nayeem</span>
                     <span className="text-[10px] text-[#8FC5FF] leading-none mt-1">
                       {currentRole}
                     </span>

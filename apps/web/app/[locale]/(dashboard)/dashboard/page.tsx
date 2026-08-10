@@ -2,57 +2,91 @@
 
 import React from "react";
 import { toast } from "sonner";
+import { Plus, FileText, UserPlus } from "lucide-react";
 
 import { useDashboard } from "@/features/dashboard/hooks/useDashboard";
-import { KpiSummaryCards } from "@/features/dashboard/components/kpi-summary-cards";
-import { QuickActionBar } from "@/features/dashboard/components/quick-action-bar";
-import { ComplianceChart } from "@/features/dashboard/components/compliance-chart";
-import { CrmPipelineWidget } from "@/features/dashboard/components/crm-pipeline-widget";
-import { RecentActivityTimeline } from "@/features/dashboard/components/recent-activity-timeline";
+import { OutsourcingKpiCards } from "@/features/dashboard/components/outsourcing-kpi-cards";
+import { PrdOverviewChart } from "@/features/dashboard/components/prd-overview-chart";
+import { TechnicianAssignmentTable } from "@/features/dashboard/components/technician-assignment-table";
+import { CrewCompliancePanel } from "@/features/dashboard/components/crew-compliance-panel";
 import { QuickActionModals } from "@/features/dashboard/components/quick-action-modals";
+import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
-  const { kpi, trend, activities, crmSummary, modalState } = useDashboard();
+  const { modalState } = useDashboard();
 
   const handleSuccessToast = (msg: string) => {
     toast.success(msg);
   };
 
   return (
-    <div className="space-y-6">
-      {/* Page Header */}
-      <div>
-        <h1 className="text-xl font-extrabold tracking-tight">Dashboard Ringkasan Operasional</h1>
-        <p className="text-xs text-muted-foreground mt-1">
-          Pantau kesehatan sertifikat kapal, pipeline prospek CRM, dan status kepatuhan maritim secara real-time.
-        </p>
-      </div>
-
-      {/* KPI Summary Cards */}
-      <KpiSummaryCards kpi={kpi} />
-
-      {/* Quick Action Shortcuts */}
-      <QuickActionBar
-        onOpenAddVessel={() => modalState.setAddVesselOpen(true)}
-        onOpenUploadDoc={() => modalState.setUploadDocOpen(true)}
-        onOpenAddLead={() => modalState.setAddLeadOpen(true)}
-      />
-
-      {/* Main Grid Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Compliance Trend Chart */}
-        <div className="lg:col-span-2 space-y-6">
-          <ComplianceChart trend={trend} />
-          <RecentActivityTimeline activities={activities} />
+    <div className="space-y-6 pb-8">
+      {/* Super Clean Borderless Header (No Container Box) */}
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="space-y-1">
+          <h1 className="text-2xl font-extrabold tracking-tight text-foreground font-heading">
+            Dashboard Pengelolaan Teknisi & Kru Maritim
+          </h1>
+          <p className="text-xs text-muted-foreground">
+            Ringkasan alokasi penugasan teknisi, kelaikan sertifikat kru, dan permintaan outsourcing klien.
+          </p>
         </div>
 
-        {/* CRM Pipeline Summary Widget */}
-        <div className="space-y-6">
-          <CrmPipelineWidget crmSummary={crmSummary} />
+        {/* Simplified Action Buttons (No Card Wrapper Box) */}
+        <div className="flex items-center gap-2">
+          <Button
+            size="sm"
+            onClick={() => modalState.setAddVesselOpen(true)}
+            className="h-8 text-xs gap-1.5 cursor-pointer shadow-xs"
+          >
+            <UserPlus className="h-3.5 w-3.5" />
+            <span>Tugaskan Teknisi</span>
+          </Button>
+
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => modalState.setUploadDocOpen(true)}
+            className="h-8 text-xs gap-1.5 cursor-pointer bg-background/50"
+          >
+            <FileText className="h-3.5 w-3.5" />
+            <span>Upload Sertifikat</span>
+          </Button>
+
+          <Button
+            size="sm"
+            variant="ghost"
+            onClick={() => modalState.setAddLeadOpen(true)}
+            className="h-8 text-xs gap-1.5 cursor-pointer text-foreground hover:bg-accent"
+          >
+            <Plus className="h-3.5 w-3.5 text-primary" />
+            <span>Tambah Lead CRM</span>
+          </Button>
         </div>
       </div>
 
-      {/* Interactive Quick Action Modals */}
+      {/* 4 Clean Outsourcing Summary Cards */}
+      <OutsourcingKpiCards />
+
+      {/* PRD Multi-Module Overview Chart */}
+      <PrdOverviewChart />
+
+      {/* Main Content Split Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        {/* Left Column: Technician Assignments Table */}
+        <div className="lg:col-span-2 space-y-4">
+          <TechnicianAssignmentTable
+            onOpenAddAssignment={() => modalState.setAddVesselOpen(true)}
+          />
+        </div>
+
+        {/* Right Column: Crew Certificate Compliance & Placement Requests */}
+        <div className="lg:col-span-1">
+          <CrewCompliancePanel />
+        </div>
+      </div>
+
+      {/* Quick Action Interactive Dialog Modals */}
       <QuickActionModals
         isAddVesselOpen={modalState.isAddVesselOpen}
         onAddVesselOpenChange={modalState.setAddVesselOpen}

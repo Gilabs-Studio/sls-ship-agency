@@ -7,34 +7,34 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1.5 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all duration-300 overflow-hidden relative backdrop-blur-md",
+  "inline-flex items-center justify-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold w-fit shrink-0 [&>svg]:size-3 gap-1.5 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all duration-200 backdrop-blur-md",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-[#ACFCCC] text-black font-bold shadow-md shadow-[#ACFCCC]/25 hover:bg-[#ACFCCC]/90 hover:scale-105",
+          "border-transparent bg-primary text-primary-foreground font-bold shadow-xs hover:bg-primary/90",
         secondary:
-          "border-transparent bg-[#8FC5FF] text-black font-bold shadow-md shadow-[#8FC5FF]/25 hover:bg-[#8FC5FF]/90 hover:scale-105",
+          "border-transparent bg-secondary text-secondary-foreground font-bold shadow-xs hover:bg-secondary/90",
         destructive:
-          "border-transparent bg-destructive/90 text-white font-semibold hover:bg-destructive shadow-md hover:scale-105",
+          "border-destructive/30 bg-destructive/10 text-destructive font-semibold hover:bg-destructive/20 shadow-xs",
         outline:
-          "border-white/20 bg-white/5 text-foreground hover:bg-white/10 hover:scale-105",
+          "border-border bg-background/50 text-foreground hover:bg-accent",
         glass:
-          "border-white/15 bg-white/10 text-foreground backdrop-blur-md hover:bg-white/20 hover:scale-105",
+          "border-border/60 bg-card/60 text-foreground backdrop-blur-md hover:bg-accent/40",
         mint:
-          "border-[#ACFCCC]/40 bg-[#ACFCCC]/15 text-[#ACFCCC] font-bold shadow-sm shadow-[#ACFCCC]/10 hover:scale-105",
+          "border-emerald-600/30 bg-emerald-50 text-emerald-800 font-bold dark:border-[#ACFCCC]/40 dark:bg-[#ACFCCC]/15 dark:text-[#ACFCCC] shadow-xs",
         ice:
-          "border-[#8FC5FF]/40 bg-[#8FC5FF]/15 text-[#8FC5FF] font-bold shadow-sm shadow-[#8FC5FF]/10 hover:scale-105",
+          "border-sky-600/30 bg-sky-50 text-sky-800 font-bold dark:border-[#8FC5FF]/40 dark:bg-[#8FC5FF]/15 dark:text-[#8FC5FF] shadow-xs",
         success:
-          "border-[#ACFCCC]/40 bg-[#ACFCCC]/15 text-[#ACFCCC] font-bold shadow-sm shadow-[#ACFCCC]/10 hover:scale-105",
+          "border-emerald-600/30 bg-emerald-50 text-emerald-800 font-bold dark:border-[#ACFCCC]/40 dark:bg-[#ACFCCC]/15 dark:text-[#ACFCCC] shadow-xs",
         warning:
-          "border-amber-400/40 bg-amber-400/15 text-amber-300 font-bold shadow-sm hover:scale-105",
+          "border-amber-500/40 bg-amber-50 text-amber-800 dark:bg-amber-400/15 dark:text-amber-300 font-bold shadow-xs",
         info:
-          "border-[#8FC5FF]/40 bg-[#8FC5FF]/15 text-[#8FC5FF] font-bold shadow-sm hover:scale-105",
+          "border-sky-600/30 bg-sky-50 text-sky-800 font-bold dark:border-[#8FC5FF]/40 dark:bg-[#8FC5FF]/15 dark:text-[#8FC5FF] shadow-xs",
         active:
-          "border-[#ACFCCC]/50 bg-[#ACFCCC]/20 text-[#ACFCCC] font-bold hover:scale-105",
-        inactive: "border-white/10 bg-white/5 text-muted-foreground",
-        soft: "border-transparent bg-white/10 text-foreground hover:bg-white/15",
+          "border-emerald-600/30 bg-emerald-50 text-emerald-800 font-bold dark:border-[#ACFCCC]/50 dark:bg-[#ACFCCC]/20 dark:text-[#ACFCCC]",
+        inactive: "border-border bg-muted/50 text-muted-foreground",
+        soft: "border-transparent bg-secondary/50 text-foreground hover:bg-secondary/80",
         dot: "border-transparent bg-transparent text-foreground px-1 gap-1.5 shadow-none",
       },
     },

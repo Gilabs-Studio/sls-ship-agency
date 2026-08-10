@@ -47,29 +47,41 @@ Sistem ini dirancang untuk menjadi platform digital yang mengubah proses adminis
 
 ---
 
-## 3. Page: Dashboard
+## 3. Page: Dashboard (Outsourcing Teknisi & Overview Kepatuhan Maritim)
 
 ### 3.1 Tujuan Halaman
 
-Menjadi titik masuk utama yang merangkum kondisi keseluruhan operasional, sehingga pengguna dapat langsung mengetahui prioritas kerja tanpa harus membuka satu per satu modul lain.
+Menjadi pusat kendali operasional utama yang menyajikan grafik agregat overview seluruh modul (kepatuhan sertifikat kapal/kru & pipeline prospek CRM), alokasi penugasan teknisi maritim, dan status kelaikan secara sederhana, bersih, tanpa container berlebihan, serta memiliki kontras warna tinggi di tema terang maupun gelap.
 
-### 3.2 Fitur Utama
+### 3.2 Fitur Utama & Layout Komponen
 
-- Ringkasan jumlah kapal aktif, dokumen mendekati expired (30/15/7 hari), dan dokumen sudah expired.
-- Grafik tren kepatuhan dokumen per bulan.
-- Widget pipeline CRM ringkas (jumlah lead baru, deal dalam proses, deal closing bulan berjalan).
-- Daftar aktivitas terbaru lintas modul (log timeline).
-- Shortcut aksi cepat: tambah kapal baru, upload dokumen, tambah lead.
+- **Grafik Overview Lintas Modul PRD:**
+  - Grafik tren kepatuhan sertifikat maritim bulanan (target 95%, realisasi 94.2%).
+  - Indikator ringkas pipeline prospek CRM (Lead Baru ➔ Dihubungi ➔ Presentasi ➔ Negosiasi ➔ Closing).
+- **Kartu Ringkasan Metrik Sederhana:**
+  - `Total Teknisi & Kru Terdaftar`: 128 Personel
+  - `Sedang Penugasan (Outsourced)`: 103 Personel
+  - `Standby (Siap Ditugaskan)`: 17 Personel
+  - `Perlu Perpanjangan`: 8 Dokumen
+- **Tabel Penugasan Teknisi Klien (Borderless & Tanpa Uppercase):**
+  - Daftar penugasan personel aktif ke kapal perusahaan pelayaran mitra dengan huruf kapital alami (*sentence/title case*).
+  - Skema warna hijau kontras tinggi (`Emerald Green` pada Light Theme, `Neon Mint` pada Dark Theme) agar 100% mudah dibaca.
+- **Panel Kepatuhan Sertifikat Kru & Kompas Navigasi:**
+  - Persentase kepatuhan sertifikat kru (`94.2% Safe`).
+  - Ringkasan permintaan outsourcing teknisi dari klien pelayaran.
+  - Widget kompas navigasi radar bergaya sonar bersih.
+- **Shortcut Header Sederhana (Tanpa Background Container Card):**
+  - Tombol aksi bersih tanpa pembungkus card tebal: Tugaskan Teknisi, Upload Sertifikat, Tambah Lead CRM.
 
 ### 3.3 Use Case dan Logic Sistem
 
 | Aktor | Trigger | Alur / Logic Sistem | Output |
 |---|---|---|---|
-| Staff Operasional | Membuka halaman dashboard | Sistem menarik data agregat dari modul Kapal & Sertifikat dan Dokumen, menghitung status berdasarkan selisih tanggal hari ini dengan tanggal expired, lalu mengelompokkan ke kategori aman/mendekati batas/lewat batas. | Kartu ringkasan status dokumen |
-| Sales | Membuka widget pipeline CRM di dashboard | Sistem menghitung jumlah lead berdasarkan tahap (baru, negosiasi, closing) dari modul CRM secara real time. | Ringkasan pipeline penjualan |
-| Super Admin | Klik shortcut tambah kapal | Sistem mengarahkan langsung ke form input pada modul Manajemen Kapal tanpa perlu navigasi manual. | Form input kapal terbuka |
+| Staff Operasional | Membuka halaman dashboard | Sistem menarik data armada dan posisi kapal secara real time, menghitung persentase kelaikan sertifikat/bahan bakar, dan menyajikan peta rute taktis maritim beserta dial radar kompas. | Dashboard taktis maritim AtlanticX |
+| Sales | Membuka filter statistik operasional | Sistem memfilter jumlah armada aktif, kapal di pelabuhan, dan status pesanan keagenan yang sedang berjalan. | Ringkasan armada terfilter |
+| Super Admin | Klik shortcut aksi cepat | Sistem membuka modal input kaca melayang tanpa merusak fokus tampilan visual peta maritim. | Modal aksi cepat terbuka |
 
-> **Relasi Modul:** Dashboard bersifat agregator, seluruh angka ditarik langsung dari modul CRM, Manajemen Kapal & Sertifikat, dan Manajemen Dokumen. Dashboard tidak menyimpan data sendiri, hanya menampilkan hasil kalkulasi ulang setiap kali halaman dibuka.
+> **Relasi Modul:** Dashboard bersifat agregator taktis visual. Seluruh parameter posisi rute, sertifikat, dan data kapal bersumber langsung dari modul Manajemen Kapal & Sertifikat, Dokumen, dan CRM.
 
 ---
 
