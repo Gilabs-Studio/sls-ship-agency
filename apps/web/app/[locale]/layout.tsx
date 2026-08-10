@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import type { Locale } from "@/types/locale";
 
 import { ReactQueryProvider } from "@/lib/react-query";
+import { RoleProvider } from "@/contexts/role-context";
 import ErrorBoundary from "@/components/error-boundary";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "sonner";
@@ -35,8 +36,10 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            {children}
-            <Toaster position="top-right" offset={80} />
+            <RoleProvider>
+              {children}
+              <Toaster position="top-right" offset={80} />
+            </RoleProvider>
           </ReactQueryProvider>
         </ThemeProvider>
       </ErrorBoundary>
