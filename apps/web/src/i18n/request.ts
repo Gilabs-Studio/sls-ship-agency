@@ -20,6 +20,8 @@ import { reportsEn } from "@/features/reports/i18n/en";
 import { reportsId } from "@/features/reports/i18n/id";
 import { settingsEn } from "@/features/settings/i18n/en";
 import { settingsId } from "@/features/settings/i18n/id";
+import { landingEn } from "@/features/landing/i18n/en";
+import { landingId } from "@/features/landing/i18n/id";
 
 const messages = {
   en: {
@@ -31,6 +33,7 @@ const messages = {
     notifications: notificationsEn,
     reports: reportsEn,
     settings: settingsEn,
+    landing: landingEn,
   },
   id: {
     ...globalIdMessages,
@@ -41,6 +44,7 @@ const messages = {
     notifications: notificationsId,
     reports: reportsId,
     settings: settingsId,
+    landing: landingId,
   },
 } as const;
 
