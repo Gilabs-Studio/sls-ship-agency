@@ -1,4 +1,10 @@
 import { HeroSection } from "@/features/landing/components/HeroSection";
+import { ServicesSection } from "@/features/landing/components/ServicesSection";
+import { AboutSection } from "@/features/landing/components/AboutSection";
+import { StatsSection } from "@/features/landing/components/StatsSection";
+import { WhyChooseUsSection } from "@/features/landing/components/WhyChooseUsSection";
+import { CtaSection } from "@/features/landing/components/CtaSection";
+import { FooterSection } from "@/features/landing/components/FooterSection";
 import { landingId } from "@/features/landing/i18n/id";
 import { landingEn } from "@/features/landing/i18n/en";
 import type { Metadata } from "next";
@@ -32,6 +38,12 @@ export default async function LandingPage({
   return (
     <main className="min-h-screen bg-slate-950">
       <HeroSection t={t} locale={locale} />
+      <ServicesSection t={t} />
+      <AboutSection t={t} />
+      <StatsSection t={t} />
+      <WhyChooseUsSection t={t} />
+      <CtaSection t={t} />
+      <FooterSection t={t} />
     </main>
   );
 }
