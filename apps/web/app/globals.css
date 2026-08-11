@@ -89,7 +89,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 12%;
     
-    --primary: 154 90% 32%;        /* Deep Mint Green for light theme (#10b981) */
+    --primary: 154 85% 25%;        /* Solid Deep Emerald Green for light theme (#047857) */
     --primary-foreground: 0 0% 100%; 
     
     --secondary: 211 90% 48%;      /* Sky Ice Blue accent */
@@ -140,6 +140,27 @@
     
     --sidebar-dark: 220 30% 94%;
     --sidebar-dark-foreground: 220 20% 12%;
+
+    /* Semantic Tag Colors - Light Theme (High Contrast Solid Colors) */
+    --mint-bg: 154 75% 92%;
+    --mint-border: 154 60% 70%;
+    --mint-text: 154 90% 18%;
+
+    --ice-bg: 211 85% 92%;
+    --ice-border: 211 70% 70%;
+    --ice-text: 211 90% 22%;
+
+    --warning-bg: 38 90% 92%;
+    --warning-border: 38 75% 70%;
+    --warning-text: 38 95% 20%;
+
+    --success-bg: 154 75% 92%;
+    --success-border: 154 60% 70%;
+    --success-text: 154 90% 18%;
+
+    --rose-bg: 340 85% 92%;
+    --rose-border: 340 70% 75%;
+    --rose-text: 340 90% 22%;
   }
 
   .dark {
@@ -186,22 +207,43 @@
     /* Chart colors */
     --chart-1: 144 95% 83%;        /* Neon Mint */
     --chart-2: 211 100% 78%;       /* Ice Sky Blue */
-    --chart-3: 38 92% 60%;         
+    --chart-3: 38 92% 50%;         
     --chart-4: 0 84% 65%;          
     --chart-5: 262 83% 70%;        
 
     /* Sidebar - Translucent Dark Glass */
-    --sidebar: 224 40% 5% / 0.75;  
+    --sidebar: 224 35% 11% / 0.8;  
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 144 95% 83%;
     --sidebar-primary-foreground: 224 40% 7%;
-    --sidebar-accent: 224 30% 14%;
+    --sidebar-accent: 224 30% 18%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 255 255 255 / 0.06;
+    --sidebar-border: 255 255 255 / 0.08;
     --sidebar-ring: 144 95% 83%;
     
-    --sidebar-dark: 224 40% 4%;
+    --sidebar-dark: 224 40% 7%;
     --sidebar-dark-foreground: 0 0% 100%;
+
+    /* Semantic Tag Colors - Dark Theme (Solid Vivid Dark Backgrounds) */
+    --mint-bg: 154 50% 16%;
+    --mint-border: 154 50% 30%;
+    --mint-text: 144 95% 83%;
+
+    --ice-bg: 211 50% 16%;
+    --ice-border: 211 50% 30%;
+    --ice-text: 211 100% 78%;
+
+    --warning-bg: 38 50% 16%;
+    --warning-border: 38 50% 30%;
+    --warning-text: 38 92% 70%;
+
+    --success-bg: 154 50% 16%;
+    --success-border: 154 50% 30%;
+    --success-text: 144 95% 83%;
+
+    --rose-bg: 340 50% 16%;
+    --rose-border: 340 50% 30%;
+    --rose-text: 340 90% 75%;
   }
 }
 
@@ -340,42 +382,100 @@
     z-index: 15;
   }
 
-  /* Glassmorphism System Utilities (AtlanticX Style) */
+  /* Glassmorphism System Utilities - Dual Theme Support & Crisp Readability */
   .glass-card {
-    background-color: hsl(var(--card) / 0.65);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark .glass-card {
+    background-color: rgba(12, 18, 30, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5);
   }
 
   .glass-panel {
-    background-color: hsl(var(--card) / 0.75);
+    background-color: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .glass-panel {
+    background-color: rgba(10, 15, 26, 0.90);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
   }
 
   .glass-pill {
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .glass-pill {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .glass-input {
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.2s ease-in-out;
   }
 
   .glass-input:focus {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(172, 252, 204, 0.5);
-    box-shadow: 0 0 15px rgba(172, 252, 204, 0.2);
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(172, 252, 204, 0.6);
+    box-shadow: 0 0 20px rgba(172, 252, 204, 0.25);
+  }
+
+  .sonar-dial-ring {
+    box-shadow: inset 0 0 15px rgba(172, 252, 204, 0.2), 0 0 25px rgba(143, 197, 255, 0.25);
+  }
+
+  /* Semantic Theme Utility Classes (Zero Hardcoded Color Strings) */
+  .text-mint {
+    color: hsl(var(--mint-text));
+  }
+  .bg-mint {
+    background-color: hsl(var(--mint-bg));
+  }
+  .border-mint {
+    border-color: hsl(var(--mint-border));
+  }
+
+  .text-ice {
+    color: hsl(var(--ice-text));
+  }
+  .bg-ice {
+    background-color: hsl(var(--ice-bg));
+  }
+  .border-ice {
+    border-color: hsl(var(--ice-border));
+  }
+
+  .text-warning-theme {
+    color: hsl(var(--warning-text));
+  }
+  .bg-warning-theme {
+    background-color: hsl(var(--warning-bg));
+  }
+  .border-warning-theme {
+    border-color: hsl(var(--warning-border));
   }
 
   .text-neon-mint {

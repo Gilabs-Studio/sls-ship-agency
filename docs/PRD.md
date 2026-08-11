@@ -47,29 +47,38 @@ Sistem ini dirancang untuk menjadi platform digital yang mengubah proses adminis
 
 ---
 
-## 3. Page: Dashboard
+## 3. Page: Dashboard (Penugasan Agen/Teknisi & Vendor Management System)
 
 ### 3.1 Tujuan Halaman
 
-Menjadi titik masuk utama yang merangkum kondisi keseluruhan operasional, sehingga pengguna dapat langsung mengetahui prioritas kerja tanpa harus membuka satu per satu modul lain.
+Menjadi pusat kendali operasional utama yang menyajikan ringkasan penugasan agen/teknisi di perusahaan pelayaran klien (kontrak 6 bulan & masa kerja berjalan), sistem Vendor Management System (VMS) mitra supplier, serta grafik Donut sirkular CRM secara bersih, tanpa hardcoded warna, dan berkontras tinggi pada tema terang maupun gelap.
 
-### 3.2 Fitur Utama
+### 3.2 Fitur Utama & Layout Komponen
 
-- Ringkasan jumlah kapal aktif, dokumen mendekati expired (30/15/7 hari), dan dokumen sudah expired.
-- Grafik tren kepatuhan dokumen per bulan.
-- Widget pipeline CRM ringkas (jumlah lead baru, deal dalam proses, deal closing bulan berjalan).
-- Daftar aktivitas terbaru lintas modul (log timeline).
-- Shortcut aksi cepat: tambah kapal baru, upload dokumen, tambah lead.
+- **Grafik Donut Sirkular CRM & Timespan Ringkasan:**
+  - Grafik lingkaran SVG Donut yang merangkum distribusi deal CRM (*Closing 45%*, *Negosiasi 30%*, *Prospek Baru 25%*).
+  - Ringkasan statistik alokasi agen/teknisi di klien.
+- **Kartu Ringkasan Metrik Bersih:**
+  - `Total Teknisi & Kru Terdaftar`: 128 Personel
+  - `Penugasan Aktif (Klien)`: 103 Personel
+  - `Standby (Siap Tugas)`: 17 Personel
+  - `Perlu Perpanjangan`: 8 Dokumen
+- **Tabel Penugasan Agen/Teknisi & Vendor Management System (VMS Tabs):**
+  - **Tab 1 (Penugasan Agen/Teknisi)**: Nama Teknisi/Agen, Perusahaan Klien, Vendor Supplier, Posisi & Kapal, Durasi Kontrak (6 Bulan), Masa Kerja Berjalan (*Timespan* Bulan ke-X dari 6 Bulan dengan progress bar), dan Fee Rate.
+  - **Tab 2 (Vendor Management System - VMS)**: Daftar Vendor Partner Outsourcing (*PT Sea Engine Vendor*, *CV Subsea Engineering*), Kategori Layanan, Jumlah Teknisi Ditugaskan, dan Rating Performa SLA (98.5%).
+  - **Tab 3 (Permintaan Alokasi Klien)**: Permintaan penugasan personel baru dari klien pelayaran dan status pemenuhan (*matching*).
+- **Skema Warna Terpusat (Zero Hardcoded Color):**
+  - Seluruh status tag/badge menggunakan variabel CSS terpusat (`--mint-*`, `--ice-*`, `--warning-*`, `--success-*`) yang otomatis menyesuaikan tingkat kontras tinggi pada Light Theme dan Dark Theme.
 
 ### 3.3 Use Case dan Logic Sistem
 
 | Aktor | Trigger | Alur / Logic Sistem | Output |
 |---|---|---|---|
-| Staff Operasional | Membuka halaman dashboard | Sistem menarik data agregat dari modul Kapal & Sertifikat dan Dokumen, menghitung status berdasarkan selisih tanggal hari ini dengan tanggal expired, lalu mengelompokkan ke kategori aman/mendekati batas/lewat batas. | Kartu ringkasan status dokumen |
-| Sales | Membuka widget pipeline CRM di dashboard | Sistem menghitung jumlah lead berdasarkan tahap (baru, negosiasi, closing) dari modul CRM secara real time. | Ringkasan pipeline penjualan |
-| Super Admin | Klik shortcut tambah kapal | Sistem mengarahkan langsung ke form input pada modul Manajemen Kapal tanpa perlu navigasi manual. | Form input kapal terbuka |
+| Staff Operasional | Membuka halaman dashboard | Sistem menarik data armada dan posisi kapal secara real time, menghitung persentase kelaikan sertifikat/bahan bakar, dan menyajikan peta rute taktis maritim beserta dial radar kompas. | Dashboard taktis maritim AtlanticX |
+| Sales | Membuka filter statistik operasional | Sistem memfilter jumlah armada aktif, kapal di pelabuhan, dan status pesanan keagenan yang sedang berjalan. | Ringkasan armada terfilter |
+| Super Admin | Klik shortcut aksi cepat | Sistem membuka modal input kaca melayang tanpa merusak fokus tampilan visual peta maritim. | Modal aksi cepat terbuka |
 
-> **Relasi Modul:** Dashboard bersifat agregator, seluruh angka ditarik langsung dari modul CRM, Manajemen Kapal & Sertifikat, dan Manajemen Dokumen. Dashboard tidak menyimpan data sendiri, hanya menampilkan hasil kalkulasi ulang setiap kali halaman dibuka.
+> **Relasi Modul:** Dashboard bersifat agregator taktis visual. Seluruh parameter posisi rute, sertifikat, dan data kapal bersumber langsung dari modul Manajemen Kapal & Sertifikat, Dokumen, dan CRM.
 
 ---
 

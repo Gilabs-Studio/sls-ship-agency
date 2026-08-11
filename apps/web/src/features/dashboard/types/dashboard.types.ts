@@ -35,3 +35,57 @@ export interface CrmPipelineSummary {
   won: number;
   lost: number;
 }
+
+// --- VMS Dashboard Interfaces ---
+
+export interface VmsKpiItem {
+  id: string;
+  title: string;
+  value: string;
+  unit: string;
+  changePercentage: number;
+  changePeriod: string;
+  iconType: "building" | "users" | "folder" | "file-text" | "bar-chart";
+}
+
+export interface VmsPipelineSegment {
+  id: string;
+  name: string;
+  count: number;
+  percentage: number;
+  color: string; // Hex or Tailwind color token
+}
+
+export interface VmsTopAgency {
+  id: string;
+  rank: number;
+  name: string;
+  logo: string; // SVG icon or URL
+  projectsCount: number;
+  contractValueFormatted: string;
+  score: number;
+  trend: "up" | "neutral" | "down";
+}
+
+export type VmsAgencyStatus = "aktif" | "non-aktif" | "blacklist";
+
+export interface VmsAgencyListItem {
+  id: string;
+  code: string;
+  name: string;
+  logo: string;
+  pic: {
+    name: string;
+    email: string;
+    avatar?: string;
+  };
+  skills: string[];
+  activeProjectsCount: number;
+  completedProjectsThisMonth: number;
+  totalContractValueFormatted: string;
+  contractCount: number;
+  performanceScore: number;
+  status: VmsAgencyStatus;
+  hasRunningProject: boolean;
+}
+

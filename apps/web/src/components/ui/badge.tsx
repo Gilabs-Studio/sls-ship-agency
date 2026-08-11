@@ -7,34 +7,36 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1.5 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all duration-300 overflow-hidden relative backdrop-blur-md",
+  "inline-flex items-center justify-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold w-fit shrink-0 [&>svg]:size-3 gap-1.5 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-all duration-200",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-[#ACFCCC] text-black font-bold shadow-md shadow-[#ACFCCC]/25 hover:bg-[#ACFCCC]/90 hover:scale-105",
+          "border-transparent bg-primary text-primary-foreground font-bold shadow-xs hover:bg-primary/90",
         secondary:
-          "border-transparent bg-[#8FC5FF] text-black font-bold shadow-md shadow-[#8FC5FF]/25 hover:bg-[#8FC5FF]/90 hover:scale-105",
+          "border-transparent bg-secondary text-secondary-foreground font-bold shadow-xs hover:bg-secondary/90",
         destructive:
-          "border-transparent bg-destructive/90 text-white font-semibold hover:bg-destructive shadow-md hover:scale-105",
+          "border-transparent bg-destructive text-destructive-foreground font-bold shadow-xs hover:bg-destructive/90",
         outline:
-          "border-white/20 bg-white/5 text-foreground hover:bg-white/10 hover:scale-105",
+          "border-border bg-background/50 text-foreground hover:bg-accent",
         glass:
-          "border-white/15 bg-white/10 text-foreground backdrop-blur-md hover:bg-white/20 hover:scale-105",
+          "border-border/60 bg-card/60 text-foreground backdrop-blur-md hover:bg-accent/40",
         mint:
-          "border-[#ACFCCC]/40 bg-[#ACFCCC]/15 text-[#ACFCCC] font-bold shadow-sm shadow-[#ACFCCC]/10 hover:scale-105",
+          "border-[hsl(var(--mint-border))] bg-[hsl(var(--mint-bg))] text-[hsl(var(--mint-text))] font-bold shadow-xs",
         ice:
-          "border-[#8FC5FF]/40 bg-[#8FC5FF]/15 text-[#8FC5FF] font-bold shadow-sm shadow-[#8FC5FF]/10 hover:scale-105",
+          "border-[hsl(var(--ice-border))] bg-[hsl(var(--ice-bg))] text-[hsl(var(--ice-text))] font-bold shadow-xs",
         success:
-          "border-[#ACFCCC]/40 bg-[#ACFCCC]/15 text-[#ACFCCC] font-bold shadow-sm shadow-[#ACFCCC]/10 hover:scale-105",
+          "border-[hsl(var(--success-border))] bg-[hsl(var(--success-bg))] text-[hsl(var(--success-text))] font-bold shadow-xs",
         warning:
-          "border-amber-400/40 bg-amber-400/15 text-amber-300 font-bold shadow-sm hover:scale-105",
+          "border-[hsl(var(--warning-border))] bg-[hsl(var(--warning-bg))] text-[hsl(var(--warning-text))] font-bold shadow-xs",
+        rose:
+          "border-[hsl(var(--rose-border))] bg-[hsl(var(--rose-bg))] text-[hsl(var(--rose-text))] font-bold shadow-xs",
         info:
-          "border-[#8FC5FF]/40 bg-[#8FC5FF]/15 text-[#8FC5FF] font-bold shadow-sm hover:scale-105",
+          "border-[hsl(var(--ice-border))] bg-[hsl(var(--ice-bg))] text-[hsl(var(--ice-text))] font-bold shadow-xs",
         active:
-          "border-[#ACFCCC]/50 bg-[#ACFCCC]/20 text-[#ACFCCC] font-bold hover:scale-105",
-        inactive: "border-white/10 bg-white/5 text-muted-foreground",
-        soft: "border-transparent bg-white/10 text-foreground hover:bg-white/15",
+          "border-[hsl(var(--mint-border))] bg-[hsl(var(--mint-bg))] text-[hsl(var(--mint-text))] font-bold shadow-xs",
+        inactive: "border-border bg-muted/50 text-muted-foreground",
+        soft: "border-transparent bg-secondary/50 text-foreground hover:bg-secondary/80",
         dot: "border-transparent bg-transparent text-foreground px-1 gap-1.5 shadow-none",
       },
     },
