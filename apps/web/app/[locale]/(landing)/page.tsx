@@ -1,7 +1,6 @@
 import { HeroSection } from "@/features/landing/components/HeroSection";
 import { ServicesSection } from "@/features/landing/components/ServicesSection";
-import { AboutSection } from "@/features/landing/components/AboutSection";
-import { StatsSection } from "@/features/landing/components/StatsSection";
+import { AboutStatsScrollSection } from "@/features/landing/components/AboutStatsScrollSection";
 import { WhyChooseUsSection } from "@/features/landing/components/WhyChooseUsSection";
 import { CtaSection } from "@/features/landing/components/CtaSection";
 import { FooterSection } from "@/features/landing/components/FooterSection";
@@ -39,8 +38,7 @@ export default async function LandingPage({
     <main className="min-h-screen bg-slate-950">
       <HeroSection t={t} locale={locale} />
       <ServicesSection t={t} />
-      <AboutSection t={t} />
-      <StatsSection t={t} />
+      <AboutStatsScrollSection t={t} />
       <WhyChooseUsSection t={t} />
       <CtaSection t={t} />
       <FooterSection t={t} />
