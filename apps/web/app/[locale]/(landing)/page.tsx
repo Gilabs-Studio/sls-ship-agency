@@ -1,8 +1,6 @@
 import { HeroSection } from "@/features/landing/components/HeroSection";
 import { ServicesSection } from "@/features/landing/components/ServicesSection";
 import { AboutStatsScrollSection } from "@/features/landing/components/AboutStatsScrollSection";
-import { WhyChooseUsSection } from "@/features/landing/components/WhyChooseUsSection";
-import { CtaSection } from "@/features/landing/components/CtaSection";
 import { FooterSection } from "@/features/landing/components/FooterSection";
 import { landingId } from "@/features/landing/i18n/id";
 import { landingEn } from "@/features/landing/i18n/en";
@@ -39,8 +37,6 @@ export default async function LandingPage({
       <HeroSection t={t} locale={locale} />
       <ServicesSection t={t} />
       <AboutStatsScrollSection t={t} />
-      <WhyChooseUsSection t={t} />
-      <CtaSection t={t} />
       <FooterSection t={t} />
     </main>
   );
