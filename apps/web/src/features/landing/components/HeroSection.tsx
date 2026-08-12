@@ -32,7 +32,7 @@ export function HeroSection({ t }: HeroSectionProps) {
       {/* ==================================================== */}
       <div className="absolute inset-0 z-0 h-full w-full pointer-events-none">
         <Image
-          src="/hero-bg.png"
+          src="/hero-bg.webp"
           alt="Ship Agency Background"
           fill
           priority
@@ -60,7 +60,7 @@ export function HeroSection({ t }: HeroSectionProps) {
           className="relative w-[680px] sm:w-full min-w-[680px] sm:min-w-0 h-full flex items-end justify-center shrink-0"
         >
           <Image
-            src="/hero-people.png"
+            src="/hero-people.webp"
             alt="PT. Solid Lautan Sinergi Team"
             fill
             priority
