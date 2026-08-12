@@ -188,7 +188,7 @@ export function SalesLeadDetailModal({
                 <div className="space-y-1 text-[11px]">
                   <span className="text-muted-foreground block">{t("detailModal.painPoints")}</span>
                   <p className="text-foreground bg-muted/30 p-2 rounded border border-border italic">
-                    "{lead.qualification.currentAgencyPainPoints}"
+                    &quot;{lead.qualification.currentAgencyPainPoints}&quot;
                   </p>
                 </div>
               </div>

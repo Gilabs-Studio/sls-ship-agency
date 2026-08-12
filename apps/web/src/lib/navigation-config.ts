@@ -36,7 +36,7 @@ export const navigationConfig: NavItem[] = [
     id: "vessels",
     name: "Kapal & Armada",
     i18nKey: "vessels",
-    icon: "truck",
+    icon: "ship",
     url: "/vessels",
   },
   {

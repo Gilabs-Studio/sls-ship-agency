@@ -15,6 +15,8 @@ import {
   ClipboardList,
   Warehouse,
   Truck,
+  Ship,
+  Anchor,
   FolderTree,
   MapPin,
   Building2,
@@ -208,6 +210,9 @@ const iconMap: Record<string, React.ReactNode> = {
   "scroll-text": <ScrollText className="h-4 w-4" />,
   scrolltext: <ScrollText className="h-4 w-4" />,
   truck: <Truck className="h-4 w-4" />,
+  ship: <Ship className="h-4 w-4" />,
+  vessels: <Ship className="h-4 w-4" />,
+  anchor: <Anchor className="h-4 w-4" />,
 
   // Navigation & Location icons
   foldertree: <FolderTree className="h-4 w-4" />,

@@ -123,7 +123,7 @@ export function VesselModals({
                 <FieldLabel className="text-xs font-semibold">Jenis Kapal</FieldLabel>
                 <Select
                   defaultValue={vesselForm.watch("vesselType")}
-                  onValueChange={(v) => vesselForm.setValue("vesselType", v as any)}
+                  onValueChange={(v) => vesselForm.setValue("vesselType", v as VesselRegistrationValues["vesselType"])}
                 >
                   <SelectTrigger className="w-full text-xs">
                     <SelectValue placeholder="Pilih tipe" />
