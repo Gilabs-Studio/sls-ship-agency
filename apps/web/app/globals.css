@@ -430,6 +430,17 @@
 
 /* Custom z-index utilities for layered effects */
 @layer utilities {
+  /* Scrollbar hide utility */
+  .scrollbar-none {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
   .z-15 {
     z-index: 15;
   }
