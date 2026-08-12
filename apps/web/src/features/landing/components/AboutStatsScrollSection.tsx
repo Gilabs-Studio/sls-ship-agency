@@ -278,29 +278,29 @@ export function AboutStatsScrollSection({ t }: AboutStatsScrollSectionProps) {
 
         {/* --- PHASE 1: ABOUT US OVERLAY --- */}
         <div
-          className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex flex-col justify-center transition-opacity duration-300 pointer-events-none h-full"
+          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-10 flex flex-col justify-center transition-opacity duration-300 pointer-events-none h-full"
           style={{
             opacity: aboutOpacity,
             display: aboutOpacity > 0.01 ? "flex" : "none",
           }}
         >
           <div className="max-w-2xl text-left pointer-events-auto">
-            <span className="text-emerald-400 font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider block mb-3">
+            <span className="text-emerald-400 font-mono text-[11px] sm:text-sm font-semibold uppercase tracking-wider block mb-2 sm:mb-3">
               {a.tag}
             </span>
-            <h2 className="text-white text-3xl sm:text-5xl font-bold tracking-tight leading-tight mb-5">
+            <h2 className="text-white text-2xl sm:text-5xl font-bold tracking-tight leading-tight mb-3 sm:mb-5">
               {a.title}
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+            <p className="text-slate-300 text-xs sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl">
               {a.description}
             </p>
             <div>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 px-6 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 cursor-pointer shadow-md hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2 border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 px-4 py-2.5 sm:px-6 sm:py-3.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer shadow-md hover:-translate-y-0.5 active:translate-y-0"
               >
                 {a.ctaButton}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </a>
             </div>
           </div>
@@ -308,43 +308,43 @@ export function AboutStatsScrollSection({ t }: AboutStatsScrollSectionProps) {
 
         {/* --- PHASE 2: TRUSTED BY NUMBERS OVERLAY --- */}
         <div
-          className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex flex-col items-center justify-center transition-opacity duration-300 pointer-events-none h-full"
+          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-10 flex flex-col items-center justify-center transition-opacity duration-300 pointer-events-none h-full"
           style={{
             opacity: statsOpacity,
             display: statsOpacity > 0.01 ? "flex" : "none",
           }}
         >
-          <div className="text-center mb-10 pointer-events-auto">
-            <span className="text-emerald-400 font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider block mb-2">
+          <div className="text-center mb-4 sm:mb-10 pointer-events-auto">
+            <span className="text-emerald-400 font-mono text-[10px] sm:text-sm font-semibold uppercase tracking-wider block mb-1 sm:mb-2">
               {s.tag}
             </span>
-            <h2 className="text-white text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-white text-xl sm:text-4xl font-bold tracking-tight">
               {s.title || "Performa & Kepercayaan Teruji"}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl text-center pointer-events-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 w-full max-w-6xl text-center pointer-events-auto">
             {statsList.map((item, idx) => {
               const Icon = item.icon;
               return (
                 <div
                   key={idx}
-                  style={{ borderRadius: "1.25rem" }}
-                  className="bg-gradient-to-b from-[#14223d]/90 via-[#0d162a]/90 to-[#070c19]/95 border border-[#1d2f50]/60 p-6 sm:p-7 flex flex-col items-center justify-center min-h-[200px] shadow-xl shadow-black/40 backdrop-blur-md group hover:border-emerald-500/50 transition-all duration-300"
+                  style={{ borderRadius: "0.875rem" }}
+                  className="bg-gradient-to-b from-[#14223d]/90 via-[#0d162a]/90 to-[#070c19]/95 border border-[#1d2f50]/60 p-3 sm:p-7 flex flex-col items-center justify-center min-h-[100px] sm:min-h-[200px] shadow-xl shadow-black/40 backdrop-blur-md group hover:border-emerald-500/50 transition-all duration-300"
                 >
                   <div
                     style={{ borderRadius: "50%" }}
-                    className="w-12 h-12 bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4 shrink-0 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all duration-300"
+                    className="w-7 h-7 sm:w-12 sm:h-12 bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-2 sm:mb-4 shrink-0 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all duration-300"
                   >
-                    <Icon className="w-6 h-6" />
+                    <Icon className="w-3.5 h-3.5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2 font-mono group-hover:text-emerald-300 transition-colors">
+                  <div className="text-xl sm:text-4xl font-extrabold text-white tracking-tight mb-0.5 sm:mb-2 font-mono group-hover:text-emerald-300 transition-colors">
                     <AnimatedStatValue
                       valStr={item.number}
                       progressRatio={countProgress}
                     />
                   </div>
-                  <div className="text-slate-300 text-xs sm:text-sm font-medium">
+                  <div className="text-slate-300 text-[11px] sm:text-sm font-medium leading-tight">
                     {item.label}
                   </div>
                 </div>
@@ -355,46 +355,46 @@ export function AboutStatsScrollSection({ t }: AboutStatsScrollSectionProps) {
 
         {/* --- PHASE 3: WHY CHOOSE US OVERLAY (Blurred Frame 95 Canvas) --- */}
         <div
-          className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 flex flex-col justify-center transition-opacity duration-300 pointer-events-none h-full"
+          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-10 flex flex-col justify-center transition-opacity duration-300 pointer-events-none h-full"
           style={{
             opacity: whyChooseUsOpacity,
             display: whyChooseUsOpacity > 0.01 ? "flex" : "none",
           }}
         >
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 pointer-events-auto">
-            <div>
-              <span className="text-emerald-400 font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider block mb-2">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2 sm:gap-6 mb-4 sm:mb-12 pointer-events-auto text-center lg:text-left">
+            <div className="mx-auto lg:mx-0">
+              <span className="text-emerald-400 font-mono text-[10px] sm:text-sm font-semibold uppercase tracking-wider block mb-1 sm:mb-2">
                 {w.tag}
               </span>
-              <h2 className="text-white text-3xl sm:text-4xl font-bold tracking-tight max-w-md leading-tight">
+              <h2 className="text-white text-xl sm:text-4xl font-bold tracking-tight max-w-md leading-tight mx-auto lg:mx-0">
                 {w.title}
               </h2>
             </div>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-lg lg:text-right">
+            <p className="text-slate-300 text-xs sm:text-base leading-relaxed max-w-lg lg:text-right hidden sm:block">
               {w.description}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full pointer-events-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 w-full pointer-events-auto">
             {whyChooseUsItems.map((item, idx) => {
               const Icon = item.icon;
               return (
                 <div
                   key={idx}
-                  style={{ borderRadius: "1.25rem" }}
-                  className="bg-gradient-to-b from-[#14223d]/90 via-[#0d162a]/90 to-[#070c19]/95 border border-[#1d2f50]/60 p-6 sm:p-7 flex flex-col justify-between min-h-[220px] shadow-xl shadow-black/40 backdrop-blur-md group hover:border-emerald-500/50 transition-all duration-300"
+                  style={{ borderRadius: "0.875rem" }}
+                  className="bg-gradient-to-b from-[#14223d]/90 via-[#0d162a]/90 to-[#070c19]/95 border border-[#1d2f50]/60 p-3.5 sm:p-7 flex flex-col justify-between min-h-[125px] sm:min-h-[220px] shadow-xl shadow-black/40 backdrop-blur-md group hover:border-emerald-500/50 transition-all duration-300"
                 >
                   <div>
                     <div
                       style={{ borderRadius: "50%" }}
-                      className="w-12 h-12 bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5 shrink-0 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all duration-300"
+                      className="w-7 h-7 sm:w-12 sm:h-12 bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-2 sm:mb-5 shrink-0 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all duration-300"
                     >
-                      <Icon className="w-6 h-6" />
+                      <Icon className="w-3.5 h-3.5 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-white text-base sm:text-lg font-bold mb-2 tracking-tight group-hover:text-emerald-300 transition-colors">
+                    <h3 className="text-white text-xs sm:text-lg font-bold mb-1 sm:mb-2 tracking-tight group-hover:text-emerald-300 transition-colors leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-slate-300/90 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-slate-300/90 text-[10px] sm:text-sm leading-snug line-clamp-3 sm:line-clamp-none">
                       {item.desc}
                     </p>
                   </div>
@@ -406,18 +406,18 @@ export function AboutStatsScrollSection({ t }: AboutStatsScrollSectionProps) {
 
         {/* --- PHASE 4: CTA OVERLAY ("Ready to Partner with a Trusted Ally?" Blurred Frame 95 Canvas) --- */}
         <div
-          className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between transition-opacity duration-300 pointer-events-none h-full"
+          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-12 flex items-center justify-between transition-opacity duration-300 pointer-events-none h-full"
           style={{
             opacity: ctaOpacity,
             display: ctaOpacity > 0.01 ? "flex" : "none",
           }}
         >
-          <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pointer-events-auto bg-gradient-to-b from-[#14223d]/80 via-[#0d162a]/85 to-[#070c19]/90 border border-[#1d2f50]/70 p-8 sm:p-12 rounded-3xl shadow-2xl backdrop-blur-md">
+          <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-8 pointer-events-auto bg-gradient-to-b from-[#14223d]/80 via-[#0d162a]/85 to-[#070c19]/90 border border-[#1d2f50]/70 p-5 sm:p-12 rounded-2xl sm:rounded-3xl shadow-2xl backdrop-blur-md">
             <div className="max-w-xl">
-              <h2 className="text-white text-3xl sm:text-5xl font-bold tracking-tight leading-tight mb-4">
+              <h2 className="text-white text-xl sm:text-5xl font-bold tracking-tight leading-tight mb-2 sm:mb-4">
                 {c.title}
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-md">
+              <p className="text-slate-300 text-xs sm:text-lg leading-relaxed max-w-md">
                 {c.description}
               </p>
             </div>
@@ -426,10 +426,10 @@ export function AboutStatsScrollSection({ t }: AboutStatsScrollSectionProps) {
               href="https://wa.me/62812345678"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl text-base transition-all duration-300 shadow-xl shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shrink-0"
+              className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 sm:px-8 sm:py-4 rounded-xl text-xs sm:text-base transition-all duration-300 shadow-xl shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shrink-0"
             >
               {c.button}
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
           </div>
         </div>

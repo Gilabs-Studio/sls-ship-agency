@@ -248,35 +248,45 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-    /* Custom Scrollbar - Thin, Blue Primary */
+  html {
+    background-color: #020617;
+    color-scheme: dark;
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--brand)) transparent;
+    scrollbar-color: rgba(51, 65, 85, 0.7) #020617;
   }
 
-  /* Webkit browsers (Chrome, Safari, Edge) */
+  * {
+    @apply border-border;
+  }
+
+  /* Custom Minimalist Scrollbar - Sleek Dark Slate with Emerald Hover */
   *::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
 
   *::-webkit-scrollbar-track {
-    background: transparent;
+    background: #020617;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--brand));
-    border-radius: 10px;
+    background-color: rgba(51, 65, 85, 0.7);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     transition: background-color 0.2s ease;
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(221 83% 48%);
+    background-color: #10b981;
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: #020617;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    background-color: #020617;
+    @apply text-foreground font-sans antialiased;
     font-weight: 400; /* Standard font-weight for sharp, clear body text */
     font-size: 0.9375rem; /* 15px body size */
     line-height: 1.55;
