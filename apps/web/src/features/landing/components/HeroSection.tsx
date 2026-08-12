@@ -3,19 +3,15 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ThemeToggleButton } from "@/components/ui/theme-toggle";
-import { Link, usePathname, useRouter } from "@/i18n/routing";
 import type { LandingTranslations } from "../types/landing.types";
 
 interface HeroSectionProps {
   t: LandingTranslations;
-  locale: string;
+  locale?: string;
 }
 
-export function HeroSection({ t, locale }: HeroSectionProps) {
+export function HeroSection({ t }: HeroSectionProps) {
   const containerRef = useRef<HTMLElement>(null);
-  const pathname = usePathname();
-  const router = useRouter();
 
   // Scroll progress for parallax effect on hero people
   const { scrollYProgress } = useScroll({
@@ -25,16 +21,6 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
 
   // Parallax scroll shift on hero-people (moves with scroll)
   const peopleY = useTransform(scrollYProgress, [0, 1], [0, 140]);
-
-  const toggleLanguage = () => {
-    const nextLocale = locale === "id" ? "en" : "id";
-    router.replace(pathname, { locale: nextLocale });
-  };
-
-  const currentFlag =
-    locale === "id"
-      ? "/flag/flag-for-flag-monaco-svgrepo-com.svg"
-      : "/flag/flag-for-flag-united-kingdom-svgrepo-com.svg";
 
   return (
     <section
@@ -59,63 +45,6 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
 
       {/* Intense Dark Bottom Shadow (Reaches up to half body of "Solid Lautan Sinergi" text) */}
       <div className="absolute inset-x-0 bottom-0 h-36 sm:h-44 lg:h-48 bg-gradient-to-t from-slate-950 via-slate-950/95 via-50% to-transparent z-25 pointer-events-none" />
-
-      {/* ==================================================== */}
-      {/* NAVBAR (z-40): MINIMALIST WITH FLAG                   */}
-      {/* ==================================================== */}
-      <header className="relative z-40 w-full px-6 sm:px-12 py-6">
-        <div className="mx-auto max-w-7xl flex items-center justify-between gap-4 bg-transparent border-none">
-          {/* Logo & Brand (Pure Text, Minimalist) */}
-          <Link href="/" className="flex items-center gap-2 cursor-pointer group">
-            <span className="text-base sm:text-lg font-extrabold tracking-tight text-white group-hover:text-emerald-400 transition-colors drop-shadow-md cursor-pointer">
-              PT. SOLID LAUTAN SINERGI
-            </span>
-          </Link>
-
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-200 tracking-wide">
-            <Link
-              href="#"
-              className="text-emerald-400 font-bold border-b-2 border-emerald-400 pb-0.5 cursor-pointer"
-            >
-              {t.nav.home}
-            </Link>
-            <a href="#showcase" className="hover:text-emerald-400 transition-colors cursor-pointer">
-              {t.nav.services}
-            </a>
-            <a href="#showcase" className="hover:text-emerald-400 transition-colors cursor-pointer">
-              {t.nav.certificates}
-            </a>
-            <a href="#showcase" className="hover:text-emerald-400 transition-colors cursor-pointer">
-              {t.nav.about}
-            </a>
-          </nav>
-
-          {/* Right Header Actions */}
-          <div className="flex items-center gap-4">
-            {/* Language Switcher (Pure Flag SVG) */}
-            <button
-              onClick={toggleLanguage}
-              type="button"
-              className="cursor-pointer transition-transform hover:scale-110 active:scale-95 flex items-center justify-center p-0 bg-transparent border-none outline-none"
-              title={locale === "id" ? "Switch to English" : "Switch to Bahasa Indonesia"}
-            >
-              <Image
-                src={currentFlag}
-                alt={locale}
-                width={28}
-                height={20}
-                className="w-7 h-[20px] object-cover rounded-sm shadow-md cursor-pointer"
-              />
-            </button>
-
-            {/* Theme Toggle */}
-            <div className="cursor-pointer">
-              <ThemeToggleButton className="!bg-slate-900/80 !text-slate-200 border border-slate-700/60 hover:!bg-slate-800 hover:!text-white backdrop-blur-md" />
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* ==================================================== */}
       {/* LAYER 2 (z-20): HERO PEOPLE WITH ENTRANCE ANIMATION  */}
@@ -155,6 +84,7 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
     </section>
   );
 }
+
 
 
 

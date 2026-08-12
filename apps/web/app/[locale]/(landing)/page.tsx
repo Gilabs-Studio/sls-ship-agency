@@ -1,3 +1,4 @@
+import { Navbar } from "@/features/landing/components/Navbar";
 import { HeroSection } from "@/features/landing/components/HeroSection";
 import { ServicesSection } from "@/features/landing/components/ServicesSection";
 import { AboutStatsScrollSection } from "@/features/landing/components/AboutStatsScrollSection";
@@ -34,6 +35,7 @@ export default async function LandingPage({
 
   return (
     <main className="min-h-screen bg-slate-950">
+      <Navbar t={t} locale={locale} />
       <HeroSection t={t} locale={locale} />
       <ServicesSection t={t} />
       <AboutStatsScrollSection t={t} />
