@@ -31,13 +31,13 @@ export function SalesPipelineContainer() {
 
   return (
     <div className="w-full min-w-0 space-y-4 pb-8">
-      {/* 1. Header (Title Deals Pipeline + Bell + Help + Export + Add Deal) */}
+      {/* 1. Header (Title Deals Pipeline + Export + Add Deal) */}
       <SalesHeader
         onAddLeadClick={() => modalState.setIsAddLeadOpen(true)}
         isClientUser={isClientUser}
       />
 
-      {/* 2. Sub-Header Toolbar (Pipeline/List Tabs + Projected Stats + Search/Filter/Sort) */}
+      {/* 2. Folder Tabs + Content Body — uses centralized FolderTabs via SalesToolbar */}
       <SalesToolbar
         viewMode={viewMode}
         onViewModeChange={setViewMode}
@@ -45,23 +45,25 @@ export function SalesPipelineContainer() {
         onSearchQueryChange={setSearchQuery}
         totalLeadsCount={kpiMetrics.totalLeads}
         totalRevenueFormatted={formattedTotalRevenue}
-      />
-
-      {/* 3. Main View: KANBAN BOARD (Plek Reference Structure) or LIST TABLE */}
-      {viewMode === "kanban" ? (
-        <SalesKanbanBoard
-          leads={leads}
-          onStageChange={actions.handleStageChange}
-          onOpenDiscovery={actions.openDiscoveryForLead}
-          onSelectLead={actions.openLeadDetail}
-          isClientUser={isClientUser}
-        />
-      ) : (
-        <SalesTableView
-          leads={leads}
-          onSelectLead={actions.openLeadDetail}
-        />
-      )}
+      >
+        {/* 3. Main View: KANBAN BOARD or LIST TABLE */}
+        <div className="p-4">
+          {viewMode === "kanban" ? (
+            <SalesKanbanBoard
+              leads={leads}
+              onStageChange={actions.handleStageChange}
+              onOpenDiscovery={actions.openDiscoveryForLead}
+              onSelectLead={actions.openLeadDetail}
+              isClientUser={isClientUser}
+            />
+          ) : (
+            <SalesTableView
+              leads={leads}
+              onSelectLead={actions.openLeadDetail}
+            />
+          )}
+        </div>
+      </SalesToolbar>
 
       {/* Interactive Modals */}
       <AddLeadModal
