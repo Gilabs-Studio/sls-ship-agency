@@ -142,9 +142,9 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
       </motion.div>
 
       {/* ==================================================== */}
-      {/* LAYER 3 (z-30): TYPOGRAPHY OVERLAY AT THE BOTTOM     */}
+      {/* LAYER 3 (z-30): TYPOGRAPHY OVERLAY                    */}
       {/* ==================================================== */}
-      <div className="absolute bottom-6 sm:bottom-10 inset-x-0 z-30 px-4 sm:px-8 text-center pointer-events-none select-none">
+      <div className="absolute top-[300px] sm:top-auto sm:bottom-10 inset-x-0 z-30 px-4 sm:px-8 text-center pointer-events-none select-none">
         <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white tracking-tight leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.9)] whitespace-normal sm:whitespace-nowrap">
           {t.heroTagline || "Solid Lautan Sinergi"}
         </h1>
