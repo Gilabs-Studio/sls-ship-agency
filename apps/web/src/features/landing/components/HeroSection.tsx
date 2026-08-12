@@ -39,7 +39,7 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen max-h-screen w-full bg-slate-950 text-slate-100 flex flex-col justify-between overflow-hidden selection:bg-emerald-500 selection:text-slate-950"
+      className="relative h-[100dvh] min-h-[100dvh] max-h-[100dvh] w-full bg-slate-950 text-slate-100 flex flex-col justify-between overflow-hidden selection:bg-emerald-500 selection:text-slate-950"
     >
       {/* ==================================================== */}
       {/* LAYER 0 (z-0): BACKGROUND IMAGE (STATIC, HEAVY OVERLAY) */}
@@ -111,7 +111,7 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
 
             {/* Theme Toggle */}
             <div className="cursor-pointer">
-              <ThemeToggleButton />
+              <ThemeToggleButton className="!bg-slate-900/80 !text-slate-200 border border-slate-700/60 hover:!bg-slate-800 hover:!text-white backdrop-blur-md" />
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
           initial={{ y: 150, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="relative w-[110%] sm:w-full h-full flex items-end justify-center"
+          className="relative w-[680px] sm:w-full min-w-[680px] sm:min-w-0 h-full flex items-end justify-center shrink-0"
         >
           <Image
             src="/hero-people.png"
@@ -136,19 +136,19 @@ export function HeroSection({ t, locale }: HeroSectionProps) {
             fill
             priority
             sizes="(max-width: 1700px) 100vw, 1600px"
-            className="object-contain object-bottom scale-110 sm:scale-115 lg:scale-120 translate-y-12 sm:translate-y-20 lg:translate-y-24 drop-shadow-[0_45px_100px_rgba(0,0,0,0.85)]"
+            className="object-contain object-bottom scale-100 sm:scale-115 lg:scale-120 translate-y-1 sm:translate-y-10 lg:translate-y-16 drop-shadow-[0_45px_100px_rgba(0,0,0,0.85)]"
           />
         </motion.div>
       </motion.div>
 
       {/* ==================================================== */}
-      {/* LAYER 3 (z-30): TYPOGRAPHY OVERLAY AT THE BOTTOM     */}
+      {/* LAYER 3 (z-30): TYPOGRAPHY OVERLAY                    */}
       {/* ==================================================== */}
-      <div className="absolute bottom-6 sm:bottom-10 inset-x-0 z-30 px-4 sm:px-8 text-center pointer-events-none select-none">
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white tracking-tight leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.9)] whitespace-nowrap">
+      <div className="absolute top-[300px] sm:top-auto sm:bottom-10 inset-x-0 z-30 px-4 sm:px-8 text-center pointer-events-none select-none">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white tracking-tight leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.9)] whitespace-normal sm:whitespace-nowrap">
           {t.heroTagline || "Solid Lautan Sinergi"}
         </h1>
-        <p className="text-base sm:text-xl lg:text-2xl text-slate-200/90 font-semibold tracking-wide drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)] mt-3 max-w-3xl mx-auto">
+        <p className="text-sm sm:text-lg lg:text-2xl text-slate-200/90 font-semibold tracking-wide drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)] mt-2 sm:mt-3 max-w-3xl mx-auto">
           {t.heroSubtagline || "Outsourcing Agen Perkapalan"}
         </p>
       </div>
