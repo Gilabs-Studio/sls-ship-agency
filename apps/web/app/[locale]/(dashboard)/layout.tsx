@@ -150,7 +150,7 @@ export default function DashboardLayout({
       </aside>
 
       {/* Main Content Area (pl-20 for floating narrow sidebar) */}
-      <div className="flex-1 pl-20 flex flex-col min-h-screen z-10 relative">
+      <div className="flex-1 pl-20 flex flex-col min-h-screen z-10 relative min-w-0">
         {/* Top Header */}
         <header className="sticky top-0 z-30 flex h-16 items-center justify-between px-6">
           {/* Global Search Bar (Clear Container & Distinct Border) */}
@@ -284,7 +284,7 @@ export default function DashboardLayout({
         </header>
 
         {/* Page Main Canvas */}
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 min-w-0">
           <PageMotion>{children}</PageMotion>
         </main>
       </div>
