@@ -116,7 +116,7 @@ export function QuickActionModals({
             <FieldGroup className="space-y-3">
               <Field>
                 <FieldLabel htmlFor="vesselName" className="text-xs font-semibold">Nama Kapal</FieldLabel>
-                <Input id="vesselName" placeholder="Contoh: KM Solid Horizon" {...vesselForm.register("vesselName")} />
+                <Input id="vesselName" placeholder="Contoh: KM Nautiva Horizon" {...vesselForm.register("vesselName")} />
                 {vesselForm.formState.errors.vesselName && (
                   <FieldError className="text-xs">{vesselForm.formState.errors.vesselName.message}</FieldError>
                 )}
@@ -150,7 +150,7 @@ export function QuickActionModals({
 
               <Field>
                 <FieldLabel htmlFor="clientName" className="text-xs font-semibold">Pemilik / Perusahaan Pelayaran</FieldLabel>
-                <Input id="clientName" placeholder="Contoh: PT Pelayaran Trans Maritime" {...vesselForm.register("clientName")} />
+                <Input id="clientName" placeholder="Contoh: PT. Nautiva Ocean Agency" {...vesselForm.register("clientName")} />
                 {vesselForm.formState.errors.clientName && (
                   <FieldError className="text-xs">{vesselForm.formState.errors.clientName.message}</FieldError>
                 )}
@@ -239,7 +239,7 @@ export function QuickActionModals({
             <FieldGroup className="space-y-3">
               <Field>
                 <FieldLabel htmlFor="companyName" className="text-xs font-semibold">Nama Perusahaan Pelayaran</FieldLabel>
-                <Input id="companyName" placeholder="Contoh: PT Ocean Trans Line" {...leadForm.register("companyName")} />
+                <Input id="companyName" placeholder="Contoh: PT. Nautiva Ocean Agency" {...leadForm.register("companyName")} />
                 {leadForm.formState.errors.companyName && (
                   <FieldError className="text-xs">{leadForm.formState.errors.companyName.message}</FieldError>
                 )}

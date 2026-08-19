@@ -7,9 +7,9 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/database"
-	"github.com/gilabs/indosupplier/api/internal/user/data/models"
-	"github.com/gilabs/indosupplier/api/internal/user/domain/dto"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/database"
+	"github.com/gilabs/nautiva/api/internal/user/data/models"
+	"github.com/gilabs/nautiva/api/internal/user/domain/dto"
 )
 
 type UserRepository interface {

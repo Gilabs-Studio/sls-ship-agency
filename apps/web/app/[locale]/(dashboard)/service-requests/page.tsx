@@ -127,7 +127,7 @@ export default function ServiceRequestsPage() {
     addServiceRequest({
       title: newTitle,
       companyId: newCompanyId,
-      companyName: companyObj?.name || "PT Samudera Indonesia Tbk",
+      companyName: companyObj?.name || "PT. Nautiva Ocean Agency",
       vesselId: newVesselId,
       vesselName: vesselObj?.name || "KM Samudera Sejahtera",
       serviceType: newServiceType,

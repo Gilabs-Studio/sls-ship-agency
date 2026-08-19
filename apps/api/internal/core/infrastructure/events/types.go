@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
 	"github.com/google/uuid"
 )
 

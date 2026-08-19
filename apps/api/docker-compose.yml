@@ -1,17 +1,17 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: indosupplier-platform-db
+    container_name: nautiva-platform-db
     environment:
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
-      POSTGRES_DB: ${DB_NAME:-indosupplier_db}
+      POSTGRES_DB: ${DB_NAME:-nautiva_db}
     ports:
       - "${DB_PORT:-5435}:5432"
     volumes:
-      - indosupplier_postgres_data:/var/lib/postgresql/data
+      - nautiva_postgres_data:/var/lib/postgresql/data
     networks:
-      - indosupplier-network
+      - nautiva-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres}"]
       interval: 10s
@@ -20,13 +20,13 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: indosupplier-platform-redis
+    container_name: nautiva-platform-redis
     ports:
       - "${REDIS_PORT:-6379}:6379"
     volumes:
-      - indosupplier_redis_data:/data
+      - nautiva_redis_data:/data
     networks:
-      - indosupplier-network
+      - nautiva-network
     command: redis-server --save 60 1 --loglevel warning ${REDIS_PASSWORD:+--requirepass ${REDIS_PASSWORD}}
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
@@ -38,7 +38,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: indosupplier-platform-api
+    container_name: nautiva-platform-api
     ports:
       - "${DOCKER_API_PORT:-8089}:8080"
     environment:
@@ -51,7 +51,7 @@ services:
       - DB_PORT=5432
       - DB_USER=${DB_USER:-postgres}
       - DB_PASSWORD=${DB_PASSWORD:-postgres}
-      - DB_NAME=${DB_NAME:-indosupplier_db}
+      - DB_NAME=${DB_NAME:-nautiva_db}
       - DB_SSLMODE=${DB_SSLMODE:-disable}
       - JWT_SECRET=${JWT_SECRET}
       - JWT_ACCESS_TTL=${JWT_ACCESS_TTL:-24}
@@ -79,7 +79,7 @@ services:
       - R2_SECRET_ACCESS_KEY=${R2_SECRET_ACCESS_KEY}
       - R2_BUCKET_NAME=${R2_BUCKET_NAME}
     volumes:
-      - indosupplier_uploads_data:/app/uploads
+      - nautiva_uploads_data:/app/uploads
     depends_on:
       postgres:
         condition: service_healthy
@@ -87,13 +87,13 @@ services:
         condition: service_healthy
     restart: unless-stopped
     networks:
-      - indosupplier-network
+      - nautiva-network
 
 networks:
-  indosupplier-network:
+  nautiva-network:
     driver: bridge
 
 volumes:
-  indosupplier_postgres_data:
-  indosupplier_uploads_data:
-  indosupplier_redis_data:
+  nautiva_postgres_data:
+  nautiva_uploads_data:
+  nautiva_redis_data:

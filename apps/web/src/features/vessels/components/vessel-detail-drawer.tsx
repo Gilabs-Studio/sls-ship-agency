@@ -1,5 +1,5 @@
 import React from "react";
-import { Ship, Clock, AlertTriangle, CheckCircle2, RefreshCw, FileText } from "lucide-react";
+import { Ship, AlertTriangle, CheckCircle2, RefreshCw, FileText } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

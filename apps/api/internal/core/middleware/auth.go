@@ -4,12 +4,12 @@ import (
 	"context"
 	"strings"
 
-	"github.com/gilabs/indosupplier/api/internal/core/errors"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/jwt"
+	"github.com/gilabs/nautiva/api/internal/core/errors"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/jwt"
 	"github.com/gin-gonic/gin"
 )
 
-const accessTokenCookieName = "indosupplier_access_token"
+const accessTokenCookieName = "nautiva_access_token"
 
 func collectCookieValues(c *gin.Context, name string) []string {
 	values := make([]string, 0)

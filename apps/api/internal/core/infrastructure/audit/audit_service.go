@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
-	"github.com/gilabs/indosupplier/api/internal/core/data/models"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/data/models"
 	"gorm.io/gorm"
 )
 

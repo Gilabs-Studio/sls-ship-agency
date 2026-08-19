@@ -3,9 +3,9 @@ package repositories
 import (
 	"context"
 
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/database"
-	"github.com/gilabs/indosupplier/api/internal/refresh_token/data/models"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/database"
+	"github.com/gilabs/nautiva/api/internal/refresh_token/data/models"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

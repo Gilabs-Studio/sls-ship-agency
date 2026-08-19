@@ -35,11 +35,11 @@ func CORSMiddleware() gin.HandlerFunc {
 		"http://localhost:3001",
 		"http://127.0.0.1:3001",
 		// Production origins (add more if needed)
-		"https://api.gilabs.id",
-		"https://indosupplier.gilabs.id",
-		"https://indosupplier.id",
-		"https://www.indosupplier.id",
-		"https://indosupplier-api-688849728115.asia-southeast2.run.app",
+		"https://api.nautiva.id",
+		"https://nautiva.gilabs.id",
+		"https://nautiva.id",
+		"https://www.nautiva.id",
+		"https://nautiva-api-688849728115.asia-southeast2.run.app",
 	}
 
 	// Add production origins from environment variable

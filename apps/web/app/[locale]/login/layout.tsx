@@ -10,11 +10,11 @@ export async function generateMetadata({
   const isId = locale === "id";
 
   const title = isId
-    ? "Login Indosupplier — Masuk ke Akun ERP, CRM & POS Anda"
-    : "Indosupplier Login — Sign In to Your ERP, CRM & POS Account";
+    ? "Login Nautiva — Masuk ke Akun ERP, CRM & POS Anda"
+    : "Nautiva Login — Sign In to Your ERP, CRM & POS Account";
   const description = isId
-    ? "Masuk ke platform Indosupplier untuk mengelola penjualan, stok, keuangan, dan SDM bisnis Anda dalam satu dasbor."
-    : "Sign in to Indosupplier to manage your sales, inventory, finance, and HR operations from one unified dashboard.";
+    ? "Masuk ke platform Nautiva untuk mengelola penjualan, stok, keuangan, dan SDM bisnis Anda dalam satu dasbor."
+    : "Sign in to Nautiva to manage your sales, inventory, finance, and HR operations from one unified dashboard.";
   const canonicalPath = `/${locale}/login`;
 
   return {
@@ -22,18 +22,18 @@ export async function generateMetadata({
     description,
     keywords: isId
       ? [
-          "indosupplier login",
-          "login indosupplier",
-          "masuk indosupplier",
+          "nautiva login",
+          "login nautiva",
+          "masuk nautiva",
           "login erp indonesia",
           "login software kasir",
-          "indosupplier masuk akun",
+          "nautiva masuk akun",
         ]
       : [
-          "indosupplier login",
-          "sign in indosupplier",
-          "indosupplier erp login",
-          "indosupplier account",
+          "nautiva login",
+          "sign in nautiva",
+          "nautiva erp login",
+          "nautiva account",
         ],
     alternates: {
       canonical: `${SEO_BASE_URL}${canonicalPath}`,
@@ -49,7 +49,7 @@ export async function generateMetadata({
       url: `${SEO_BASE_URL}${canonicalPath}`,
       title,
       description,
-      siteName: "Indosupplier",
+      siteName: "Nautiva",
     },
     robots: {
       index: false,
@@ -68,13 +68,13 @@ export default function LoginLayout({
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SEO_BASE_URL}/login`,
-    "name": "Indosupplier Login",
+    "name": "Nautiva Login",
     "url": `${SEO_BASE_URL}/id/login`,
-    "description": "Halaman login Indosupplier — masuk ke platform ERP, CRM, HRIS, POS, dan Finance all-in-one untuk bisnis Indonesia.",
+    "description": "Halaman login Nautiva — masuk ke platform ERP, CRM, HRIS, POS, dan Finance all-in-one untuk bisnis Indonesia.",
     "isPartOf": {
       "@type": "WebSite",
       "@id": `${SEO_BASE_URL}/#website`,
-      "name": "Indosupplier",
+      "name": "Nautiva",
       "url": SEO_BASE_URL,
     },
   };

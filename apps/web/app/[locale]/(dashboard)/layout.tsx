@@ -75,7 +75,7 @@ export default function DashboardLayout({
           <Link
             href="/dashboard"
             className="h-9 w-9 rounded-xl bg-primary text-primary-foreground font-bold flex items-center justify-center shadow-sm hover:scale-105 transition-transform"
-            title="Solid Maritime Agency"
+            title="PT. NAUTIVA OCEAN AGENCY"
           >
             <Ship className="h-5 w-5" />
           </Link>
@@ -150,7 +150,7 @@ export default function DashboardLayout({
       </aside>
 
       {/* Main Content Area (pl-20 for floating narrow sidebar) */}
-      <div className="flex-1 pl-20 flex flex-col min-h-screen z-10 relative">
+      <div className="flex-1 pl-20 flex flex-col min-h-screen z-10 relative min-w-0">
         {/* Top Header */}
         <header className="sticky top-0 z-30 flex h-16 items-center justify-between px-6">
           {/* Global Search Bar (Clear Container & Distinct Border) */}
@@ -205,7 +205,7 @@ export default function DashboardLayout({
                       <span>Sertifikat SOLAS Expired</span>
                     </div>
                     <p className="text-muted-foreground text-[11px]">
-                      KM Solid Horizon (IMO 982124) membutuhkan perpanjangan mendesak.
+                      KM Nautiva Horizon (IMO 982124) membutuhkan perpanjangan mendesak.
                     </p>
                     <span className="text-[10px] text-muted-foreground">10 menit yang lalu</span>
                   </div>
@@ -215,7 +215,7 @@ export default function DashboardLayout({
                       <span>Permintaan 1 Teknisi Mesin Baru</span>
                     </div>
                     <p className="text-muted-foreground text-[11px]">
-                      PT Samarinda Trans Energi mengajukan penugasan teknisi.
+                      PT. Nautiva Ocean Agency mengajukan penugasan teknisi.
                     </p>
                     <span className="text-[10px] text-muted-foreground">1 jam yang lalu</span>
                   </div>
@@ -264,7 +264,7 @@ export default function DashboardLayout({
                   <div className="flex flex-col space-y-1">
                     <p className="text-sm font-bold leading-none">Arafat Nayeem</p>
                     <p className="text-xs text-muted-foreground leading-none">
-                      arafat@solidmaritime.com
+                      arafat@nautiva.id
                     </p>
                   </div>
                 </DropdownMenuLabel>
@@ -284,7 +284,7 @@ export default function DashboardLayout({
         </header>
 
         {/* Page Main Canvas */}
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 min-w-0">
           <PageMotion>{children}</PageMotion>
         </main>
       </div>

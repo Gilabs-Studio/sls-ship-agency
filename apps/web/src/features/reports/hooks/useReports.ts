@@ -27,7 +27,7 @@ export function useReports() {
         toast.success(`Laporan_${activeTab}_2026.${format.toLowerCase() === "pdf" ? "pdf" : "xlsx"} berhasil diunduh!`, { id: toastId });
 
         // Trigger simulated browser download
-        const dummyContent = "Data Laporan Operasional Keagenan Kapal PT. Solid Lautan Sinergi";
+        const dummyContent = "Data Laporan Operasional Keagenan Kapal PT. Nautiva Ocean Agency";
         const blob = new Blob([dummyContent], { type: format === "PDF" ? "application/pdf" : "application/vnd.ms-excel" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");

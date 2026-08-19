@@ -4,7 +4,7 @@ export const initialUsers: UserAccount[] = [
   {
     id: "user-1",
     name: "Arafat Nayeem",
-    email: "arafat@solidmaritime.com",
+    email: "arafat@nautiva.id",
     role: "Super Admin",
     department: "Executive & System Management",
     isActive: true,
@@ -13,7 +13,7 @@ export const initialUsers: UserAccount[] = [
   {
     id: "user-2",
     name: "Budi Santoso",
-    email: "budi@solidmaritime.com",
+    email: "budi@nautiva.id",
     role: "Staff Operasional",
     department: "Divisi Operasional & Sertifikasi",
     isActive: true,
@@ -22,7 +22,7 @@ export const initialUsers: UserAccount[] = [
   {
     id: "user-3",
     name: "Siti Rahma",
-    email: "siti@solidmaritime.com",
+    email: "siti@nautiva.id",
     role: "Sales / Business Dev",
     department: "Business Development",
     isActive: true,
@@ -34,7 +34,7 @@ export const initialUsers: UserAccount[] = [
     email: "bambang@samarindaenergy.com",
     role: "Klien",
     department: "Pelayaran Mitra",
-    companyName: "PT Samarinda Trans Energi",
+    companyName: "PT. Nautiva Ocean Agency",
     isActive: true,
     lastLogin: "2026-08-08 16:20",
   },

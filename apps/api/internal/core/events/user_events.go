@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	infraEvents "github.com/gilabs/indosupplier/api/internal/core/infrastructure/events"
+	infraEvents "github.com/gilabs/nautiva/api/internal/core/infrastructure/events"
 )
 
 // UserCreatedPayload contains the data for a user created event

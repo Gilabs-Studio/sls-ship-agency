@@ -1,6 +1,6 @@
-# Indosupplier - GILABS Integrated Management System
+# Nautiva - GILABS Integrated Management System
 
-Monorepo untuk Indosupplier (GILABS Integrated Management System) menggunakan Turborepo.
+Monorepo untuk Nautiva (GILABS Integrated Management System) menggunakan Turborepo.
 
 ## Tech Stack
 
@@ -25,7 +25,7 @@ Monorepo untuk Indosupplier (GILABS Integrated Management System) menggunakan Tu
 ## Struktur Project
 
 ```
-indosupplier/
+nautiva/
 ├── apps/
 │   ├── api/          # Go API backend (Gin)
 │   └── web/          # Next.js frontend
@@ -140,7 +140,7 @@ Server akan berjalan di `http://localhost:8080`
 Di root project (bukan di folder lain), tersedia script helper:
 
 ```bash
-cd D:\Files\Documents\Pekerjaan\Gilabs\indosupplier
+cd D:\Files\Documents\Pekerjaan\Gilabs\nautiva
 pnpm run dev:web-api-docker
 ```
 

@@ -89,24 +89,24 @@ export function AboutStatsScrollSection({ t }: AboutStatsScrollSectionProps) {
     [w]
   );
 
-  // Preload WebP frames into memory
+  // Preload WebP frames into memory with immediate priority for Frame 1
   useEffect(() => {
     let isMounted = true;
     const loadedImages: HTMLImageElement[] = [];
-    let loadedCount = 0;
 
+    // Initialize array of images
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
       const frameIndexStr = i.toString().padStart(3, "0");
       img.src = `/frames/frame_${frameIndexStr}.webp`;
 
-      img.onload = () => {
-        if (!isMounted) return;
-        loadedCount++;
-        if (loadedCount >= 10) {
+      if (i === 1) {
+        // Priority handler for Frame 1
+        img.onload = () => {
+          if (!isMounted) return;
           setImagesLoaded(true);
-        }
-      };
+        };
+      }
 
       loadedImages.push(img);
     }

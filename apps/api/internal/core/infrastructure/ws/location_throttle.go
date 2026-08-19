@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/redis"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/redis"
 )
 
 const (

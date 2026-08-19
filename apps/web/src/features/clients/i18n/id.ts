@@ -1,0 +1,75 @@
+export const clientsId = {
+  title: "Siklus Hidup Klien (Client Lifecycle)",
+  description: "Pantau dan kelola hubungan klien, kontrak outsourcing staf kapal, skor kesehatan akun, dan pipeline pembaruan di seluruh armada.",
+  timePeriod: {
+    thisMonth: "Bulan Ini",
+    thisQuarter: "Kuartal Ini",
+    thisYear: "Tahun Ini",
+  },
+  actions: {
+    exportReport: "Ekspor Laporan",
+    addContract: "Kontrak Baru",
+    viewAll: "Lihat Semua",
+    refresh: "Perbarui Data",
+  },
+  kpi: {
+    totalClients: "Total Klien",
+    activeContracts: "Kontrak Aktif",
+    activePlacements: "Penempatan Aktif",
+    contractValue: "Nilai Kontrak (USD)",
+    healthScore: "Skor Kesehatan Klien (Rata-rata)",
+    thisMonthIncrease: "+{count} bulan ini",
+    vsLastMonth: "+{percent}% vs bulan lalu",
+    good: "Bagus",
+    needsAttention: "Perhatian",
+  },
+  funnel: {
+    title: "Funnel Siklus Hidup Klien",
+    subtitle: "Alur konversi dari prospek awal hingga akun manning aktif",
+    stages: {
+      lead: "Prospek Awal (Lead)",
+      prospect: "Prospek Terkualifikasi",
+      proposal: "Pengajuan Proposal",
+      negotiation: "Negosiasi Kontrak",
+      contracted: "Telah Berkontrak",
+      active: "Klien Aktif",
+      inactiveLost: "Nonaktif / Batal",
+    },
+  },
+  contractsStatus: {
+    title: "Kontrak Berdasarkan Status",
+    subtitle: "Distribusi perjanjian outsourcing kru & manning agen perkapalan",
+    totalLabel: "Total",
+    statuses: {
+      active: "Aktif",
+      expiringSoon: "Segera Berakhir",
+      pendingRenewal: "Menunggu Pembaruan",
+      onHold: "Ditangguhkan (On Hold)",
+      completed: "Selesai",
+      terminated: "Dihentikan",
+    },
+  },
+  renewals: {
+    title: "Pembaruan Mendatang",
+    subtitle: "Perjanjian manning yang akan berakhir dalam 30 hari",
+    daysLeft: "Sisa {days} hari",
+  },
+  healthOverview: {
+    title: "Ringkasan Kesehatan Klien",
+    subtitle: "Skor retensi akun & status interaksi terakhir",
+    columns: {
+      client: "Klien",
+      healthScore: "Skor Kesehatan",
+      trend: "Tren",
+      lastInteraction: "Interaksi Terakhir",
+    },
+  },
+  recentActivities: {
+    title: "Aktivitas Terkini",
+    subtitle: "Log riwayat interaksi klien dan pencapaian penempatan staf kapal",
+  },
+  topClients: {
+    title: "Klien Teratas Berdasarkan Nilai Kontrak",
+    subtitle: "Daftar pemilik kapal dengan volume nilai kontrak terbesar",
+  },
+};

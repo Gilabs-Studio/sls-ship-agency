@@ -7,12 +7,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 
-	"github.com/gilabs/indosupplier/api/internal/auth/domain/dto"
-	"github.com/gilabs/indosupplier/api/internal/auth/domain/usecase"
-	authDTO "github.com/gilabs/indosupplier/api/internal/auth/presentation/dto"
-	"github.com/gilabs/indosupplier/api/internal/core/errors"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
-	"github.com/gilabs/indosupplier/api/internal/core/response"
+	"github.com/gilabs/nautiva/api/internal/auth/domain/dto"
+	"github.com/gilabs/nautiva/api/internal/auth/domain/usecase"
+	authDTO "github.com/gilabs/nautiva/api/internal/auth/presentation/dto"
+	"github.com/gilabs/nautiva/api/internal/core/errors"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/response"
 )
 
 type AuthHandler struct {
@@ -60,7 +60,7 @@ func setAuthCookies(c *gin.Context, accessToken, refreshToken string) {
 	secure, sameSite := getCookieSecureAndSameSite(c)
 
 	http.SetCookie(c.Writer, &http.Cookie{
-		Name:     "indosupplier_access_token",
+		Name:     "nautiva_access_token",
 		Value:    accessToken,
 		Path:     "/",
 		MaxAge:   config.AppConfig.JWT.AccessTokenTTL * 3600,
@@ -71,7 +71,7 @@ func setAuthCookies(c *gin.Context, accessToken, refreshToken string) {
 	})
 
 	http.SetCookie(c.Writer, &http.Cookie{
-		Name:     "indosupplier_refresh_token",
+		Name:     "nautiva_refresh_token",
 		Value:    refreshToken,
 		Path:     "/",
 		MaxAge:   config.AppConfig.JWT.RefreshTokenTTL * 24 * 3600,
@@ -87,7 +87,7 @@ func clearAuthCookies(c *gin.Context) {
 	secure, sameSite := getCookieSecureAndSameSite(c)
 
 	http.SetCookie(c.Writer, &http.Cookie{
-		Name:     "indosupplier_access_token",
+		Name:     "nautiva_access_token",
 		Value:    "",
 		Path:     "/",
 		MaxAge:   -1,
@@ -98,7 +98,7 @@ func clearAuthCookies(c *gin.Context) {
 	})
 
 	http.SetCookie(c.Writer, &http.Cookie{
-		Name:     "indosupplier_refresh_token",
+		Name:     "nautiva_refresh_token",
 		Value:    "",
 		Path:     "/",
 		MaxAge:   -1,
@@ -151,7 +151,7 @@ func (h *AuthHandler) Login(c *gin.Context) {
 }
 
 func (h *AuthHandler) RefreshToken(c *gin.Context) {
-	refreshToken, err := c.Cookie("indosupplier_refresh_token")
+	refreshToken, err := c.Cookie("nautiva_refresh_token")
 	if err != nil || refreshToken == "" {
 		var req struct {
 			RefreshToken string `json:"refresh_token"`
@@ -189,7 +189,7 @@ func (h *AuthHandler) RefreshToken(c *gin.Context) {
 }
 
 func (h *AuthHandler) Logout(c *gin.Context) {
-	refreshToken, err := c.Cookie("indosupplier_refresh_token")
+	refreshToken, err := c.Cookie("nautiva_refresh_token")
 	if err != nil || refreshToken == "" {
 		var req struct {
 			RefreshToken string `json:"refresh_token"`
@@ -206,7 +206,7 @@ func (h *AuthHandler) Logout(c *gin.Context) {
 
 	secure, sameSite := getCookieSecureAndSameSite(c)
 	http.SetCookie(c.Writer, &http.Cookie{
-		Name:     "indosupplier_csrf_token",
+		Name:     "nautiva_csrf_token",
 		Value:    "",
 		Path:     "/",
 		MaxAge:   -1,
@@ -227,7 +227,7 @@ func (h *AuthHandler) GetCSRFToken(c *gin.Context) {
 
 	secure, sameSite := getCookieSecureAndSameSite(c)
 	http.SetCookie(c.Writer, &http.Cookie{
-		Name:     "indosupplier_csrf_token",
+		Name:     "nautiva_csrf_token",
 		Value:    token,
 		Path:     "/",
 		MaxAge:   24 * 3600,

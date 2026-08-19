@@ -249,44 +249,86 @@
 
 @layer base {
   html {
-    background-color: #020617;
-    color-scheme: dark;
+    @apply bg-background text-foreground;
+    color-scheme: light;
     scrollbar-width: thin;
-    scrollbar-color: rgba(51, 65, 85, 0.7) #020617;
+    scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
   }
 
   * {
     @apply border-border;
   }
 
-  /* Custom Minimalist Scrollbar - Sleek Dark Slate with Emerald Hover */
+  /* 1. Internal Application & Dashboard Scrollbar (Theme-Dynamic: adapts seamlessly between Light and Dark themes) */
   *::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
 
   *::-webkit-scrollbar-track {
-    background: #020617;
+    background: transparent !important;
+  }
+
+  .dark *::-webkit-scrollbar-track {
+    background: transparent !important;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: rgba(51, 65, 85, 0.7);
+    background-color: rgba(148, 163, 184, 0.35);
     border-radius: 9999px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .dark *::-webkit-scrollbar-thumb {
+    background-color: rgba(148, 163, 184, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: background-color 0.2s ease;
   }
 
   *::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--primary) / 0.8);
+  }
+
+  .dark *::-webkit-scrollbar-thumb:hover {
     background-color: #10b981;
   }
 
   *::-webkit-scrollbar-corner {
-    background: #020617;
+    background: transparent;
+  }
+
+  /* 2. Landing Page Dedicated Scrollbar System (Isolated strictly to .landing-page container) */
+  .landing-scrollbar,
+  .landing-page {
+    color-scheme: dark;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(51, 65, 85, 0.7) #020617;
+  }
+
+  .landing-scrollbar *::-webkit-scrollbar-track,
+  .landing-page *::-webkit-scrollbar-track {
+    background: #020617 !important;
+  }
+
+  .landing-scrollbar *::-webkit-scrollbar-thumb,
+  .landing-page *::-webkit-scrollbar-thumb {
+    background-color: rgba(51, 65, 85, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 9999px !important;
+  }
+
+  .landing-scrollbar *::-webkit-scrollbar-thumb:hover,
+  .landing-page *::-webkit-scrollbar-thumb:hover {
+    background-color: #10b981 !important;
   }
 
   body {
-    background-color: #020617;
-    @apply text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
     font-weight: 400; /* Standard font-weight for sharp, clear body text */
     font-size: 0.9375rem; /* 15px body size */
     line-height: 1.55;
@@ -388,6 +430,17 @@
 
 /* Custom z-index utilities for layered effects */
 @layer utilities {
+  /* Scrollbar hide utility */
+  .scrollbar-none {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
   .z-15 {
     z-index: 15;
   }

@@ -1,0 +1,247 @@
+import type { ClientLifecycleData } from "../types/clients.types";
+
+export const dummyClientLifecycleData: ClientLifecycleData = {
+  metrics: {
+    totalClients: 48,
+    totalClientsDelta: 8,
+    activeContracts: 32,
+    activeContractsDelta: 5,
+    activePlacements: 186,
+    activePlacementsDelta: 12,
+    contractValueUsd: 2450000,
+    contractValueDeltaPercent: 18.6,
+    clientHealthScoreAvg: 78,
+    clientHealthStatus: "Good",
+  },
+  funnelStages: [
+    {
+      id: "funnel-1",
+      key: "lead",
+      name: "Lead",
+      count: 68,
+      percentage: 20.1,
+      color: "hsl(215 85% 25%)",
+    },
+    {
+      id: "funnel-2",
+      key: "prospect",
+      name: "Prospect",
+      count: 42,
+      percentage: 12.4,
+      color: "hsl(215 80% 36%)",
+    },
+    {
+      id: "funnel-3",
+      key: "proposal",
+      name: "Proposal",
+      count: 28,
+      percentage: 8.3,
+      color: "hsl(217 85% 48%)",
+    },
+    {
+      id: "funnel-4",
+      key: "negotiation",
+      name: "Negotiation",
+      count: 18,
+      percentage: 5.3,
+      color: "hsl(215 90% 58%)",
+    },
+    {
+      id: "funnel-5",
+      key: "contracted",
+      name: "Contracted",
+      count: 32,
+      percentage: 9.4,
+      color: "hsl(213 90% 68%)",
+    },
+    {
+      id: "funnel-6",
+      key: "active",
+      name: "Active",
+      count: 48,
+      percentage: 14.2,
+      color: "hsl(210 95% 78%)",
+    },
+    {
+      id: "funnel-7",
+      key: "inactiveLost",
+      name: "Inactive / Lost",
+      count: 12,
+      percentage: 3.6,
+      color: "hsl(215 70% 88%)",
+    },
+  ],
+  contractsByStatus: [
+    {
+      id: "status-active",
+      name: "Active",
+      count: 32,
+      percentage: 50,
+      color: "hsl(217 91% 35%)", // Deep navy blue
+    },
+    {
+      id: "status-expiring",
+      name: "Expiring Soon",
+      count: 10,
+      percentage: 16,
+      color: "hsl(213 90% 56%)", // Royal blue
+    },
+    {
+      id: "status-pending",
+      name: "Pending Renewal",
+      count: 8,
+      percentage: 12,
+      color: "hsl(206 90% 70%)", // Sky ice blue
+    },
+    {
+      id: "status-onhold",
+      name: "On Hold",
+      count: 6,
+      percentage: 9,
+      color: "hsl(38 92% 50%)", // Amber
+    },
+    {
+      id: "status-completed",
+      name: "Completed",
+      count: 6,
+      percentage: 9,
+      color: "hsl(220 15% 65%)", // Muted slate
+    },
+    {
+      id: "status-terminated",
+      name: "Terminated",
+      count: 2,
+      percentage: 3,
+      color: "hsl(24 95% 53%)", // Coral orange
+    },
+  ],
+  upcomingRenewals: [
+    {
+      id: "ren-1",
+      clientName: "Oceanic Shipping Ltd.",
+      vesselName: "MV Ocean Star",
+      dueDate: "Jun 20, 2026",
+      daysLeft: 9,
+    },
+    {
+      id: "ren-2",
+      clientName: "BlueWave Maritime",
+      vesselName: "MV BW Endeavour",
+      dueDate: "Jun 25, 2026",
+      daysLeft: 14,
+    },
+    {
+      id: "ren-3",
+      clientName: "GreenSea Line",
+      vesselName: "MV Green Horizon",
+      dueDate: "Jul 02, 2026",
+      daysLeft: 21,
+    },
+    {
+      id: "ren-4",
+      clientName: "Pacific Transport Co.",
+      vesselName: "MV Pacific Breeze",
+      dueDate: "Jul 10, 2026",
+      daysLeft: 29,
+    },
+  ],
+  clientHealthOverview: [
+    {
+      id: "health-1",
+      clientName: "Oceanic Shipping Ltd.",
+      healthScore: 92,
+      trend: "up",
+      lastInteraction: "2 days ago",
+    },
+    {
+      id: "health-2",
+      clientName: "BlueWave Maritime",
+      healthScore: 75,
+      trend: "flat",
+      lastInteraction: "5 days ago",
+    },
+    {
+      id: "health-3",
+      clientName: "GreenSea Line",
+      healthScore: 65,
+      trend: "down",
+      lastInteraction: "8 days ago",
+    },
+    {
+      id: "health-4",
+      clientName: "Pacific Transport Co.",
+      healthScore: 50,
+      trend: "down",
+      lastInteraction: "12 days ago",
+    },
+    {
+      id: "health-5",
+      clientName: "Global Marine Corp.",
+      healthScore: 30,
+      trend: "down",
+      lastInteraction: "15 days ago",
+    },
+  ],
+  recentActivities: [
+    {
+      id: "act-1",
+      type: "contract_renewed",
+      title: "Contract renewed with Oceanic Shipping Ltd.",
+      targetInfo: "for MV Ocean Star",
+      timeAgo: "2 hours ago",
+    },
+    {
+      id: "act-2",
+      type: "proposal_sent",
+      title: "New proposal sent to BlueWave Maritime",
+      targetInfo: "for 20 Deck Officers",
+      timeAgo: "6 hours ago",
+    },
+    {
+      id: "act-3",
+      type: "placement_completed",
+      title: "Placement completed: 3rd Engineer",
+      targetInfo: "on MV Green Horizon",
+      timeAgo: "1 day ago",
+    },
+    {
+      id: "act-4",
+      type: "meeting",
+      title: "Client meeting with Pacific Transport Co.",
+      targetInfo: "Manning SLA Review",
+      timeAgo: "2 days ago",
+    },
+  ],
+  topClients: [
+    {
+      id: "top-1",
+      clientName: "Oceanic Shipping Ltd.",
+      contractValueUsd: 680000,
+      relativePercentage: 100,
+    },
+    {
+      id: "top-2",
+      clientName: "BlueWave Maritime",
+      contractValueUsd: 520000,
+      relativePercentage: 76,
+    },
+    {
+      id: "top-3",
+      clientName: "GreenSea Line",
+      contractValueUsd: 420000,
+      relativePercentage: 62,
+    },
+    {
+      id: "top-4",
+      clientName: "Pacific Transport Co.",
+      contractValueUsd: 350000,
+      relativePercentage: 51,
+    },
+    {
+      id: "top-5",
+      clientName: "Global Marine Corp.",
+      contractValueUsd: 280000,
+      relativePercentage: 41,
+    },
+  ],
+};

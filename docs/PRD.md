@@ -1,7 +1,7 @@
 # PRODUCT REQUIREMENT DOCUMENT
 ## Sistem Manajemen Keagenan Kapal (Ship Agency Management System)
 
-**Disusun untuk:** PT. Solid Lautan Sinergi
+**Disusun untuk:** PT. Nautiva Ocean Agency
 **Versi:** 1.0
 **Tanggal:** Agustus 2026
 
@@ -11,7 +11,7 @@
 
 ### 1.1 Latar Belakang
 
-PT. Solid Lautan Sinergi bergerak di bidang jasa keagenan kapal, dengan fokus layanan pada pengelolaan sertifikat kapal, monitoring dokumen, dan pengurusan perizinan yang sesuai regulasi maritim. Proses ini saat ini rawan human error karena melibatkan banyak dokumen dengan masa berlaku berbeda-beda, tersebar di banyak klien dan banyak kapal sekaligus.
+PT. Nautiva Ocean Agency bergerak di bidang jasa keagenan kapal, dengan fokus layanan pada pengelolaan sertifikat kapal, monitoring dokumen, dan pengurusan perizinan yang sesuai regulasi maritim. Proses ini saat ini rawan human error karena melibatkan banyak dokumen dengan masa berlaku berbeda-beda, tersebar di banyak klien dan banyak kapal sekaligus.
 
 Sistem ini dirancang untuk menjadi platform digital yang mengubah proses administratif manual menjadi alur kerja yang terpusat, terjadwal otomatis, dan dapat dipantau secara real time oleh internal tim maupun klien (perusahaan pelayaran).
 

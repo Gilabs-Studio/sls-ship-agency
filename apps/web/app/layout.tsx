@@ -44,20 +44,20 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
-    metadataBase: new URL("https://indosupplier.id"),
+    metadataBase: new URL("https://nautiva.id"),
     title: {
-      template: "%s | Indosupplier",
-      default: "Indosupplier - ERP, CRM, HRIS, POS & Finance",
+      template: "%s | Nautiva",
+      default: "Nautiva - ERP, CRM, HRIS, POS & Finance",
     },
     description:
-      "Indosupplier adalah software all-in-one ERP, CRM, HRIS, POS, dan Finance untuk bisnis Indonesia. Satu platform untuk operasional, penjualan, stok, HR, dan laporan keuangan.",
+      "Nautiva adalah software all-in-one ERP, CRM, HRIS, POS, dan Finance untuk bisnis Indonesia. Satu platform untuk operasional, penjualan, stok, HR, dan laporan keuangan.",
     keywords: [
       "ERP Indonesia",
       "Aplikasi CRM",
       "Sistem HRIS",
       "Aplikasi Kasir POS",
       "Software Finance",
-      "Indosupplier",
+      "Nautiva",
       "Manajemen Bisnis Terintegrasi",
       "All-in-one Software",
       "Vendor ERP",
@@ -73,32 +73,32 @@ export async function generateMetadata(): Promise<Metadata> {
       "sales management software",
       "software manajemen penjualan",
     ],
-    authors: [{ name: "Indosupplier" }],
-    creator: "Indosupplier",
-    publisher: "Indosupplier",
+    authors: [{ name: "Nautiva" }],
+    creator: "Nautiva",
+    publisher: "Nautiva",
     openGraph: {
       type: "website",
       locale: locale === "id" ? "id_ID" : "en_US",
-      url: "https://indosupplier.id",
-      title: "Indosupplier - ERP, CRM, HRIS, POS & Finance",
+      url: "https://nautiva.id",
+      title: "Nautiva - ERP, CRM, HRIS, POS & Finance",
       description:
-        "Indosupplier adalah platform bisnis all-in-one untuk ERP, CRM, HRIS, POS, dan Finance di Indonesia.",
-      siteName: "Indosupplier",
+        "Nautiva adalah platform bisnis all-in-one untuk ERP, CRM, HRIS, POS, dan Finance di Indonesia.",
+      siteName: "Nautiva",
       images: [
         {
           url: "/screenshot/dashboard.webp",
           width: 1920,
           height: 1080,
-          alt: "Indosupplier dashboard preview",
+          alt: "Nautiva dashboard preview",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Indosupplier - ERP, CRM, HRIS, POS & Finance",
+      title: "Nautiva - ERP, CRM, HRIS, POS & Finance",
       description:
-        "Indosupplier adalah platform bisnis all-in-one untuk ERP, CRM, HRIS, POS, dan Finance di Indonesia.",
-      creator: "@indosupplier",
+        "Nautiva adalah platform bisnis all-in-one untuk ERP, CRM, HRIS, POS, dan Finance di Indonesia.",
+      creator: "@nautiva",
       images: ["/screenshot/dashboard.webp"],
     },
     robots: {
@@ -113,7 +113,7 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: "https://indosupplier.id",
+      canonical: "https://nautiva.id",
       languages: getLanguageAlternates("/"),
     },
   };

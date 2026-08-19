@@ -3,7 +3,7 @@ import type { LeadItem, ContactItem, DealItem, InteractionLog } from "../types/c
 export const initialLeads: LeadItem[] = [
   {
     id: "lead-1",
-    companyName: "PT Nusantara Cargo Line",
+    companyName: "PT. Nautiva Ocean Agency",
     picName: "Capt. Herman Wijaya",
     picPhone: "0812-9876-5432",
     picEmail: "herman@nusantaracargo.co.id",
@@ -20,7 +20,7 @@ export const initialLeads: LeadItem[] = [
   },
   {
     id: "lead-2",
-    companyName: "PT Samarinda Trans Energi",
+    companyName: "PT. Nautiva Ocean Agency",
     picName: "Bambang Soetrisno",
     picPhone: "0811-2345-6789",
     picEmail: "bambang@samarindaenergy.com",
@@ -54,7 +54,7 @@ export const initialLeads: LeadItem[] = [
   },
   {
     id: "lead-4",
-    companyName: "PT Batam Global Maritime",
+    companyName: "PT. Nautiva Ocean Agency",
     picName: "Eko Prasetyo",
     picPhone: "0852-1122-3344",
     picEmail: "eko@batamglobalmaritime.com",
@@ -71,7 +71,7 @@ export const initialLeads: LeadItem[] = [
   },
   {
     id: "lead-5",
-    companyName: "PT Indonesia Oceanic Lines",
+    companyName: "PT. Nautiva Ocean Agency",
     picName: "Rina Kusuma",
     picPhone: "0817-4433-2211",
     picEmail: "rina@oceaniclines.id",
@@ -92,7 +92,7 @@ export const initialContacts: ContactItem[] = [
   {
     id: "cont-1",
     name: "Capt. Herman Wijaya",
-    company: "PT Nusantara Cargo Line",
+    company: "PT. Nautiva Ocean Agency",
     position: "Fleet Operations Manager",
     email: "herman@nusantaracargo.co.id",
     phone: "0812-9876-5432",
@@ -103,7 +103,7 @@ export const initialContacts: ContactItem[] = [
   {
     id: "cont-2",
     name: "Bambang Soetrisno",
-    company: "PT Samarinda Trans Energi",
+    company: "PT. Nautiva Ocean Agency",
     position: "VP Procurement & Logistics",
     email: "bambang@samarindaenergy.com",
     phone: "0811-2345-6789",
@@ -128,8 +128,8 @@ export const initialDeals: DealItem[] = [
   {
     id: "deal-101",
     leadId: "lead-1",
-    title: "Penawaran Keagenan Kargo PT Nusantara Cargo",
-    companyName: "PT Nusantara Cargo Line",
+    title: "Penawaran Keagenan Kargo PT. Nautiva Ocean Agency",
+    companyName: "PT. Nautiva Ocean Agency",
     vesselCount: 6,
     proposalValue: 450000000,
     status: "Direview",
@@ -140,7 +140,7 @@ export const initialDeals: DealItem[] = [
     id: "deal-102",
     leadId: "lead-2",
     title: "Kontrak Layanan Keagenan Tanker Minyak",
-    companyName: "PT Samarinda Trans Energi",
+    companyName: "PT. Nautiva Ocean Agency",
     vesselCount: 12,
     proposalValue: 1200000000,
     status: "Disetujui",

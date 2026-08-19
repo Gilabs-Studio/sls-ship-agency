@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
 )

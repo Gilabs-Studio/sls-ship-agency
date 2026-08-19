@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gilabs/indosupplier/api/internal/core/response"
+	"github.com/gilabs/nautiva/api/internal/core/response"
 	"github.com/gin-gonic/gin"
 )
 

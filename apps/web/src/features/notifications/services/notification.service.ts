@@ -4,7 +4,7 @@ export const initialNotifications: NotificationItem[] = [
   {
     id: "notif-1",
     title: "Sertifikat SOLAS Expired Mendesak (H-1)",
-    message: "Sertifikat SOLAS Safety Construction KM Solid Horizon (IMO 9821245) sudah melewati tanggal expired.",
+    message: "Sertifikat SOLAS Safety Construction KM Nautiva Horizon (IMO 9821245) sudah melewati tanggal expired.",
     category: "Certificate Expiry",
     channels: ["Email", "WhatsApp", "In-App"],
     priority: "High",

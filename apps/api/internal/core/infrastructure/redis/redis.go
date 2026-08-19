@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
 	"github.com/redis/go-redis/v9"
 )
 

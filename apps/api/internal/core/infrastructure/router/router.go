@@ -1,9 +1,9 @@
 package router
 
 import (
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/jwt"
-	"github.com/gilabs/indosupplier/api/internal/core/middleware"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/jwt"
+	"github.com/gilabs/nautiva/api/internal/core/middleware"
 	"github.com/gin-gonic/gin"
 )
 

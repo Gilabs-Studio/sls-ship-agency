@@ -123,7 +123,7 @@ export function VesselModals({
                 <FieldLabel className="text-xs font-semibold">Jenis Kapal</FieldLabel>
                 <Select
                   defaultValue={vesselForm.watch("vesselType")}
-                  onValueChange={(v) => vesselForm.setValue("vesselType", v as any)}
+                  onValueChange={(v) => vesselForm.setValue("vesselType", v as VesselRegistrationValues["vesselType"])}
                 >
                   <SelectTrigger className="w-full text-xs">
                     <SelectValue placeholder="Pilih tipe" />
@@ -139,7 +139,7 @@ export function VesselModals({
 
               <Field>
                 <FieldLabel htmlFor="clientCompany" className="text-xs font-semibold">Perusahaan Pelayaran (Pemilik)</FieldLabel>
-                <Input id="clientCompany" placeholder="Contoh: PT Pelayaran Trans Maritime" {...vesselForm.register("clientCompany")} />
+                <Input id="clientCompany" placeholder="Contoh: PT. Nautiva Ocean Agency" {...vesselForm.register("clientCompany")} />
               </Field>
 
               <div className="grid grid-cols-2 gap-3">
