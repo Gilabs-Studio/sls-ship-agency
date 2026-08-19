@@ -1,0 +1,75 @@
+export const clientsEn = {
+  title: "Client Lifecycle",
+  description: "Monitor and manage client relationships, crew staffing contracts, health scores, and renewal pipelines across your fleet accounts.",
+  timePeriod: {
+    thisMonth: "This Month",
+    thisQuarter: "This Quarter",
+    thisYear: "This Year",
+  },
+  actions: {
+    exportReport: "Export Report",
+    addContract: "New Contract",
+    viewAll: "View all",
+    refresh: "Refresh Data",
+  },
+  kpi: {
+    totalClients: "Total Clients",
+    activeContracts: "Active Contracts",
+    activePlacements: "Active Placements",
+    contractValue: "Contract Value (USD)",
+    healthScore: "Client Health Score (Avg)",
+    thisMonthIncrease: "+{count} this month",
+    vsLastMonth: "+{percent}% vs last month",
+    good: "Good",
+    needsAttention: "Attention",
+  },
+  funnel: {
+    title: "Client Lifecycle Funnel",
+    subtitle: "Conversion flow from initial leads to active staffing accounts",
+    stages: {
+      lead: "Lead",
+      prospect: "Prospect",
+      proposal: "Proposal",
+      negotiation: "Negotiation",
+      contracted: "Contracted",
+      active: "Active",
+      inactiveLost: "Inactive / Lost",
+    },
+  },
+  contractsStatus: {
+    title: "Contracts by Status",
+    subtitle: "Distribution of active crew outsourcing & manning agreements",
+    totalLabel: "Total",
+    statuses: {
+      active: "Active",
+      expiringSoon: "Expiring Soon",
+      pendingRenewal: "Pending Renewal",
+      onHold: "On Hold",
+      completed: "Completed",
+      terminated: "Terminated",
+    },
+  },
+  renewals: {
+    title: "Upcoming Renewals",
+    subtitle: "Manning agreements expiring within 30 days",
+    daysLeft: "{days} days left",
+  },
+  healthOverview: {
+    title: "Client Health Overview",
+    subtitle: "Account retention health score & recent engagement status",
+    columns: {
+      client: "Client",
+      healthScore: "Health Score",
+      trend: "Trend",
+      lastInteraction: "Last Interaction",
+    },
+  },
+  recentActivities: {
+    title: "Recent Activities",
+    subtitle: "Real-time audit log of client engagements and staffing milestones",
+  },
+  topClients: {
+    title: "Top Clients by Contract Value",
+    subtitle: "Highest value shipowner accounts by annual contract volume",
+  },
+};

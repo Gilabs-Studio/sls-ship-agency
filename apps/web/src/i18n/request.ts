@@ -25,6 +25,9 @@ import { landingId } from "@/features/landing/i18n/id";
 import { salesEn } from "@/features/sales/i18n/en";
 import { salesId } from "@/features/sales/i18n/id";
 
+import { clientsEn } from "@/features/clients/i18n/en";
+import { clientsId } from "@/features/clients/i18n/id";
+
 const messages = {
   en: {
     ...globalEnMessages,
@@ -37,6 +40,7 @@ const messages = {
     settings: settingsEn,
     landing: landingEn,
     sales: salesEn,
+    clients: clientsEn,
   },
   id: {
     ...globalIdMessages,
@@ -49,6 +53,7 @@ const messages = {
     settings: settingsId,
     landing: landingId,
     sales: salesId,
+    clients: clientsId,
   },
 } as const;
 
