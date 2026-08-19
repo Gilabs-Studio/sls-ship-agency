@@ -61,11 +61,11 @@ export function generateMandatoryCertificates(vesselType: VesselType): Mandatory
 export const initialVessels: VesselItem[] = [
   {
     id: "vessel-1",
-    name: "KM Solid Horizon",
+    name: "KM Nautiva Horizon",
     imoNumber: "9821245",
     flag: "Indonesia 🇮🇩",
     vesselType: "Cargo",
-    clientCompany: "PT Nusantara Cargo Line",
+    clientCompany: "PT. Nautiva Ocean Agency",
     builtYear: 2018,
     grossTonnage: 12500,
     seaworthinessStatus: "Tidak Layak Operasi", // Has expired certificate
@@ -115,7 +115,7 @@ export const initialVessels: VesselItem[] = [
     imoNumber: "9482103",
     flag: "Indonesia 🇮🇩",
     vesselType: "Tanker",
-    clientCompany: "PT Samarinda Trans Energi",
+    clientCompany: "PT. Nautiva Ocean Agency",
     builtYear: 2021,
     grossTonnage: 28000,
     seaworthinessStatus: "Layak Operasi",

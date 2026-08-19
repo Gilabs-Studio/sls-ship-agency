@@ -1,8 +1,8 @@
 package mapper
 
 import (
-	"github.com/gilabs/indosupplier/api/internal/user/data/models"
-	"github.com/gilabs/indosupplier/api/internal/user/domain/dto"
+	"github.com/gilabs/nautiva/api/internal/user/data/models"
+	"github.com/gilabs/nautiva/api/internal/user/domain/dto"
 )
 
 func ToAvailableUserResponse(u *models.User) dto.AvailableUserResponse {

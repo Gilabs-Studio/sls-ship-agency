@@ -68,7 +68,7 @@ export function AddAgentModal({ open, onOpenChange, onSubmit }: AddAgentModalPro
             <span>Registrasi Agen Pelaut Baru</span>
           </DialogTitle>
           <DialogDescription className="text-xs">
-            Masukkan kredensial dan data kualifikasi agen pelaut untuk didaftarkan ke sistem master GIMS.
+            Masukkan kredensial dan data kualifikasi agen pelaut untuk didaftarkan ke sistem master Nautiva.
           </DialogDescription>
         </DialogHeader>
 

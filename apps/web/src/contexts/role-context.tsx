@@ -23,8 +23,8 @@ const RoleContext = createContext<RoleContextType | undefined>(undefined);
 export const RoleProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [role, setRole] = useState<RoleType>("Super Admin");
 
-  // Defaults to "PT Samudera Indonesia Tbk" when Client User role is selected
-  const clientCompanyName = "PT Samudera Indonesia Tbk";
+  // Defaults to "PT. Nautiva Ocean Agency" when Client User role is selected
+  const clientCompanyName = "PT. Nautiva Ocean Agency";
   const isClientUser = role === "Klien (Shipping Co)";
 
   return (

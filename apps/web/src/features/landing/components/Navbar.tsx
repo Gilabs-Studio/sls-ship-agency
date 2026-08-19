@@ -66,7 +66,7 @@ export function Navbar({ t, locale }: NavbarProps) {
         {/* Logo & Brand */}
         <Link href="/" className="flex items-center gap-2 cursor-pointer group">
           <span className="text-base sm:text-lg font-extrabold tracking-tight text-white group-hover:text-emerald-400 transition-colors drop-shadow-md cursor-pointer">
-            PT. SOLID LAUTAN SINERGI
+            PT. NAUTIVA OCEAN AGENCY
           </span>
         </Link>
 

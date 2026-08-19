@@ -104,7 +104,7 @@ export default function OutsourcingPage() {
       serviceRequestNo: reqObj?.requestNo || "SR-2026-0801",
       title: taskTitle,
       vendorId: selectedVendorId,
-      vendorName: vendorObj?.name || "PT Nusantara Marine Surveyors",
+      vendorName: vendorObj?.name || "PT. Nautiva Ocean Agency",
       expertise: vendorObj?.expertise || "Marine Survey & Technical Inspection",
       deadline: deadlineDate,
       costActual: Number(costEstimate),

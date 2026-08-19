@@ -111,7 +111,7 @@ export function useVesselsPage() {
       placementHistory: [],
       reviews: [],
       flags: ["Kru Baru Terdaftar", "Siap Penempatan"],
-      notes: "Agen pelaut baru terdaftar dalam database resmi GIMS.",
+      notes: "Agen pelaut baru terdaftar dalam database resmi Nautiva.",
     };
 
     setAgents((prev) => [newAgent, ...prev]);

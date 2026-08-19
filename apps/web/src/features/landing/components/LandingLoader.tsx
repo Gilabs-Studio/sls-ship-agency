@@ -61,7 +61,7 @@ export function LandingLoader({
       {/* Brand & Subtitle */}
       <div className="text-center px-4 max-w-md z-10 space-y-2">
         <h2 className="text-sm sm:text-base font-extrabold tracking-widest text-white uppercase font-mono drop-shadow-[0_2px_10px_rgba(16,185,129,0.3)]">
-          PT. SOLID LAUTAN SINERGI
+          PT. NAUTIVA OCEAN AGENCY
         </h2>
         <p className="text-xs sm:text-sm text-slate-400 font-medium tracking-wide">
           {message}

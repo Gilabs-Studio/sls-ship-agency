@@ -5,10 +5,10 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/gilabs/indosupplier/api/internal/core/errors"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
-	"github.com/gilabs/indosupplier/api/internal/core/response"
-	"github.com/gilabs/indosupplier/api/internal/core/utils"
+	"github.com/gilabs/nautiva/api/internal/core/errors"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/response"
+	"github.com/gilabs/nautiva/api/internal/core/utils"
 	"github.com/gin-gonic/gin"
 )
 

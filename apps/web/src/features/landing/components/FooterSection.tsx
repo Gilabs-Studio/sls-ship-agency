@@ -43,7 +43,7 @@ export function FooterSection({ t }: FooterSectionProps) {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://solidlautansinergi.co.id"
+                href="https://nautiva.id"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Website"

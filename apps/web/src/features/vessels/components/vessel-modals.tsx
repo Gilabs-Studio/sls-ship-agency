@@ -139,7 +139,7 @@ export function VesselModals({
 
               <Field>
                 <FieldLabel htmlFor="clientCompany" className="text-xs font-semibold">Perusahaan Pelayaran (Pemilik)</FieldLabel>
-                <Input id="clientCompany" placeholder="Contoh: PT Pelayaran Trans Maritime" {...vesselForm.register("clientCompany")} />
+                <Input id="clientCompany" placeholder="Contoh: PT. Nautiva Ocean Agency" {...vesselForm.register("clientCompany")} />
               </Field>
 
               <div className="grid grid-cols-2 gap-3">

@@ -53,8 +53,8 @@ export async function generateMetadata({
 
   return {
     title: isId
-      ? "PT. Solid Lautan Sinergi — Layanan Keagenan Kapal & Monitoring Dokumen"
-      : "PT. Solid Lautan Sinergi — Ship Agency & Vessel Certificate Management",
+      ? "PT. Nautiva Ocean Agency — Layanan Keagenan Kapal & Monitoring Dokumen"
+      : "PT. Nautiva Ocean Agency — Ship Agency & Vessel Certificate Management",
     description: isId
       ? "Mitra terpercaya perusahaan pelayaran nasional & lokal. Menghadirkan pengelolaan sertifikat kapal, pengurusan dokumen efisien, dan monitoring berbasis teknologi."
       : "Trusted partner for national and local shipping companies. Streamlining vessel documentation, compliance monitoring, and professional port agency operations.",

@@ -3,7 +3,7 @@ import type { ClientComplianceReportItem, CrmConversionMetric } from "../types/r
 export const initialComplianceReports: ClientComplianceReportItem[] = [
   {
     clientId: "c-1",
-    clientCompany: "PT Samarinda Trans Energi",
+    clientCompany: "PT. Nautiva Ocean Agency",
     vesselCount: 12,
     totalCertificates: 48,
     activeCount: 45,
@@ -13,7 +13,7 @@ export const initialComplianceReports: ClientComplianceReportItem[] = [
   },
   {
     clientId: "c-2",
-    clientCompany: "PT Nusantara Cargo Line",
+    clientCompany: "PT. Nautiva Ocean Agency",
     vesselCount: 6,
     totalCertificates: 24,
     activeCount: 20,

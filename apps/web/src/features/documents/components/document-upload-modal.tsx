@@ -39,8 +39,8 @@ export function DocumentUploadModal({
     defaultValues: {
       title: "",
       category: "Sertifikat Kapal",
-      vesselName: "KM Solid Horizon",
-      clientCompany: "PT Nusantara Cargo Line",
+      vesselName: "KM Nautiva Horizon",
+      clientCompany: "PT. Nautiva Ocean Agency",
       expiryDate: "",
     },
   });
@@ -91,7 +91,7 @@ export function DocumentUploadModal({
 
             <Field>
               <FieldLabel htmlFor="vesselName" className="text-xs font-semibold">Nama Kapal Terkait</FieldLabel>
-              <Input id="vesselName" placeholder="Contoh: KM Solid Horizon" {...form.register("vesselName")} />
+              <Input id="vesselName" placeholder="Contoh: KM Nautiva Horizon" {...form.register("vesselName")} />
             </Field>
 
             <Field>

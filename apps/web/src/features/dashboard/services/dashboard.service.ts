@@ -54,7 +54,7 @@ export const mockRecentActivities: ActivityTimelineItem[] = [
     id: "act-3",
     module: "crm",
     title: "Lead Baru Didaftarkan",
-    description: "PT Nusantara Logistics mendaftarkan 5 armada potensi keagenan",
+    description: "PT. Nautiva Ocean Agencyan 5 armada potensi keagenan",
     actor: "Siti Rahma (Sales)",
     timestamp: "2 jam yang lalu",
     statusSeverity: "info",
@@ -63,7 +63,7 @@ export const mockRecentActivities: ActivityTimelineItem[] = [
     id: "act-4",
     module: "notifications",
     title: "Eskalasi Notifikasi Expiry H-7",
-    description: "Peringatan otomatis dikirim ke Super Admin untuk KM Solid Horizon",
+    description: "Peringatan otomatis dikirim ke Super Admin untuk KM Nautiva Horizon",
     actor: "System Engine",
     timestamp: "4 jam yang lalu",
     statusSeverity: "destructive",
@@ -307,7 +307,7 @@ export const mockVmsAgencies: VmsAgencyListItem[] = [
   {
     id: "agy-6",
     code: "ID-AGY-006",
-    name: "PT Cyber Shield Indonesia",
+    name: "PT. Nautiva Ocean Agency",
     logo: "cs",
     pic: {
       name: "Agus Pratama",

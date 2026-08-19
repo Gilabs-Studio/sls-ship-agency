@@ -11,28 +11,28 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	authUsecase "github.com/gilabs/indosupplier/api/internal/auth/domain/usecase"
-	authHandler "github.com/gilabs/indosupplier/api/internal/auth/presentation/handler"
-	authRouter "github.com/gilabs/indosupplier/api/internal/auth/presentation/router"
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/audit"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/database"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/events"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/jwt"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/redis"
-	coreRouter "github.com/gilabs/indosupplier/api/internal/core/infrastructure/router"
-	"github.com/gilabs/indosupplier/api/internal/core/logger"
-	"github.com/gilabs/indosupplier/api/internal/core/middleware"
-	"github.com/gilabs/indosupplier/api/internal/core/response"
-	"github.com/gilabs/indosupplier/api/internal/core/storage"
-	refreshTokenRepo "github.com/gilabs/indosupplier/api/internal/refresh_token/data/repositories"
-	refreshTokenWorker "github.com/gilabs/indosupplier/api/internal/refresh_token/worker"
-	"github.com/gilabs/indosupplier/api/internal/user/data/repositories"
-	userUsecase "github.com/gilabs/indosupplier/api/internal/user/domain/usecase"
-	userHandler "github.com/gilabs/indosupplier/api/internal/user/presentation/handler"
-	userRouter "github.com/gilabs/indosupplier/api/internal/user/presentation/router"
-	"github.com/gilabs/indosupplier/api/seeders"
+	authUsecase "github.com/gilabs/nautiva/api/internal/auth/domain/usecase"
+	authHandler "github.com/gilabs/nautiva/api/internal/auth/presentation/handler"
+	authRouter "github.com/gilabs/nautiva/api/internal/auth/presentation/router"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/audit"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/database"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/events"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/jwt"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/redis"
+	coreRouter "github.com/gilabs/nautiva/api/internal/core/infrastructure/router"
+	"github.com/gilabs/nautiva/api/internal/core/logger"
+	"github.com/gilabs/nautiva/api/internal/core/middleware"
+	"github.com/gilabs/nautiva/api/internal/core/response"
+	"github.com/gilabs/nautiva/api/internal/core/storage"
+	refreshTokenRepo "github.com/gilabs/nautiva/api/internal/refresh_token/data/repositories"
+	refreshTokenWorker "github.com/gilabs/nautiva/api/internal/refresh_token/worker"
+	"github.com/gilabs/nautiva/api/internal/user/data/repositories"
+	userUsecase "github.com/gilabs/nautiva/api/internal/user/domain/usecase"
+	userHandler "github.com/gilabs/nautiva/api/internal/user/presentation/handler"
+	userRouter "github.com/gilabs/nautiva/api/internal/user/presentation/router"
+	"github.com/gilabs/nautiva/api/seeders"
 )
 
 func initInfrastructure() {
@@ -136,7 +136,7 @@ func main() {
 	}
 
 	r.GET("/health", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"status": "ok", "message": "IndoSupplier API is running"})
+		c.JSON(http.StatusOK, gin.H{"status": "ok", "message": "Nautiva API is running"})
 	})
 
 	r.GET("/ping", func(c *gin.Context) {
@@ -146,7 +146,7 @@ func main() {
 	v1 := r.Group("/api/v1")
 	{
 		v1.GET("/", func(c *gin.Context) {
-			response.SuccessResponse(c, gin.H{"message": "IndoSupplier API v1", "version": "1.0.0"}, nil)
+			response.SuccessResponse(c, gin.H{"message": "Nautiva API v1", "version": "1.0.0"}, nil)
 		})
 
 		authRouter.RegisterAuthRoutes(v1, authH, jwtManager)

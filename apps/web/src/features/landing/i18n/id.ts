@@ -1,7 +1,7 @@
 import type { LandingTranslations } from "../types/landing.types";
 
 export const landingId: LandingTranslations = {
-  badge: "PT. SOLID LAUTAN SINERGI",
+  badge: "PT. NAUTIVA OCEAN AGENCY",
   headline: "Keagenan Kapal & Monitoring",
   headlineHighlight: "Sertifikat Pelayaran",
   subtitle:
@@ -9,8 +9,8 @@ export const landingId: LandingTranslations = {
   ctaPrimary: "Ajukan Penawaran Kerja Sama",
   ctaSecondary: "Surat Perkenalan",
   ctaLogin: "Masuk Portal",
-  brutalistTitle: "SOLID LAUTAN SINERGI",
-  heroTagline: "Solid Lautan Sinergi",
+  brutalistTitle: "NAUTIVA OCEAN AGENCY",
+  heroTagline: "Nautiva Ocean Agency",
   heroSubtagline: "Outsourcing Agen Perkapalan",
 
   nav: {
@@ -49,9 +49,9 @@ export const landingId: LandingTranslations = {
   },
   letterModal: {
     title: "Surat Perkenalan Resmi",
-    subtitle: "PT. Solid Lautan Sinergi — Penawaran Kerja Sama Keagenan Kapal",
+    subtitle: "PT. Nautiva Ocean Agency — Penawaran Kerja Sama Keagenan Kapal",
     close: "Tutup",
-    downloadText: "Dokumen Resmi PT. Solid Lautan Sinergi",
+    downloadText: "Dokumen Resmi PT. Nautiva Ocean Agency",
   },
   letter: {
     salutation: "Kepada Yth.",
@@ -59,7 +59,7 @@ export const landingId: LandingTranslations = {
     location: "Di Tempat",
     opening: "Dengan hormat,",
     intro:
-      "Perkenankan kami memperkenalkan diri. Kami adalah PT. Solid Lautan Sinergi, perusahaan yang bergerak di bidang jasa keagenan kapal. Selama ini, kami telah dipercaya untuk menangani berbagai layanan keagenan oleh sejumlah perusahaan pelayaran, baik berskala nasional maupun lokal. Didukung oleh tim yang berpengalaman dan profesional di bidangnya, kami senantiasa berupaya memberikan pelayanan terbaik yang berorientasi pada kualitas dan kepuasan mitra usaha.",
+      "Perkenankan kami memperkenalkan diri. Kami adalah PT. Nautiva Ocean Agency, perusahaan yang bergerak di bidang jasa keagenan kapal. Selama ini, kami telah dipercaya untuk menangani berbagai layanan keagenan oleh sejumlah perusahaan pelayaran, baik berskala nasional maupun lokal. Didukung oleh tim yang berpengalaman dan profesional di bidangnya, kami senantiasa berupaya memberikan pelayanan terbaik yang berorientasi pada kualitas dan kepuasan mitra usaha.",
     proposal:
       "Melalui surat ini, kami bermaksud mengajukan penawaran kerja sama dalam hal pengelolaan dan monitoring sertifikat kapal, serta pengurusan dokumen kapal secara lebih efisien, efektif, dan sesuai dengan ketentuan yang berlaku.",
     initiative:
@@ -67,7 +67,7 @@ export const landingId: LandingTranslations = {
     closing:
       "Kami berharap penawaran ini dapat menjadi awal dari hubungan kerja sama yang baik dan saling mendukung. Atas perhatian dan kesempatan yang diberikan, kami sampaikan terima kasih.",
     signoff: "Hormat kami,",
-    companyName: "PT. Solid Lautan Sinergi",
+    companyName: "PT. Nautiva Ocean Agency",
   },
   servicesSection: {
     tag: "OUR SERVICES",
@@ -87,7 +87,7 @@ export const landingId: LandingTranslations = {
     tag: "ABOUT US",
     title: "Mitra Terpercaya Industri Maritim",
     description:
-      "PT. Solid Lautan Sinergi hadir sebagai mitra strategis bagi perusahaan pelayaran dalam menyediakan layanan outsourcing agen perkapalan yang profesional, efisien, dan berorientasi pada keselamatan serta kepatuhan regulasi.",
+      "PT. Nautiva Ocean Agency hadir sebagai mitra strategis bagi perusahaan pelayaran dalam menyediakan layanan outsourcing agen perkapalan yang profesional, efisien, dan berorientasi pada keselamatan serta kepatuhan regulasi.",
     ctaButton: "Selengkapnya Tentang Kami",
   },
   statsSection: {
@@ -104,7 +104,7 @@ export const landingId: LandingTranslations = {
   },
   whyChooseUsSection: {
     tag: "WHY CHOOSE US",
-    title: "Mengapa Memilih Solid Lautan Sinergi?",
+    title: "Mengapa Memilih Nautiva Ocean Agency?",
     description:
       "Kami berkomitmen memberikan layanan terbaik dengan standar tinggi dan berorientasi pada kepercayaan serta kepuasan klien.",
     item1Title: "Profesional & Berpengalaman",
@@ -123,7 +123,7 @@ export const landingId: LandingTranslations = {
     button: "Hubungi Kami Sekarang",
   },
   footerSection: {
-    companyName: "PT. SOLID LAUTAN SINERGI",
+    companyName: "PT. NAUTIVA OCEAN AGENCY",
     description:
       "Mitra outsourcing agen perkapalan yang profesional, efisien, dan berkomitmen untuk keselamatan serta kepuasan klien.",
     menuTitle: "Menu",
@@ -139,7 +139,7 @@ export const landingId: LandingTranslations = {
     contactTitle: "Kontak Kami",
     address: "Jl. Bahari No. 123, Jakarta Utara, Indonesia",
     phone: "+62 21 1234 5678",
-    email: "info@solidlautansinergi.co.id",
-    copyright: "© 2025 PT. Solid Lautan Sinergi. All rights reserved.",
+    email: "info@nautiva.id",
+    copyright: "© 2025 PT. Nautiva Ocean Agency. All rights reserved.",
   },
 };

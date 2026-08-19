@@ -117,7 +117,7 @@ export function CrmModals({
             <FieldGroup className="space-y-3">
               <Field>
                 <FieldLabel htmlFor="companyName" className="text-xs font-semibold">Nama Perusahaan Pelayaran</FieldLabel>
-                <Input id="companyName" placeholder="Contoh: PT Ocean Trans Line" {...leadForm.register("companyName")} />
+                <Input id="companyName" placeholder="Contoh: PT. Nautiva Ocean Agency" {...leadForm.register("companyName")} />
                 {leadForm.formState.errors.companyName && (
                   <FieldError className="text-xs">{leadForm.formState.errors.companyName.message}</FieldError>
                 )}
@@ -192,7 +192,7 @@ export function CrmModals({
               </Field>
               <Field>
                 <FieldLabel htmlFor="company" className="text-xs font-semibold">Nama Perusahaan</FieldLabel>
-                <Input id="company" placeholder="Contoh: PT Lautan Utama" {...contactForm.register("company")} />
+                <Input id="company" placeholder="Contoh: PT. Nautiva Ocean Agency" {...contactForm.register("company")} />
               </Field>
               <Field>
                 <FieldLabel htmlFor="position" className="text-xs font-semibold">Jabatan</FieldLabel>

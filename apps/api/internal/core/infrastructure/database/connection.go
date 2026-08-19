@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

@@ -1,6 +1,6 @@
-# Standar Pengambangan Frontend (Web) — GIMS Platform
+# Standar Pengambangan Frontend (Web) — Nautiva Platform
 
-Dokumen ini mendefinisikan standar arsitektur, panduan gaya kode, styling, i18n, serta praktik terbaik (best practices) untuk pengembangan frontend aplikasi GIMS menggunakan Next.js 16 (App Router) dan React 19.
+Dokumen ini mendefinisikan standar arsitektur, panduan gaya kode, styling, i18n, serta praktik terbaik (best practices) untuk pengembangan frontend aplikasi Nautiva menggunakan Next.js 16 (App Router) dan React 19.
 
 Gunakan [Template Prompt Perubahan API & Web](./change-prompt-templates.md) sebelum meminta perubahan fitur, bug fix, review, atau integrasi full stack agar scope, kontrak data, i18n, security, dan verifikasi jelas sejak awal.
 
@@ -60,7 +60,7 @@ export default function LoginForm() {
 
 ## 3. Standar Styling & Tailwind CSS v4
 
-GIMS menggunakan **Tailwind CSS v4** dengan integrasi CSS-native theme. Pengaturan tema global disimpan di `/app/globals.css`.
+Nautiva menggunakan **Tailwind CSS v4** dengan integrasi CSS-native theme. Pengaturan tema global disimpan di `/app/globals.css`.
 
 ### 🎨 Sistem Warna & Tema (Theme Tokens)
 *   Hindari penulisan nilai warna secara langsung (arbitrary values) seperti `bg-[#6366f1]` atau `text-[#e53e3e]`.
@@ -86,7 +86,7 @@ Untuk memastikan keterbacaan tinggi dan gaya minimalis yang profesional, ikuti s
 *   **Penerapan:** Terapkan standar ini secara konsisten pada kontainer, card padding, flex/grid gaps, margin antar paragraf/judul, serta input fields.
 
 ### 📐 Aturan Sudut (Border Radius Restriction)
-GIMS menerapkan pembatasan radius sudut (rounded corners) secara global untuk menjaga konsistensi UI. Di dalam `globals.css` terdapat rule:
+Nautiva menerapkan pembatasan radius sudut (rounded corners) secara global untuk menjaga konsistensi UI. Di dalam `globals.css` terdapat rule:
 ```css
 .rounded-full,
 .rounded-2xl,
@@ -165,7 +165,7 @@ Untuk menjaga konsistensi UI, **DILARANG** menggunakan native `confirm()` browse
 
 ## 5. Lokalisasi & Navigasi Rute (i18n)
 
-Aplikasi GIMS menggunakan localization bawaan dengan dukungan Bahasa Indonesia (`id`) dan Inggris (`en`).
+Aplikasi Nautiva menggunakan localization bawaan dengan dukungan Bahasa Indonesia (`id`) dan Inggris (`en`).
 
 ### 🗺️ Aturan Navigasi & Router (Kritis)
 Next.js standard router tidak mendukung dynamic locale prefixing secara bawaan. Oleh karena itu:

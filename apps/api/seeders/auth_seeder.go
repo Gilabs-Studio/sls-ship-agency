@@ -6,8 +6,8 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/database"
-	"github.com/gilabs/indosupplier/api/internal/user/data/models"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/database"
+	"github.com/gilabs/nautiva/api/internal/user/data/models"
 )
 
 func SeedUsers() error {
@@ -18,7 +18,7 @@ func SeedUsers() error {
 
 	defaultEmail := os.Getenv("SEED_DEFAULT_EMAIL")
 	if defaultEmail == "" {
-		defaultEmail = "admin@indosupplier.local"
+		defaultEmail = "admin@nautiva.local"
 	}
 
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(seedPassword), bcrypt.DefaultCost)

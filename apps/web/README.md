@@ -1,6 +1,6 @@
-# Indosupplier Web
+# Nautiva Web
 
-Frontend application untuk Indosupplier menggunakan Next.js 16.
+Frontend application untuk Nautiva menggunakan Next.js 16.
 
 ## Tech Stack
 

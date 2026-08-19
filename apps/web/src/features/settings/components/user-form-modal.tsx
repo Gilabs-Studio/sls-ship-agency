@@ -70,7 +70,7 @@ export function UserFormModal({ isOpen, onOpenChange, onSubmitUser }: UserFormMo
 
             <Field>
               <FieldLabel htmlFor="email" className="text-xs font-semibold">Alamat Email</FieldLabel>
-              <Input id="email" type="email" placeholder="rian@solidmaritime.com" {...form.register("email")} />
+              <Input id="email" type="email" placeholder="rian@nautiva.id" {...form.register("email")} />
             </Field>
 
             <Field>

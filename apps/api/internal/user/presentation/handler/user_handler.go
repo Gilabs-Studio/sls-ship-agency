@@ -6,12 +6,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 
-	"github.com/gilabs/indosupplier/api/internal/core/errors"
-	"github.com/gilabs/indosupplier/api/internal/core/response"
-	"github.com/gilabs/indosupplier/api/internal/core/utils"
-	domainDTO "github.com/gilabs/indosupplier/api/internal/user/domain/dto"
-	"github.com/gilabs/indosupplier/api/internal/user/domain/usecase"
-	presentationDTO "github.com/gilabs/indosupplier/api/internal/user/presentation/dto"
+	"github.com/gilabs/nautiva/api/internal/core/errors"
+	"github.com/gilabs/nautiva/api/internal/core/response"
+	"github.com/gilabs/nautiva/api/internal/core/utils"
+	domainDTO "github.com/gilabs/nautiva/api/internal/user/domain/dto"
+	"github.com/gilabs/nautiva/api/internal/user/domain/usecase"
+	presentationDTO "github.com/gilabs/nautiva/api/internal/user/presentation/dto"
 )
 
 type UserHandler struct {

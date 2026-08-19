@@ -1,4 +1,4 @@
-module github.com/gilabs/indosupplier/api
+module github.com/gilabs/nautiva/api
 
 go 1.25.4
 

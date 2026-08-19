@@ -3,8 +3,8 @@ package middleware
 import (
 	"time"
 
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
-	"github.com/gilabs/indosupplier/api/internal/core/logger"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/logger"
 	"github.com/gin-gonic/gin"
 )
 

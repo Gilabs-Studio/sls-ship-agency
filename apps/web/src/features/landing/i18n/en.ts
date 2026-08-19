@@ -1,7 +1,7 @@
 import type { LandingTranslations } from "../types/landing.types";
 
 export const landingEn: LandingTranslations = {
-  badge: "PT. SOLID LAUTAN SINERGI",
+  badge: "PT. NAUTIVA OCEAN AGENCY",
   headline: "Ship Agency & Vessel Certificate",
   headlineHighlight: "Management",
   subtitle:
@@ -9,8 +9,8 @@ export const landingEn: LandingTranslations = {
   ctaPrimary: "Request Proposal",
   ctaSecondary: "Introduction Letter",
   ctaLogin: "Portal Login",
-  brutalistTitle: "SOLID LAUTAN SINERGI",
-  heroTagline: "Solid Lautan Sinergi",
+  brutalistTitle: "NAUTIVA OCEAN AGENCY",
+  heroTagline: "Nautiva Ocean Agency",
   heroSubtagline: "Outsourcing Agen Perkapalan",
 
   nav: {
@@ -49,9 +49,9 @@ export const landingEn: LandingTranslations = {
   },
   letterModal: {
     title: "Official Introduction Letter",
-    subtitle: "PT. Solid Lautan Sinergi — Partnership Proposal",
+    subtitle: "PT. Nautiva Ocean Agency — Partnership Proposal",
     close: "Close",
-    downloadText: "Official Document — PT. Solid Lautan Sinergi",
+    downloadText: "Official Document — PT. Nautiva Ocean Agency",
   },
   letter: {
     salutation: "To:",
@@ -59,7 +59,7 @@ export const landingEn: LandingTranslations = {
     location: "At Destination",
     opening: "Dear Sir/Madam,",
     intro:
-      "Allow us to introduce ourselves. We are PT. Solid Lautan Sinergi, a company providing comprehensive ship agency services. We have been trusted by national and local shipping lines to handle diverse port agency operations. Driven by an experienced team of professionals, we continuously deliver top-tier services focused on quality and partner satisfaction.",
+      "Allow us to introduce ourselves. We are PT. Nautiva Ocean Agency, a company providing comprehensive ship agency services. We have been trusted by national and local shipping lines to handle diverse port agency operations. Driven by an experienced team of professionals, we continuously deliver top-tier services focused on quality and partner satisfaction.",
     proposal:
       "Through this introduction letter, we offer a strategic partnership in vessel certificate management and monitoring, as well as efficient document handling in full compliance with maritime regulations.",
     initiative:
@@ -67,7 +67,7 @@ export const landingEn: LandingTranslations = {
     closing:
       "We look forward to establishing a beneficial partnership. Thank you for your time and consideration.",
     signoff: "Sincerely,",
-    companyName: "PT. Solid Lautan Sinergi",
+    companyName: "PT. Nautiva Ocean Agency",
   },
   servicesSection: {
     tag: "OUR SERVICES",
@@ -87,7 +87,7 @@ export const landingEn: LandingTranslations = {
     tag: "ABOUT US",
     title: "Trusted Maritime Industry Partner",
     description:
-      "PT. Solid Lautan Sinergi is a strategic partner for shipping companies, providing professional, efficient ship agency outsourcing services focused on safety and regulatory compliance.",
+      "PT. Nautiva Ocean Agency is a strategic partner for shipping companies, providing professional, efficient ship agency outsourcing services focused on safety and regulatory compliance.",
     ctaButton: "Learn More About Us",
   },
   statsSection: {
@@ -104,7 +104,7 @@ export const landingEn: LandingTranslations = {
   },
   whyChooseUsSection: {
     tag: "WHY CHOOSE US",
-    title: "Why Choose Solid Lautan Sinergi?",
+    title: "Why Choose Nautiva Ocean Agency?",
     description:
       "We are committed to delivering top-tier services with high standards, centered on trust and client satisfaction.",
     item1Title: "Professional & Experienced",
@@ -123,7 +123,7 @@ export const landingEn: LandingTranslations = {
     button: "Contact Us Now",
   },
   footerSection: {
-    companyName: "PT. SOLID LAUTAN SINERGI",
+    companyName: "PT. NAUTIVA OCEAN AGENCY",
     description:
       "Professional and efficient ship agency outsourcing partner committed to safety and partner satisfaction.",
     menuTitle: "Menu",
@@ -139,7 +139,7 @@ export const landingEn: LandingTranslations = {
     contactTitle: "Contact Us",
     address: "Jl. Bahari No. 123, North Jakarta, Indonesia",
     phone: "+62 21 1234 5678",
-    email: "info@solidlautansinergi.co.id",
-    copyright: "© 2025 PT. Solid Lautan Sinergi. All rights reserved.",
+    email: "info@nautiva.id",
+    copyright: "© 2025 PT. Nautiva Ocean Agency. All rights reserved.",
   },
 };

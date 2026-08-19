@@ -43,7 +43,7 @@ export function HeroSection({ t }: HeroSectionProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/50 to-slate-950" />
       </div>
 
-      {/* Intense Dark Bottom Shadow (Reaches up to half body of "Solid Lautan Sinergi" text) */}
+      {/* Intense Dark Bottom Shadow (Reaches up to half body of "Nautiva Ocean Agency" text) */}
       <div className="absolute inset-x-0 bottom-0 h-36 sm:h-44 lg:h-48 bg-gradient-to-t from-slate-950 via-slate-950/95 via-50% to-transparent z-25 pointer-events-none" />
 
       {/* ==================================================== */}
@@ -61,7 +61,7 @@ export function HeroSection({ t }: HeroSectionProps) {
         >
           <Image
             src="/hero-people.webp"
-            alt="PT. Solid Lautan Sinergi Team"
+            alt="PT. Nautiva Ocean Agency Team"
             fill
             priority
             sizes="(max-width: 1700px) 100vw, 1600px"
@@ -75,7 +75,7 @@ export function HeroSection({ t }: HeroSectionProps) {
       {/* ==================================================== */}
       <div className="absolute top-[300px] sm:top-auto sm:bottom-10 inset-x-0 z-30 px-4 sm:px-8 text-center pointer-events-none select-none">
         <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white tracking-tight leading-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.9)] whitespace-normal sm:whitespace-nowrap">
-          {t.heroTagline || "Solid Lautan Sinergi"}
+          {t.heroTagline || "Nautiva Ocean Agency"}
         </h1>
         <p className="text-sm sm:text-lg lg:text-2xl text-slate-200/90 font-semibold tracking-wide drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)] mt-2 sm:mt-3 max-w-3xl mx-auto">
           {t.heroSubtagline || "Outsourcing Agen Perkapalan"}

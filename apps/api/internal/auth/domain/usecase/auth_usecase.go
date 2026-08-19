@@ -7,13 +7,13 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
-	"github.com/gilabs/indosupplier/api/internal/auth/domain/dto"
-	"github.com/gilabs/indosupplier/api/internal/core/apptime"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/events"
-	jwtManager "github.com/gilabs/indosupplier/api/internal/core/infrastructure/jwt"
-	refreshTokenModels "github.com/gilabs/indosupplier/api/internal/refresh_token/data/models"
-	refreshTokenRepo "github.com/gilabs/indosupplier/api/internal/refresh_token/data/repositories"
-	userRepo "github.com/gilabs/indosupplier/api/internal/user/data/repositories"
+	"github.com/gilabs/nautiva/api/internal/auth/domain/dto"
+	"github.com/gilabs/nautiva/api/internal/core/apptime"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/events"
+	jwtManager "github.com/gilabs/nautiva/api/internal/core/infrastructure/jwt"
+	refreshTokenModels "github.com/gilabs/nautiva/api/internal/refresh_token/data/models"
+	refreshTokenRepo "github.com/gilabs/nautiva/api/internal/refresh_token/data/repositories"
+	userRepo "github.com/gilabs/nautiva/api/internal/user/data/repositories"
 )
 
 var (

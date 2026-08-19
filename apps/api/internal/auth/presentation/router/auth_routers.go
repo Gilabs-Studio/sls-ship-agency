@@ -3,9 +3,9 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/gilabs/indosupplier/api/internal/auth/presentation/handler"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/jwt"
-	"github.com/gilabs/indosupplier/api/internal/core/middleware"
+	"github.com/gilabs/nautiva/api/internal/auth/presentation/handler"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/jwt"
+	"github.com/gilabs/nautiva/api/internal/core/middleware"
 )
 
 func RegisterAuthRoutes(rg *gin.RouterGroup, h *handler.AuthHandler, jwtManager *jwt.JWTManager) {

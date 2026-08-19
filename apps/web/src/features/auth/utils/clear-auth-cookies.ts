@@ -6,7 +6,7 @@
  * 2. Manual logout
  * 3. API returns 401 and refresh fails
  *
- * Note: HttpOnly cookies (indosupplier_access_token, indosupplier_refresh_token) cannot be
+ * Note: HttpOnly cookies (nautiva_access_token, nautiva_refresh_token) cannot be
  * cleared by JavaScript. They must be cleared by the server via Set-Cookie
  * with MaxAge=-1. This function only clears non-HttpOnly cookies like csrf_token.
  *
@@ -16,11 +16,11 @@ export function clearAuthCookies(): void {
   if (typeof document === "undefined") return;
 
   const cookiesToClear = [
-    "indosupplier_csrf_token",
+    "nautiva_csrf_token",
     // Note: These are HttpOnly, so this won't actually work for them
     // but we include them for completeness in case they're ever non-HttpOnly
-    "indosupplier_access_token",
-    "indosupplier_refresh_token",
+    "nautiva_access_token",
+    "nautiva_refresh_token",
   ];
 
   cookiesToClear.forEach((cookieName) => {

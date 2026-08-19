@@ -37,9 +37,9 @@ const defaultAssignments: AgentAssignment[] = [
   {
     id: "ta-1",
     agentName: "Bambang Kurniawan",
-    clientCompany: "PT Samarinda Trans Energi",
-    vendorSupplier: "PT Solid Lautan Sinergi",
-    positionVessel: "Chief Engineer (KM Solid Horizon)",
+    clientCompany: "PT. Nautiva Ocean Agency",
+    vendorSupplier: "PT Nautiva Ocean Agency",
+    positionVessel: "Chief Engineer (KM Nautiva Horizon)",
     contractDurationMonths: 6,
     currentMonthElapsed: 4,
     monthlyFeeRate: "Rp 25.000.000",
@@ -48,7 +48,7 @@ const defaultAssignments: AgentAssignment[] = [
   {
     id: "ta-2",
     agentName: "Ahmad Hidayat",
-    clientCompany: "PT Ocean Line Logistics",
+    clientCompany: "PT. Nautiva Ocean Agency",
     vendorSupplier: "CV Subsea Engine Tech",
     positionVessel: "Teknisi Elektrikal (KM Ocean Star)",
     contractDurationMonths: 6,
@@ -59,8 +59,8 @@ const defaultAssignments: AgentAssignment[] = [
   {
     id: "ta-3",
     agentName: "Capt. Hendra Wijaya",
-    clientCompany: "PT Pelayaran Nusantara",
-    vendorSupplier: "PT Solid Lautan Sinergi",
+    clientCompany: "PT. Nautiva Ocean Agency",
+    vendorSupplier: "PT Nautiva Ocean Agency",
     positionVessel: "Master Mariner (KM Pacific Queen)",
     contractDurationMonths: 12,
     currentMonthElapsed: 8,
@@ -70,8 +70,8 @@ const defaultAssignments: AgentAssignment[] = [
   {
     id: "ta-4",
     agentName: "Rian Prasetyo",
-    clientCompany: "PT Batam Fast Ferry",
-    vendorSupplier: "PT Navigasi Utama Supplier",
+    clientCompany: "PT. Nautiva Ocean Agency",
+    vendorSupplier: "PT. Nautiva Ocean Agency",
     positionVessel: "Teknisi Navigasi (KM Fast Express 02)",
     contractDurationMonths: 6,
     currentMonthElapsed: 1,
@@ -83,7 +83,7 @@ const defaultAssignments: AgentAssignment[] = [
 const defaultVendors: VendorSupplierItem[] = [
   {
     id: "vms-1",
-    vendorName: "PT Solid Lautan Sinergi",
+    vendorName: "PT Nautiva Ocean Agency",
     serviceCategory: "Main Marine Engine & Crew Manning",
     techniciansDeployedCount: 42,
     slaPerformanceRating: "98.5%",
@@ -99,7 +99,7 @@ const defaultVendors: VendorSupplierItem[] = [
   },
   {
     id: "vms-3",
-    vendorName: "PT Navigasi Utama Supplier",
+    vendorName: "PT. Nautiva Ocean Agency",
     serviceCategory: "Sonar & ECDIS Marine Navigation System",
     techniciansDeployedCount: 18,
     slaPerformanceRating: "94.2%",
@@ -110,14 +110,14 @@ const defaultVendors: VendorSupplierItem[] = [
 const defaultRequests: ClientRequestItem[] = [
   {
     id: "req-1",
-    clientCompany: "PT Samarinda Trans Energi",
+    clientCompany: "PT. Nautiva Ocean Agency",
     positionRequirement: "1 Chief Engineer (Mesin Utama)",
     scheduleDueDate: "Jadwal H-3 Requirement",
     matchStatus: "Matched (Siap Tugas)",
   },
   {
     id: "req-2",
-    clientCompany: "PT Ocean Line Logistics",
+    clientCompany: "PT. Nautiva Ocean Agency",
     positionRequirement: "2 Teknisi Elektrikal Kapal",
     scheduleDueDate: "Jadwal H-7 Requirement",
     matchStatus: "Dalam Screening",

@@ -44,7 +44,7 @@ export const salesId = {
     title: "Tambah Lead Prospek Baru",
     subtitle: "Masukkan informasi dasar perusahaan pelayaran untuk masuk ke pipeline sales.",
     companyLabel: "Nama Perusahaan Pelayaran",
-    companyPlaceholder: "Contoh: PT Pelayaran Samudera Jaya",
+    companyPlaceholder: "Contoh: PT. Nautiva Ocean Agency",
     businessTypeLabel: "Jenis Usaha Pelayaran",
     picNameLabel: "Nama PIC Utama",
     picNamePlaceholder: "Contoh: Capt. Irwan",

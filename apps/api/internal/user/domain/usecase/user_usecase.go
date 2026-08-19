@@ -11,14 +11,14 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
-	"github.com/gilabs/indosupplier/api/internal/core/events"
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/audit"
-	infraEvents "github.com/gilabs/indosupplier/api/internal/core/infrastructure/events"
-	"github.com/gilabs/indosupplier/api/internal/core/utils"
-	"github.com/gilabs/indosupplier/api/internal/user/data/models"
-	"github.com/gilabs/indosupplier/api/internal/user/data/repositories"
-	"github.com/gilabs/indosupplier/api/internal/user/domain/dto"
-	"github.com/gilabs/indosupplier/api/internal/user/domain/mapper"
+	"github.com/gilabs/nautiva/api/internal/core/events"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/audit"
+	infraEvents "github.com/gilabs/nautiva/api/internal/core/infrastructure/events"
+	"github.com/gilabs/nautiva/api/internal/core/utils"
+	"github.com/gilabs/nautiva/api/internal/user/data/models"
+	"github.com/gilabs/nautiva/api/internal/user/data/repositories"
+	"github.com/gilabs/nautiva/api/internal/user/domain/dto"
+	"github.com/gilabs/nautiva/api/internal/user/domain/mapper"
 	"github.com/redis/go-redis/v9"
 )
 

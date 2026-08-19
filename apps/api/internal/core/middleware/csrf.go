@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/gilabs/indosupplier/api/internal/core/infrastructure/config"
+	"github.com/gilabs/nautiva/api/internal/core/infrastructure/config"
 	"github.com/gin-gonic/gin"
 )
 
@@ -64,7 +64,7 @@ func abortCSRFFailedToGenerate(c *gin.Context) {
 }
 
 func ensureCSRFCookie(c *gin.Context) (string, bool) {
-	token, err := c.Cookie("indosupplier_csrf_token")
+	token, err := c.Cookie("nautiva_csrf_token")
 	if err == nil && token != "" {
 		return token, true
 	}
@@ -226,8 +226,8 @@ func setCSRFCookie(c *gin.Context, token string) {
 
 	if shouldUseCrossSiteCSRFCookie(c) {
 		sameSite = http.SameSiteNoneMode
-		// In production, set root domain so cookies work across all subdomains (e.g., .gilabs.id, .indosupplier.id)
-		// This allows sharing cookies between indosupplier.id, indosupplier.gilabs.id, api.gilabs.id, etc.
+		// In production, set root domain so cookies work across all subdomains (e.g., .gilabs.id, .nautiva.id)
+		// This allows sharing cookies between nautiva.id, nautiva.gilabs.id, api.gilabs.id, etc.
 		if config.AppConfig != nil && strings.ToLower(strings.TrimSpace(config.AppConfig.Server.Env)) == "production" {
 			domain = config.AppConfig.Server.RootDomain
 		}
@@ -244,5 +244,5 @@ func setCSRFCookie(c *gin.Context, token string) {
 	c.SetSameSite(sameSite)
 
 	// Note: HttpOnly is FALSE so JavaScript can read it and send in header (Double-Submit Cookie pattern)
-	c.SetCookie("indosupplier_csrf_token", token, 3600*24, "/", domain, isSecure, false)
+	c.SetCookie("nautiva_csrf_token", token, 3600*24, "/", domain, isSecure, false)
 }

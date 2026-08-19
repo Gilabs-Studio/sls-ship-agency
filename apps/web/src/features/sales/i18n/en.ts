@@ -44,7 +44,7 @@ export const salesEn = {
     title: "Add New Prospect Lead",
     subtitle: "Enter basic shipping company information to enter the sales pipeline.",
     companyLabel: "Shipping Company Name",
-    companyPlaceholder: "e.g. PT Pelayaran Samudera Jaya",
+    companyPlaceholder: "e.g. PT. Nautiva Ocean Agency",
     businessTypeLabel: "Business Type",
     picNameLabel: "Primary PIC Name",
     picNamePlaceholder: "e.g. Capt. Irwan",
